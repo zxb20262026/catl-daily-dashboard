@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-22 00:54",
+  "update_time": "2026-04-22 01:06",
   "trade_date": "20260421",
   "catl": {
     "close": 447.6,
@@ -23,12 +23,12 @@
     "ma60_dev": 17.5
   },
   "hk": {
-    "close": 736.0,
-    "pct_chg": 4.77,
-    "close_cny": 645.18
+    "close": null,
+    "pct_chg": null,
+    "close_cny": null
   },
   "ah": {
-    "premium": -30.62,
+    "premium": null,
     "hkd_cny": 0.8766
   },
   "industry": {
@@ -1840,318 +1840,179 @@
       "close": 447.6
     }
   ],
-  "hk_price_series": [
-    {
-      "date": "20260320",
-      "close": 698.0
-    },
-    {
-      "date": "20260323",
-      "close": 662.0
-    },
-    {
-      "date": "20260324",
-      "close": 645.0
-    },
-    {
-      "date": "20260325",
-      "close": 637.5
-    },
-    {
-      "date": "20260326",
-      "close": 616.0
-    },
-    {
-      "date": "20260327",
-      "close": 634.0
-    },
-    {
-      "date": "20260330",
-      "close": 632.0
-    },
-    {
-      "date": "20260331",
-      "close": 613.5
-    },
-    {
-      "date": "20260401",
-      "close": 632.5
-    },
-    {
-      "date": "20260402",
-      "close": 627.5
-    },
-    {
-      "date": "20260408",
-      "close": 639.5
-    },
-    {
-      "date": "20260409",
-      "close": 633.0
-    },
-    {
-      "date": "20260410",
-      "close": 681.5
-    },
-    {
-      "date": "20260413",
-      "close": 682.5
-    },
-    {
-      "date": "20260414",
-      "close": 660.0
-    },
-    {
-      "date": "20260415",
-      "close": 655.5
-    },
-    {
-      "date": "20260416",
-      "close": 714.5
-    },
-    {
-      "date": "20260417",
-      "close": 692.0
-    },
-    {
-      "date": "20260420",
-      "close": 702.5
-    },
-    {
-      "date": "20260421",
-      "close": 736.0
+  "hk_price_series": [],
+  "ah_premium_series": [],
+  "news": {
+    "articles": [
+      {
+        "title": "宁德时代首提“超换一体”",
+        "date": "2026-04-21",
+        "source": "界面新闻",
+        "url": "http://finance.eastmoney.com/a/202604213712807741.html",
+        "sentiment_score": 6,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代：国内市占率突破47%",
+        "date": "2026-04-21",
+        "source": "上海证券报·中国证券网",
+        "url": "http://finance.eastmoney.com/a/202604213712603441.html",
+        "sentiment_score": 6,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "美联新材：公司与宁德时代暂时没有合作",
+        "date": "2026-04-21",
+        "source": "每日经济新闻",
+        "url": "http://finance.eastmoney.com/a/202604213712273062.html",
+        "sentiment_score": -10,
+        "sentiment_label": "negative"
+      },
+      {
+        "title": "指数贡献榜：宁德时代贡献34.37点",
+        "date": "2026-04-21",
+        "source": "东方财富研究中心",
+        "url": "http://finance.eastmoney.com/a/202604213712409854.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代，成交额A股第一！",
+        "date": "2026-04-21",
+        "source": "上海证券报",
+        "url": "http://finance.eastmoney.com/a/202604213712073359.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代钠电池年内将实现大规模量产",
+        "date": "2026-04-21",
+        "source": "界面新闻",
+        "url": "http://finance.eastmoney.com/a/202604213712596485.html",
+        "sentiment_score": 12,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代A股成交额达200亿元",
+        "date": "2026-04-21",
+        "source": "第一财经",
+        "url": "http://finance.eastmoney.com/a/202604213712152995.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代成交额超100亿元",
+        "date": "2026-04-21",
+        "source": "证券时报网",
+        "url": "http://finance.eastmoney.com/a/202604213712031937.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代麒麟凝聚态电池发布，最高续航1500公里",
+        "date": "2026-04-21",
+        "source": "新京报",
+        "url": "http://finance.eastmoney.com/a/202604213712715190.html",
+        "sentiment_score": 15,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代将举办2026年“超级科技日”发布会，创业板50（159949）重仓宁德时代，含量超23%",
+        "date": "2026-04-21",
+        "source": "每日经济新闻",
+        "url": "http://finance.eastmoney.com/a/202604213711657840.html",
+        "sentiment_score": 5,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代发布六大创新成果  多化学材料体系全面突破",
+        "date": "2026-04-21",
+        "source": "新华财经",
+        "url": "http://finance.eastmoney.com/a/202604213712845117.html",
+        "sentiment_score": 11,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代钠离子电池今年四季度将实现量产",
+        "date": "2026-04-21",
+        "source": "新华财经",
+        "url": "http://finance.eastmoney.com/a/202604213712770041.html",
+        "sentiment_score": 6,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代成交额超200亿元",
+        "date": "2026-04-20",
+        "source": "证券时报网",
+        "url": "http://finance.eastmoney.com/a/202604203710531354.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代发布车用凝聚态电池，续航1500公里",
+        "date": "2026-04-21",
+        "source": "21世纪经济报道",
+        "url": "http://finance.eastmoney.com/a/202604213712763938.html",
+        "sentiment_score": 15,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "港股收盘｜恒指涨0.48% 宁德时代涨近5%",
+        "date": "2026-04-21",
+        "source": "第一财经",
+        "url": "http://finance.eastmoney.com/a/202604213712282764.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代发布麒麟凝聚态电池 最高续航1500公里",
+        "date": "2026-04-21",
+        "source": "财联社",
+        "url": "http://finance.eastmoney.com/a/202604213712612788.html",
+        "sentiment_score": 15,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代港股涨超5% 再创历史新高",
+        "date": "2026-04-21",
+        "source": "人民财讯",
+        "url": "http://finance.eastmoney.com/a/202604213711979043.html",
+        "sentiment_score": 12,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代港股一度涨近6% 续创新高",
+        "date": "2026-04-21",
+        "source": "第一财经",
+        "url": "http://finance.eastmoney.com/a/202604213711970210.html",
+        "sentiment_score": 15,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代放大招！6分钟满电、续航1500公里……",
+        "date": "2026-04-21",
+        "source": "中国证券报",
+        "url": "http://finance.eastmoney.com/a/202604213712891886.html",
+        "sentiment_score": 6,
+        "sentiment_label": "positive"
+      },
+      {
+        "title": "宁德时代A股成交额超200亿元",
+        "date": "2026-04-20",
+        "source": "每日经济新闻",
+        "url": "http://finance.eastmoney.com/a/202604203710507584.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      }
+    ],
+    "sentiment": {
+      "score": 100,
+      "label": "positive",
+      "positive_count": 15,
+      "negative_count": 1,
+      "neutral_count": 8
     }
-  ],
-  "ah_premium_series": [
-    {
-      "date": "20260224",
-      "premium": -21.43,
-      "a_close": 361.95,
-      "h_close_cny": 460.65
-    },
-    {
-      "date": "20260225",
-      "premium": -22.48,
-      "a_close": 362.18,
-      "h_close_cny": 467.23
-    },
-    {
-      "date": "20260226",
-      "premium": -20.81,
-      "a_close": 346.0,
-      "h_close_cny": 436.9
-    },
-    {
-      "date": "20260227",
-      "premium": -21.34,
-      "a_close": 342.01,
-      "h_close_cny": 434.79
-    },
-    {
-      "date": "20260302",
-      "premium": -19.88,
-      "a_close": 340.22,
-      "h_close_cny": 424.63
-    },
-    {
-      "date": "20260303",
-      "premium": -19.4,
-      "a_close": 344.07,
-      "h_close_cny": 426.9
-    },
-    {
-      "date": "20260304",
-      "premium": -19.32,
-      "a_close": 338.9,
-      "h_close_cny": 420.07
-    },
-    {
-      "date": "20260305",
-      "premium": -20.06,
-      "a_close": 350.25,
-      "h_close_cny": 438.12
-    },
-    {
-      "date": "20260306",
-      "premium": -21.11,
-      "a_close": 354.77,
-      "h_close_cny": 449.7
-    },
-    {
-      "date": "20260309",
-      "premium": -18.92,
-      "a_close": 357.5,
-      "h_close_cny": 440.93
-    },
-    {
-      "date": "20260310",
-      "premium": -21.95,
-      "a_close": 376.3,
-      "h_close_cny": 482.13
-    },
-    {
-      "date": "20260311",
-      "premium": -24.49,
-      "a_close": 396.8,
-      "h_close_cny": 525.52
-    },
-    {
-      "date": "20260312",
-      "premium": -26.04,
-      "a_close": 395.5,
-      "h_close_cny": 534.73
-    },
-    {
-      "date": "20260313",
-      "premium": -27.07,
-      "a_close": 397.0,
-      "h_close_cny": 544.37
-    },
-    {
-      "date": "20260316",
-      "premium": -30.46,
-      "a_close": 408.4,
-      "h_close_cny": 587.32
-    },
-    {
-      "date": "20260317",
-      "premium": -28.7,
-      "a_close": 405.0,
-      "h_close_cny": 568.04
-    },
-    {
-      "date": "20260318",
-      "premium": -29.5,
-      "a_close": 402.02,
-      "h_close_cny": 570.23
-    },
-    {
-      "date": "20260319",
-      "premium": -29.06,
-      "a_close": 400.5,
-      "h_close_cny": 564.53
-    },
-    {
-      "date": "20260320",
-      "premium": -32.5,
-      "a_close": 413.0,
-      "h_close_cny": 611.87
-    },
-    {
-      "date": "20260323",
-      "premium": -30.73,
-      "a_close": 401.99,
-      "h_close_cny": 580.31
-    },
-    {
-      "date": "20260324",
-      "premium": -29.79,
-      "a_close": 396.99,
-      "h_close_cny": 565.41
-    },
-    {
-      "date": "20260325",
-      "premium": -28.81,
-      "a_close": 397.81,
-      "h_close_cny": 558.83
-    },
-    {
-      "date": "20260326",
-      "premium": -25.46,
-      "a_close": 402.5,
-      "h_close_cny": 539.99
-    },
-    {
-      "date": "20260327",
-      "premium": -25.12,
-      "a_close": 416.18,
-      "h_close_cny": 555.76
-    },
-    {
-      "date": "20260330",
-      "premium": -25.45,
-      "a_close": 413.0,
-      "h_close_cny": 554.01
-    },
-    {
-      "date": "20260331",
-      "premium": -25.31,
-      "a_close": 401.7,
-      "h_close_cny": 537.79
-    },
-    {
-      "date": "20260401",
-      "premium": -26.83,
-      "a_close": 405.71,
-      "h_close_cny": 554.45
-    },
-    {
-      "date": "20260402",
-      "premium": -27.07,
-      "a_close": 401.17,
-      "h_close_cny": 550.07
-    },
-    {
-      "date": "20260408",
-      "premium": -30.2,
-      "a_close": 391.3,
-      "h_close_cny": 560.59
-    },
-    {
-      "date": "20260409",
-      "premium": -29.72,
-      "a_close": 389.99,
-      "h_close_cny": 554.89
-    },
-    {
-      "date": "20260410",
-      "premium": -30.37,
-      "a_close": 416.0,
-      "h_close_cny": 597.4
-    },
-    {
-      "date": "20260413",
-      "premium": -28.61,
-      "a_close": 427.13,
-      "h_close_cny": 598.28
-    },
-    {
-      "date": "20260414",
-      "premium": -25.54,
-      "a_close": 430.79,
-      "h_close_cny": 578.56
-    },
-    {
-      "date": "20260415",
-      "premium": -24.99,
-      "a_close": 431.0,
-      "h_close_cny": 574.61
-    },
-    {
-      "date": "20260416",
-      "premium": -27.52,
-      "a_close": 453.98,
-      "h_close_cny": 626.33
-    },
-    {
-      "date": "20260417",
-      "premium": -26.77,
-      "a_close": 444.2,
-      "h_close_cny": 606.61
-    },
-    {
-      "date": "20260420",
-      "premium": -29.77,
-      "a_close": 432.5,
-      "h_close_cny": 615.81
-    },
-    {
-      "date": "20260421",
-      "premium": -30.62,
-      "a_close": 447.6,
-      "h_close_cny": 645.18
-    }
-  ],
+  },
   "params": {
     "pe_cheap": 22,
     "pe_reasonable": 30,
@@ -2164,18 +2025,17 @@
     "lithium_high": 12
   },
   "signals": {
-    "score": 1,
-    "verdict": "watch",
-    "verdict_text": "估值偏向合理偏低，可适当关注",
+    "score": 0,
+    "verdict": "hold",
+    "verdict_text": "估值合理，继续持有观察",
     "color": "yellow",
     "details": [
       "PE 30.3x 偏贵",
-      "AH溢价 -30.6% 偏低",
       "价格站上20日均线(414)",
       "个股PE低于行业19%"
     ],
     "add_triggered": false,
-    "add_ready": 2,
+    "add_ready": 1,
     "add_total": 4,
     "target_price": 324.84
   }
