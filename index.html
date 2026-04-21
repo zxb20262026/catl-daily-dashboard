@@ -14,7 +14,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .header h1 span.dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .header .meta{font-size:12px;color:var(--text2)}
-.container{max-width:1200px;margin:0 auto;padding:16px}
+.container{max-width:1400px;margin:0 auto;padding:16px}
 .grid{display:grid;gap:12px}
 .g2{grid-template-columns:1fr 1fr}
 .g3{grid-template-columns:1fr 1fr 1fr}
@@ -47,10 +47,13 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .signal-green{background:rgba(63,185,80,.1);border-left:3px solid var(--green)}
 .signal-yellow{background:rgba(210,153,34,.1);border-left:3px solid var(--yellow)}
 .signal-red{background:rgba(248,81,73,.1);border-left:3px solid var(--red)}
-.peer-table{width:100%;font-size:12px;border-collapse:collapse}
-.peer-table th{text-align:left;color:var(--text2);font-weight:500;padding:4px 8px;border-bottom:1px solid var(--border)}
-.peer-table td{padding:4px 8px;border-bottom:1px solid rgba(48,54,61,.5)}
+.peer-table{width:100%;font-size:11px;border-collapse:collapse}
+.peer-table th{text-align:left;color:var(--text2);font-weight:500;padding:5px 6px;border-bottom:1px solid var(--border);white-space:nowrap}
+.peer-table td{padding:4px 6px;border-bottom:1px solid rgba(48,54,61,.5);white-space:nowrap}
 .peer-table .highlight{color:var(--accent);font-weight:600}
+.peer-table .best{color:var(--green);font-weight:600}
+.peer-table .worst{color:var(--red)}
+.chain-tag{font-size:9px;padding:1px 4px;border-radius:3px;background:rgba(88,166,255,.12);color:var(--blue);white-space:nowrap}
 .ma-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
 .ma-item{padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px}
 .ma-item .label{font-size:11px;color:var(--text2)}.ma-item .val{font-size:18px;font-weight:600}
@@ -71,7 +74,19 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .lithium-price{font-size:28px;font-weight:700}
 .lithium-status{font-size:12px;margin-top:4px}
 .na{color:var(--text2);font-style:italic}
-@media(max-width:768px){.g2,.g3{grid-template-columns:1fr}.price-big{font-size:26px}.pe-num{font-size:28px}}
+/* PE历史分位图 */
+.pe-hist-header{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;flex-wrap:wrap}
+.pe-hist-big{font-size:28px;font-weight:700}
+.pe-hist-pct{font-size:20px;font-weight:600}
+.pe-hist-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:10px}
+.pe-hist-stat{padding:6px 8px;background:rgba(255,255,255,.03);border-radius:6px;text-align:center}
+.pe-hist-stat .label{font-size:10px;color:var(--text2)}
+.pe-hist-stat .val{font-size:15px;font-weight:600;margin-top:2px}
+/* 行业对标图表区 */
+.peer-charts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
+.peer-chart-box{height:200px}
+@media(max-width:768px){.g2,.g3{grid-template-columns:1fr}.price-big{font-size:26px}.pe-num{font-size:28px}.peer-charts{grid-template-columns:1fr}.pe-hist-stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1024px){.peer-charts{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -102,6 +117,10 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div class="item">成交额 <b id="aAmount">--</b> 亿</div>
       <div class="item">最高 <b id="aHigh">--</b></div>
       <div class="item">最低 <b id="aLow">--</b></div>
+      <div class="item">ROE <b id="catlRoe">--</b></div>
+      <div class="item">PB <b id="catlPb">--</b></div>
+      <div class="item">毛利率 <b id="catlGpm">--</b></div>
+      <div class="item">净利率 <b id="catlNpm">--</b></div>
     </div>
     <div class="ah-row">
       <span style="font-size:12px;color:var(--text2)">AH 溢价</span>
@@ -139,18 +158,52 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <div class="signal-box" id="peSignal">--</div>
   </div>
 
-  <!-- 模块三：行业对标 -->
+  <!-- PE 5年历史分位图 -->
   <div class="card">
-    <div class="card-title"><span class="icon">🏭</span> 行业对标（动力电池 A 股）</div>
-    <div style="margin-bottom:10px">
-      <span style="font-size:12px;color:var(--text2)">行业 PE 中位数</span>
-      <span style="font-size:22px;font-weight:700;margin-left:8px" id="indPe">--</span>
-      <span style="font-size:13px;margin-left:8px" id="peerPremium">--</span>
+    <div class="card-title"><span class="icon">📏</span> PE 历史分位（5年）</div>
+    <div class="pe-hist-header">
+      <span style="color:var(--text2);font-size:12px">当前PE</span>
+      <span class="pe-hist-big" id="peHistCurrent">--</span>
+      <span style="color:var(--text2);font-size:12px">历史分位</span>
+      <span class="pe-hist-pct" id="peHistPct">--</span>
     </div>
+    <div class="pe-hist-stats">
+      <div class="pe-hist-stat"><div class="label">最低</div><div class="val" id="peHistMin">--</div></div>
+      <div class="pe-hist-stat"><div class="label">25%分位</div><div class="val" id="peHistP25">--</div></div>
+      <div class="pe-hist-stat"><div class="label">中位数</div><div class="val" id="peHistMed">--</div></div>
+      <div class="pe-hist-stat"><div class="label">75%分位</div><div class="val" id="peHistP75">--</div></div>
+      <div class="pe-hist-stat"><div class="label">最高</div><div class="val" id="peHistMax">--</div></div>
+    </div>
+    <div id="peHistChart" class="chart-box" style="height:240px"></div>
+  </div>
+
+  <!-- 模块三：行业对标 -->
+  <div class="card g-full">
+    <div class="card-title"><span class="icon">🏭</span> 行业对标（动力电池产业链 9 家）</div>
+    <div style="margin-bottom:10px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <div>
+        <span style="font-size:12px;color:var(--text2)">行业 PE 中位数</span>
+        <span style="font-size:20px;font-weight:700;margin-left:6px" id="indPe">--</span>
+        <span style="font-size:13px;margin-left:6px" id="peerPremium">--</span>
+      </div>
+      <div id="peHistNote" style="font-size:12px;color:var(--text2)"></div>
+    </div>
+    <!-- 对标柱状图 -->
+    <div class="peer-charts">
+      <div id="peerPeChart" class="peer-chart-box"></div>
+      <div id="peerRoeChart" class="peer-chart-box"></div>
+      <div id="peerGpmChart" class="peer-chart-box"></div>
+    </div>
+    <!-- 对标表格 -->
+    <div style="overflow-x:auto">
     <table class="peer-table">
-      <thead><tr><th>公司</th><th>股价</th><th>PE(TTM)</th></tr></thead>
+      <thead><tr>
+        <th>公司</th><th>产业链</th><th>股价</th><th>涨跌幅</th><th>PE(TTM)</th>
+        <th>PB</th><th>ROE</th><th>毛利率</th><th>净利率</th><th>市值(亿)</th>
+      </tr></thead>
       <tbody id="peerBody"></tbody>
     </table>
+    </div>
   </div>
 
   <!-- 模块四：碳酸锂 -->
@@ -219,18 +272,20 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 </div>
 </div>
 <footer style="text-align:center;padding:20px;font-size:11px;color:var(--text2)">
-  数据来源：Tushare Pro · 公开数据抓取 · 仅供参考，不构成投资建议
+  数据来源：Tushare Pro · 东方财富 · 公开数据抓取 · 仅供参考，不构成投资建议
 </footer>
 
 <script>
 var DATA = null;
 
-function fmt(n, d){ return n == null ? '--' : Number(n).toFixed(d || 2); }
+function fmt(n, d){ return n == null ? '--' : Number(n).toFixed(d == undefined ? 2 : d); }
 function fmtB(n){ return n == null ? '--' : (n >= 10000 ? (n/10000).toFixed(1)+'万' : fmt(n,0)); }
+function fmtInt(n){ return n == null ? '--' : Math.round(n).toLocaleString(); }
 
 function chgClass(v){ return v > 0 ? 'chg-up' : v < 0 ? 'chg-down' : ''; }
 function chgText(v){ return v > 0 ? '+'+fmt(v,2)+'%' : v < 0 ? fmt(v,2)+'%' : '0.00%'; }
 function arrow(v){ return v > 0 ? '↑' : v < 0 ? '↓' : '→'; }
+function na(v){ return v != null && v !== '' && !isNaN(v) ? v : '<span class="na">--</span>'; }
 
 function loadAndRender(){
   fetch('dashboard_data.json?t='+Date.now())
@@ -242,7 +297,6 @@ function loadAndRender(){
 function render(d){
   var c = d.catl, h = d.hk, ah = d.ah, ind = d.industry, sig = d.signals, p = d.params;
 
-  // 头部
   document.getElementById('tradeDate').textContent = d.trade_date;
   document.getElementById('updateTime').textContent = d.update_time;
 
@@ -255,6 +309,12 @@ function render(d){
   document.getElementById('aAmount').textContent = fmt(c.amount/10000,1);
   document.getElementById('aHigh').textContent = '\u00a5'+fmt(c.high);
   document.getElementById('aLow').textContent = '\u00a5'+fmt(c.low);
+  
+  // 宁德时代财务指标
+  document.getElementById('catlRoe').innerHTML = c.roe != null ? fmt(c.roe,1)+'%' : '<span class="na">--</span>';
+  document.getElementById('catlPb').innerHTML = c.pb != null ? fmt(c.pb,1)+'x' : '<span class="na">--</span>';
+  document.getElementById('catlGpm').innerHTML = c.gpm != null ? fmt(c.gpm,1)+'%' : '<span class="na">--</span>';
+  document.getElementById('catlNpm').innerHTML = c.npm != null ? fmt(c.npm,1)+'%' : '<span class="na">--</span>';
 
   // H股
   document.getElementById('hPrice').textContent = 'HK$'+fmt(h.close);
@@ -266,79 +326,41 @@ function render(d){
   var ahVal = ah.premium;
   var badge = document.getElementById('ahBadge');
   if(ahVal == null){
-    badge.textContent = '--';
-    badge.className = 'ah-badge ah-mid';
+    badge.textContent = '--'; badge.className = 'ah-badge ah-mid';
   } else if(ahVal < 0){
-    badge.textContent = fmt(ahVal,1)+'% (H>A)';
-    badge.className = 'ah-badge ah-neg';
+    badge.textContent = fmt(ahVal,1)+'% (H>A)'; badge.className = 'ah-badge ah-neg';
   } else if(ahVal <= p.ah_premium_low){
-    badge.textContent = '+'+fmt(ahVal,1)+'%';
-    badge.className = 'ah-badge ah-low';
+    badge.textContent = '+'+fmt(ahVal,1)+'%'; badge.className = 'ah-badge ah-low';
   } else if(ahVal <= p.ah_premium_high){
-    badge.textContent = '+'+fmt(ahVal,1)+'%';
-    badge.className = 'ah-badge ah-mid';
+    badge.textContent = '+'+fmt(ahVal,1)+'%'; badge.className = 'ah-badge ah-mid';
   } else {
-    badge.textContent = '+'+fmt(ahVal,1)+'%';
-    badge.className = 'ah-badge ah-high';
+    badge.textContent = '+'+fmt(ahVal,1)+'%'; badge.className = 'ah-badge ah-high';
   }
   document.getElementById('ahDetail').textContent = 'H股折CNY: \u00a5'+fmt(h.close_cny);
   document.getElementById('ahFx').textContent = 'HKD/CNY '+fmt(ah.hkd_cny,4);
 
-  // PE
+  // PE温度计
   var pe = c.pe_ttm;
   document.getElementById('peNum').textContent = pe != null ? fmt(pe,1) : '--';
-  // PE bar
   var peMin = p.pe_hist_low, peMax = p.pe_hist_high;
   var pePct = pe ? Math.min(100, Math.max(0, (pe - peMin) / (peMax - peMin) * 100)) : 50;
   var fill = document.getElementById('peBarFill');
   fill.style.width = pePct + '%';
   fill.style.background = pe <= p.pe_cheap ? 'var(--green)' : pe <= p.pe_reasonable ? 'var(--yellow)' : pe <= p.pe_expensive ? '#e08030' : 'var(--red)';
-  // PE position marker
   fill.style.position = 'relative';
   fill.innerHTML = '<div style="position:absolute;right:-1px;top:-6px;width:2px;height:22px;background:#fff;border-radius:1px"></div>';
 
-  // PE signal
   var peBox = document.getElementById('peSignal');
-  if(pe <= p.pe_cheap){
-    peBox.className = 'signal-box signal-green';
-    peBox.textContent = '🟢 PE处于历史低位区间，估值便宜，关注加仓机会';
-  } else if(pe <= p.pe_reasonable){
-    peBox.className = 'signal-box signal-yellow';
-    peBox.textContent = '🟡 PE处于合理区间，持有观察';
-  } else if(pe <= p.pe_expensive){
-    peBox.className = 'signal-box signal-yellow';
-    peBox.textContent = '🟠 PE偏贵，不建议加仓';
-  } else {
-    peBox.className = 'signal-box signal-red';
-    peBox.textContent = '🔴 PE处于历史高位，高估风险';
-  }
+  if(pe <= p.pe_cheap){ peBox.className='signal-box signal-green'; peBox.textContent='🟢 PE处于历史低位区间，估值便宜，关注加仓机会'; }
+  else if(pe <= p.pe_reasonable){ peBox.className='signal-box signal-yellow'; peBox.textContent='🟡 PE处于合理区间，持有观察'; }
+  else if(pe <= p.pe_expensive){ peBox.className='signal-box signal-yellow'; peBox.textContent='🟠 PE偏贵，不建议加仓'; }
+  else { peBox.className='signal-box signal-red'; peBox.textContent='🔴 PE处于历史高位，高估风险'; }
+
+  // PE历史分位
+  renderPeHistory(d);
 
   // 行业对标
-  document.getElementById('indPe').textContent = ind.pe_median ? fmt(ind.pe_median,1) : '--';
-  var pp = document.getElementById('peerPremium');
-  if(ind.peer_premium != null){
-    var ppv = ind.peer_premium;
-    pp.textContent = (ppv >= 0 ? '+' : '') + fmt(ppv,1) + '% vs行业';
-    pp.style.color = ppv < 0 ? 'var(--green)' : ppv > 20 ? 'var(--red)' : 'var(--text2)';
-  } else { pp.textContent = '--'; }
-
-  var tbody = document.getElementById('peerBody');
-  tbody.innerHTML = '';
-  if(ind.peers){
-    ind.peers.forEach(function(p){
-      var isHighlight = p.code === '300750.SZ';
-      var tr = document.createElement('tr');
-      tr.innerHTML = '<td'+(isHighlight?' class="highlight"':'')+'>'+p.name+(isHighlight?' ★':'')+'</td>'
-        +'<td>\u00a5'+fmt(p.close)+'</td>'
-        +'<td style="color:'+(p.pe!=null?(p.pe<=22?'var(--green)':p.pe<=30?'var(--yellow)':'var(--red)'):'var(--text2)')+'">'+(p.pe!=null?fmt(p.pe,1)+'x':'--')+'</td>';
-      tbody.appendChild(tr);
-    });
-    // 加一行宁德时代自身
-    var tr2 = document.createElement('tr');
-    tr2.innerHTML = '<td class="highlight">宁德时代 ★</td><td>\u00a5'+fmt(c.close)+'</td>'
-      +'<td style="color:'+(pe<=22?'var(--green)':pe<=30?'var(--yellow)':'var(--red)')+'">'+(pe!=null?fmt(pe,1)+'x':'--')+'</td>';
-    tbody.appendChild(tr2);
-  }
+  renderIndustry(d);
 
   // 碳酸锂
   var li = d.lithium;
@@ -350,24 +372,14 @@ function render(d){
     if(li.price < ll){ liDiv.style.color='var(--green)'; liStatus.textContent='🟢 利好：锂价低位，毛利率改善空间大'; liStatus.style.color='var(--green)'; }
     else if(li.price <= lh){ liDiv.style.color='var(--yellow)'; liStatus.textContent='🟡 中性：锂价处于中间区间'; liStatus.style.color='var(--yellow)'; }
     else { liDiv.style.color='var(--red)'; liStatus.textContent='🔴 利空：锂价偏高，成本端承压'; liStatus.style.color='var(--red)'; }
-  } else {
-    liDiv.innerHTML = '<span class="na">暂无数据</span>';
-    liStatus.textContent = '数据源获取失败，请稍后更新';
-  }
+  } else { liDiv.innerHTML = '<span class="na">暂无数据</span>'; liStatus.textContent = '数据源获取失败'; }
 
   // 均线
   document.getElementById('ma20').textContent = c.ma20 ? '\u00a5'+fmt(c.ma20) : '--';
   document.getElementById('ma60').textContent = c.ma60 ? '\u00a5'+fmt(c.ma60) : '--';
-  var m20d = document.getElementById('ma20Dev');
-  var m60d = document.getElementById('ma60Dev');
-  if(c.ma20_dev != null){
-    m20d.textContent = '偏离 '+fmt(c.ma20_dev,1)+'%';
-    m20d.className = 'dev '+(c.ma20_dev>0?'dev-up':'dev-down');
-  }
-  if(c.ma60_dev != null){
-    m60d.textContent = '偏离 '+fmt(c.ma60_dev,1)+'%';
-    m60d.className = 'dev '+(c.ma60_dev>0?'dev-up':'dev-down');
-  }
+  var m20d = document.getElementById('ma20Dev'), m60d = document.getElementById('ma60Dev');
+  if(c.ma20_dev != null){ m20d.textContent='偏离 '+fmt(c.ma20_dev,1)+'%'; m20d.className='dev '+(c.ma20_dev>0?'dev-up':'dev-down'); }
+  if(c.ma60_dev != null){ m60d.textContent='偏离 '+fmt(c.ma60_dev,1)+'%'; m60d.className='dev '+(c.ma60_dev>0?'dev-up':'dev-down'); }
 
   // 资金
   document.getElementById('northMoney').textContent = d.northbound.north_money != null ? fmt(d.northbound.north_money/10000,1)+'亿' : '--';
@@ -380,34 +392,227 @@ function render(d){
   } else { sc.textContent = '--'; }
 
   // 综合信号
-  var vb = document.getElementById('verdictBox');
-  var vi = document.getElementById('verdictIcon');
-  var vt = document.getElementById('verdictText');
-  var vd = document.getElementById('verdictDetail');
-  if(sig.verdict === 'intensive'){
-    vb.style.background='rgba(63,185,80,.08)'; vi.textContent='🟢'; vt.textContent=sig.verdict_text; vt.style.color='var(--green)';
-  } else if(sig.verdict === 'watch'){
-    vb.style.background='rgba(210,153,34,.08)'; vi.textContent='🟡'; vt.textContent=sig.verdict_text; vt.style.color='var(--yellow)';
-  } else if(sig.verdict === 'hold'){
-    vb.style.background='rgba(255,255,255,.03)'; vi.textContent='🔍'; vt.textContent=sig.verdict_text; vt.style.color='var(--text)';
-  } else {
-    vb.style.background='rgba(248,81,73,.08)'; vi.textContent='🔴'; vt.textContent=sig.verdict_text; vt.style.color='var(--red)';
-  }
+  var vb = document.getElementById('verdictBox'), vi = document.getElementById('verdictIcon');
+  var vt = document.getElementById('verdictText'), vd = document.getElementById('verdictDetail');
+  if(sig.verdict==='intensive'){ vb.style.background='rgba(63,185,80,.08)'; vi.textContent='🟢'; vt.textContent=sig.verdict_text; vt.style.color='var(--green)'; }
+  else if(sig.verdict==='watch'){ vb.style.background='rgba(210,153,34,.08)'; vi.textContent='🟡'; vt.textContent=sig.verdict_text; vt.style.color='var(--yellow)'; }
+  else if(sig.verdict==='hold'){ vb.style.background='rgba(255,255,255,.03)'; vi.textContent='🔍'; vt.textContent=sig.verdict_text; vt.style.color='var(--text)'; }
+  else { vb.style.background='rgba(248,81,73,.08)'; vi.textContent='🔴'; vt.textContent=sig.verdict_text; vt.style.color='var(--red)'; }
   vd.innerHTML = sig.details.map(function(s){ return '• '+s; }).join('<br>');
 
-  // 加仓进度
   document.getElementById('addCount').textContent = sig.add_ready+'/'+sig.add_total;
   var addPct = sig.add_ready / sig.add_total * 100;
   var addBar = document.getElementById('addBar');
   addBar.style.width = addPct+'%';
   addBar.style.background = sig.add_triggered ? 'var(--green)' : 'var(--blue)';
-  document.getElementById('addNote').textContent = sig.add_triggered
-    ? '✅ 加仓条件已满足！'
-    : (sig.target_price ? '加仓目标价(PE=22x): \u00a5'+fmt(sig.target_price) : '--');
+  document.getElementById('addNote').textContent = sig.add_triggered ? '✅ 加仓条件已满足！' : (sig.target_price ? '加仓目标价(PE=22x): \u00a5'+fmt(sig.target_price) : '--');
 
   // 图表
   renderPriceChart(d);
   renderAhChart(d);
+}
+
+function renderPeHistory(d){
+  var ph = d.pe_history;
+  if(!ph){ 
+    document.getElementById('peHistCurrent').textContent = '--';
+    document.getElementById('peHistPct').textContent = '--';
+    return; 
+  }
+
+  document.getElementById('peHistCurrent').textContent = fmt(ph.current_pe,1)+'x';
+  var pctEl = document.getElementById('peHistPct');
+  pctEl.textContent = fmt(ph.current_percentile,0)+'%';
+  pctEl.style.color = ph.current_percentile <= 25 ? 'var(--green)' : ph.current_percentile <= 75 ? 'var(--yellow)' : 'var(--red)';
+
+  document.getElementById('peHistMin').textContent = fmt(ph.min,1)+'x';
+  document.getElementById('peHistP25').textContent = fmt(ph.p25,1)+'x';
+  document.getElementById('peHistMed').textContent = fmt(ph.median,1)+'x';
+  document.getElementById('peHistP75').textContent = fmt(ph.p75,1)+'x';
+  document.getElementById('peHistMax').textContent = fmt(ph.max,1)+'x';
+
+  var noteEl = document.getElementById('peHistNote');
+  if(ph.current_percentile <= 20){
+    noteEl.innerHTML = '📊 PE处于历史低位，估值吸引力较强';
+    noteEl.style.color = 'var(--green)';
+  } else if(ph.current_percentile <= 50){
+    noteEl.innerHTML = '📊 PE处于历史中低位，估值合理偏低';
+    noteEl.style.color = 'var(--yellow)';
+  } else if(ph.current_percentile <= 80){
+    noteEl.innerHTML = '📊 PE处于历史中高位，估值合理偏贵';
+    noteEl.style.color = 'var(--yellow)';
+  } else {
+    noteEl.innerHTML = '📊 PE处于历史高位，估值偏贵';
+    noteEl.style.color = 'var(--red)';
+  }
+
+  // 图表
+  if(!ph.series || ph.series.length < 2) return;
+  var dom = document.getElementById('peHistChart');
+  var chart = echarts.init(dom);
+  var dates = ph.series.map(function(s){ return s.date.slice(0,4)+'/'+s.date.slice(4,6)+'/'+s.date.slice(6,8); });
+  var vals = ph.series.map(function(s){ return s.pe_ttm; });
+
+  // 构建分位带数据
+  var band_25 = [], band_75 = [];
+  for(var i = 0; i < vals.length; i++){
+    band_25.push(ph.p25);
+    band_75.push(ph.p75);
+  }
+
+  chart.setOption({
+    backgroundColor:'transparent',
+    grid:{top:30,right:50,bottom:30,left:55},
+    xAxis:{type:'category',data:dates,axisLabel:{fontSize:10,color:'#8b949e',interval:Math.floor(dates.length/6)},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
+    yAxis:{type:'value',scale:true,axisLabel:{fontSize:10,color:'#8b949e',formatter:'{value}x'},splitLine:{lineStyle:{color:'#21262d'}},axisLine:{show:false}},
+    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:12},
+      formatter:function(params){
+        var p = params[0];
+        if(!p) return '';
+        var idx = p.dataIndex;
+        var s = ph.series[idx];
+        return s.date.slice(0,4)+'/'+s.date.slice(4,6)+'/'+s.date.slice(6,8)+'<br/>'
+          +'PE(TTM): <b>'+s.pe_ttm+'x</b><br/>'
+          +'历史分位: <b>'+s.pe_percentile+'%</b>';
+      }
+    },
+    series:[
+      {name:'25%-75%区间',type:'line',data:band_75,lineStyle:{opacity:0},areaStyle:{color:'rgba(210,153,34,0.08)'},symbol:'none',stack:'band'},
+      {name:'下界',type:'line',data:band_25,lineStyle:{opacity:0},areaStyle:{color:'rgba(63,185,80,0.08)'},symbol:'none',stack:'band2'},
+      {name:'PE(TTM)',type:'line',data:vals,lineStyle:{color:'#79c0ff',width:2},itemStyle:{color:'#79c0ff'},symbol:'none',
+        markLine:{
+          silent:true,
+          data:[
+            {yAxis:ph.p25,lineStyle:{color:'#3fb950',type:'dashed',width:1,opacity:0.6},label:{show:true,formatter:'P25: '+ph.p25+'x',fontSize:9,color:'#3fb950',position:'insideEndTop'}},
+            {yAxis:ph.median,lineStyle:{color:'#d29922',type:'dashed',width:1,opacity:0.6},label:{show:true,formatter:'中位: '+ph.median+'x',fontSize:9,color:'#d29922',position:'insideEndTop'}},
+            {yAxis:ph.p75,lineStyle:{color:'#f85149',type:'dashed',width:1,opacity:0.6},label:{show:true,formatter:'P75: '+ph.p75+'x',fontSize:9,color:'#f85149',position:'insideEndTop'}}
+          ]
+        },
+        markPoint:{
+          data:[
+            {coord:[dates.length-1, vals[vals.length-1]], symbol:'circle', symbolSize:10, itemStyle:{color:'#79c0ff', borderColor:'#fff', borderWidth:2}, label:{show:false}}
+          ]
+        }
+      }
+    ]
+  });
+  window.addEventListener('resize', function(){ chart.resize(); });
+}
+
+function renderIndustry(d){
+  var ind = d.industry, c = d.catl, pe = c.pe_ttm;
+
+  document.getElementById('indPe').textContent = ind.pe_median ? fmt(ind.pe_median,1) : '--';
+  var pp = document.getElementById('peerPremium');
+  if(ind.peer_premium != null){
+    var ppv = ind.peer_premium;
+    pp.textContent = (ppv >= 0 ? '+' : '') + fmt(ppv,1) + '% vs行业';
+    pp.style.color = ppv < 0 ? 'var(--green)' : ppv > 20 ? 'var(--red)' : 'var(--text2)';
+  } else { pp.textContent = '--'; }
+
+  // 准备包含宁德时代在内的完整对标列表
+  var allPeers = [];
+  if(ind.peers){
+    ind.peers.forEach(function(p){
+      allPeers.push({
+        code:p.code, name:p.name, chain:p.chain,
+        close:p.close, pct_chg:p.pct_chg, pe:p.pe,
+        pb:p.pb, roe:p.roe, gpm:p.gpm, npm:p.npm,
+        mv:p.mv, isCatl:false
+      });
+    });
+  }
+  // 加入宁德时代自身
+  allPeers.unshift({
+    code:'300750.SZ', name:'宁德时代', chain:'电池龙头',
+    close:c.close, pct_chg:c.pct_chg, pe:pe,
+    pb:c.pb, roe:c.roe, gpm:c.gpm, npm:c.npm,
+    mv:c.mv, isCatl:true
+  });
+
+  // 表格
+  var tbody = document.getElementById('peerBody');
+  tbody.innerHTML = '';
+  allPeers.forEach(function(p){
+    var tr = document.createElement('tr');
+    if(p.isCatl) tr.style.background = 'rgba(121,192,255,0.06)';
+    
+    var peColor = p.pe != null ? (p.pe <= 22 ? 'var(--green)' : p.pe <= 30 ? 'var(--yellow)' : 'var(--red)') : 'var(--text2)';
+    var chgColor = chgClass(p.pct_chg);
+    var chgStr = chgText(p.pct_chg);
+
+    tr.innerHTML = '<td'+(p.isCatl?' class="highlight"':'')+'>'+p.name+(p.isCatl?' ★':'')+'</td>'
+      +'<td><span class="chain-tag">'+p.chain+'</span></td>'
+      +'<td>\u00a5'+fmt(p.close)+'</td>'
+      +'<td class="'+chgColor+'">'+chgStr+'</td>'
+      +'<td style="color:'+peColor+'">'+(p.pe!=null?fmt(p.pe,1)+'x':'--')+'</td>'
+      +'<td>'+na(p.pb!=null?fmt(p.pb,1)+'x':null)+'</td>'
+      +'<td>'+na(p.roe!=null?fmt(p.roe,1)+'%':null)+'</td>'
+      +'<td>'+na(p.gpm!=null?fmt(p.gpm,1)+'%':null)+'</td>'
+      +'<td>'+na(p.npm!=null?fmt(p.npm,1)+'%':null)+'</td>'
+      +'<td>'+(p.mv!=null?fmtInt(p.mv/100):'--')+'</td>';
+    tbody.appendChild(tr);
+  });
+
+  // 柱状图
+  renderPeerCharts(allPeers);
+}
+
+function renderPeerCharts(peers){
+  // PE 柱状图
+  var peDom = document.getElementById('peerPeChart');
+  var peChart = echarts.init(peDom);
+  var peNames = peers.map(function(p){ return p.name.length > 4 ? p.name.slice(0,4) : p.name; });
+  var peVals = peers.map(function(p){ return p.pe; });
+
+  peChart.setOption({
+    backgroundColor:'transparent',
+    title:{text:'PE(TTM) 对比',textStyle:{fontSize:12,color:'#8b949e'},left:'center',top:0},
+    grid:{top:28,right:10,bottom:30,left:10},
+    xAxis:{type:'category',data:peNames,axisLabel:{fontSize:9,color:'#8b949e',rotate:30},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
+    yAxis:{type:'value',show:false},
+    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:11},formatter:function(p){ return p[0].name+': '+p[0].value+'x'; }},
+    series:[{type:'bar',data:peVals.map(function(v,i){
+      return {value:v, itemStyle:{color:v==null?'#30363d':(v<=22?'#3fb950':v<=30?'#d29922':v<=60?'#e08030':'#f85149')}};
+    }),barMaxWidth:28}]
+  });
+  window.addEventListener('resize',function(){ peChart.resize(); });
+
+  // ROE 柱状图
+  var roeDom = document.getElementById('peerRoeChart');
+  var roeChart = echarts.init(roeDom);
+  var roeVals = peers.map(function(p){ return p.roe; });
+
+  roeChart.setOption({
+    backgroundColor:'transparent',
+    title:{text:'ROE(%) 对比',textStyle:{fontSize:12,color:'#8b949e'},left:'center',top:0},
+    grid:{top:28,right:10,bottom:30,left:10},
+    xAxis:{type:'category',data:peNames,axisLabel:{fontSize:9,color:'#8b949e',rotate:30},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
+    yAxis:{type:'value',show:false},
+    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:11},formatter:function(p){ return p[0].name+': '+p[0].value+'%'; }},
+    series:[{type:'bar',data:roeVals.map(function(v){
+      return {value:v, itemStyle:{color:v==null?'#30363d':(v>=20?'#3fb950':v>=10?'#d29922':'#f85149')}};
+    }),barMaxWidth:28}]
+  });
+  window.addEventListener('resize',function(){ roeChart.resize(); });
+
+  // 毛利率柱状图
+  var gpmDom = document.getElementById('peerGpmChart');
+  var gpmChart = echarts.init(gpmDom);
+  var gpmVals = peers.map(function(p){ return p.gpm; });
+
+  gpmChart.setOption({
+    backgroundColor:'transparent',
+    title:{text:'毛利率(%) 对比',textStyle:{fontSize:12,color:'#8b949e'},left:'center',top:0},
+    grid:{top:28,right:10,bottom:30,left:10},
+    xAxis:{type:'category',data:peNames,axisLabel:{fontSize:9,color:'#8b949e',rotate:30},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
+    yAxis:{type:'value',show:false},
+    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:11},formatter:function(p){ return p[0].name+': '+p[0].value+'%'; }},
+    series:[{type:'bar',data:gpmVals.map(function(v){
+      return {value:v, itemStyle:{color:v==null?'#30363d':(v>=30?'#3fb950':v>=20?'#d29922':'#f85149')}};
+    }),barMaxWidth:28}]
+  });
+  window.addEventListener('resize',function(){ gpmChart.resize(); });
 }
 
 function renderPriceChart(d){
@@ -449,36 +654,18 @@ function renderAhChart(d){
     yAxis:{type:'value',scale:true,axisLabel:{fontSize:10,color:'#8b949e',formatter:'{value}%'},splitLine:{lineStyle:{color:'#21262d'}},axisLine:{show:false}},
     tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:12},
       formatter:function(params){
-        var p = params[0];
-        var idx = p.dataIndex;
-        var s = d.ah_premium_series[idx];
+        var p = params[0]; var idx = p.dataIndex; var s = d.ah_premium_series[idx];
         return s.date.slice(0,4)+'/'+s.date.slice(4,6)+'/'+s.date.slice(6,8)+'<br/>'
           +'AH溢价: <b>'+s.premium+'%</b><br/>'
           +'A股: ¥'+s.a_close+' / H股(CNY): ¥'+s.h_close_cny;
       }
     },
-    visualMap:{
-      show:false,
-      pieces:[
-        {lte:0,color:'#58a6ff'},
-        {gt:0,lte:40,color:'#3fb950'},
-        {gt:40,lte:70,color:'#d29922'},
-        {gt:70,color:'#f85149'}
-      ]
-    },
+    visualMap:{show:false,pieces:[{lte:0,color:'#58a6ff'},{gt:0,lte:40,color:'#3fb950'},{gt:40,lte:70,color:'#d29922'},{gt:70,color:'#f85149'}]},
     series:[{
-      name:'AH溢价',
-      type:'line',
-      data:vals,
-      lineStyle:{width:2},
-      areaStyle:{opacity:0.15},
-      symbol:'none',
-      markLine:{
-        silent:true,
-        data:[
-          {yAxis:0,lineStyle:{color:'#58a6ff',type:'solid',width:1,opacity:0.5},label:{show:true,formatter:'A=H',fontSize:10,color:'#8b949e',position:'insideEndTop'}}
-        ]
-      }
+      name:'AH溢价',type:'line',data:vals,lineStyle:{width:2},areaStyle:{opacity:0.15},symbol:'none',
+      markLine:{silent:true,data:[
+        {yAxis:0,lineStyle:{color:'#58a6ff',type:'solid',width:1,opacity:0.5},label:{show:true,formatter:'A=H',fontSize:10,color:'#8b949e',position:'insideEndTop'}}
+      ]}
     }]
   });
   window.addEventListener('resize', function(){ chart.resize(); });
