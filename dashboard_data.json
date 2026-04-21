@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-21 23:59",
+  "update_time": "2026-04-22 00:38",
   "trade_date": "20260421",
   "catl": {
     "close": 447.6,
@@ -11,6 +11,10 @@
     "amount": 2541.0,
     "mv": 19694.0,
     "pe_ttm": 24.96,
+    "pb": 5.72,
+    "roe": 24.91,
+    "gpm": 24.82,
+    "npm": 17.61,
     "ma20": 413.53,
     "ma60": 380.94,
     "ma20_trend": "up",
@@ -27,38 +31,127 @@
     "hkd_cny": 0.8766
   },
   "industry": {
-    "pe_median": 28.54,
-    "peer_premium": -12.54,
+    "pe_median": 36.15,
+    "peer_premium": -30.95,
     "peers": [
       {
         "code": "002594.SZ",
         "name": "比亚迪",
+        "chain": "电池+整车",
         "close": 101.53,
-        "pe": 9.06
+        "pct_chg": -1.341,
+        "pe": 9.06,
+        "em_pe": null,
+        "pb": 4.07,
+        "roe": 15.31,
+        "gpm": 17.74,
+        "npm": 4.2,
+        "rev_yoy": null,
+        "profit_yoy": null,
+        "mv": null,
+        "f10_report": "2025-12-31"
       },
       {
         "code": "300014.SZ",
         "name": "亿纬锂能",
+        "chain": "电池",
         "close": 71.98,
-        "pe": 36.15
+        "pct_chg": 4.3794,
+        "pe": 36.15,
+        "em_pe": null,
+        "pb": 3.55,
+        "roe": 10.5,
+        "gpm": 16.17,
+        "npm": 7.0,
+        "rev_yoy": null,
+        "profit_yoy": null,
+        "mv": null,
+        "f10_report": "2025-12-31"
       },
       {
         "code": "002074.SZ",
         "name": "国轩高科",
+        "chain": "电池(大众系)",
         "close": 40.56,
-        "pe": 25.58
+        "pct_chg": 1.5523,
+        "pe": 25.58,
+        "em_pe": null,
+        "pb": 2.59,
+        "roe": 4.77,
+        "gpm": 16.82,
+        "npm": 8.28,
+        "rev_yoy": null,
+        "profit_yoy": null,
+        "mv": null,
+        "f10_report": "2024-12-31"
       },
       {
         "code": "300207.SZ",
         "name": "欣旺达",
+        "chain": "电池+消费",
         "close": 29.65,
-        "pe": 28.54
+        "pct_chg": 2.1006,
+        "pe": 28.54,
+        "em_pe": null,
+        "pb": 2.19,
+        "roe": 6.26,
+        "gpm": 16.84,
+        "npm": 1.74,
+        "rev_yoy": null,
+        "profit_yoy": null,
+        "mv": null,
+        "f10_report": "2024-12-31"
       },
       {
-        "code": "300438.SZ",
-        "name": "鹏辉能源",
-        "close": 67.12,
-        "pe": 377.89
+        "code": "002709.SZ",
+        "name": "天赐材料",
+        "chain": "电解液",
+        "close": 52.79,
+        "pct_chg": 6.3243,
+        "pe": 75.94,
+        "em_pe": null,
+        "pb": 6.01,
+        "roe": 9.79,
+        "gpm": 22.24,
+        "npm": 8.07,
+        "rev_yoy": null,
+        "profit_yoy": null,
+        "mv": null,
+        "f10_report": "2025-12-31"
+      },
+      {
+        "code": "002460.SZ",
+        "name": "赣锋锂业",
+        "chain": "锂资源",
+        "close": 83.36,
+        "pct_chg": 0.7859,
+        "pe": 105.09,
+        "em_pe": null,
+        "pb": 3.87,
+        "roe": 3.8,
+        "gpm": 15.72,
+        "npm": 5.47,
+        "rev_yoy": null,
+        "profit_yoy": null,
+        "mv": null,
+        "f10_report": "2025-12-31"
+      },
+      {
+        "code": "002466.SZ",
+        "name": "天齐锂业",
+        "chain": "锂资源",
+        "close": 70.71,
+        "pct_chg": 5.8216,
+        "pe": 209.87,
+        "em_pe": null,
+        "pb": 2.74,
+        "roe": 1.1,
+        "gpm": 39.47,
+        "npm": 29.02,
+        "rev_yoy": null,
+        "profit_yoy": null,
+        "mv": null,
+        "f10_report": "2025-12-31"
       }
     ]
   },
@@ -76,6 +169,1584 @@
     "ratio": 3.6,
     "change": -509500,
     "change_pct": -8.28
+  },
+  "pe_history": {
+    "current_pe": 30.34,
+    "current_percentile": 69.3,
+    "min": 8.1,
+    "max": 84.8,
+    "median": 23.6,
+    "p25": 18.0,
+    "p75": 35.5,
+    "data_days": 1040,
+    "series": [
+      {
+        "date": "20211231",
+        "close": 588.0,
+        "pe_ttm": 81.5,
+        "pe_percentile": 99.3
+      },
+      {
+        "date": "20220107",
+        "close": 539.9,
+        "pe_ttm": 74.83,
+        "pe_percentile": 94.9
+      },
+      {
+        "date": "20220113",
+        "close": 565.0,
+        "pe_ttm": 78.31,
+        "pe_percentile": 97.7
+      },
+      {
+        "date": "20220119",
+        "close": 569.99,
+        "pe_ttm": 79.0,
+        "pe_percentile": 98.4
+      },
+      {
+        "date": "20220125",
+        "close": 565.6,
+        "pe_ttm": 78.39,
+        "pe_percentile": 97.9
+      },
+      {
+        "date": "20220207",
+        "close": 579.44,
+        "pe_ttm": 84.75,
+        "pe_percentile": 99.8
+      },
+      {
+        "date": "20220211",
+        "close": 489.99,
+        "pe_ttm": 71.66,
+        "pe_percentile": 92.4
+      },
+      {
+        "date": "20220217",
+        "close": 535.0,
+        "pe_ttm": 78.25,
+        "pe_percentile": 97.6
+      },
+      {
+        "date": "20220223",
+        "close": 519.0,
+        "pe_ttm": 75.91,
+        "pe_percentile": 96.2
+      },
+      {
+        "date": "20220301",
+        "close": 536.18,
+        "pe_ttm": 78.42,
+        "pe_percentile": 98.0
+      },
+      {
+        "date": "20220307",
+        "close": 454.89,
+        "pe_ttm": 66.53,
+        "pe_percentile": 87.6
+      },
+      {
+        "date": "20220311",
+        "close": 493.55,
+        "pe_ttm": 72.18,
+        "pe_percentile": 92.7
+      },
+      {
+        "date": "20220317",
+        "close": 524.5,
+        "pe_ttm": 76.71,
+        "pe_percentile": 96.8
+      },
+      {
+        "date": "20220323",
+        "close": 515.29,
+        "pe_ttm": 75.36,
+        "pe_percentile": 95.7
+      },
+      {
+        "date": "20220329",
+        "close": 486.9,
+        "pe_ttm": 71.21,
+        "pe_percentile": 91.6
+      },
+      {
+        "date": "20220406",
+        "close": 508.17,
+        "pe_ttm": 76.48,
+        "pe_percentile": 96.7
+      },
+      {
+        "date": "20220412",
+        "close": 472.0,
+        "pe_ttm": 71.03,
+        "pe_percentile": 91.4
+      },
+      {
+        "date": "20220418",
+        "close": 451.0,
+        "pe_ttm": 67.87,
+        "pe_percentile": 88.3
+      },
+      {
+        "date": "20220422",
+        "close": 415.34,
+        "pe_ttm": 62.51,
+        "pe_percentile": 86.1
+      },
+      {
+        "date": "20220428",
+        "close": 387.5,
+        "pe_ttm": 58.32,
+        "pe_percentile": 83.9
+      },
+      {
+        "date": "20220509",
+        "close": 368.5,
+        "pe_ttm": 55.46,
+        "pe_percentile": 82.5
+      },
+      {
+        "date": "20220513",
+        "close": 414.8,
+        "pe_ttm": 62.43,
+        "pe_percentile": 86.0
+      },
+      {
+        "date": "20220519",
+        "close": 419.0,
+        "pe_ttm": 63.06,
+        "pe_percentile": 86.2
+      },
+      {
+        "date": "20220525",
+        "close": 398.98,
+        "pe_ttm": 60.05,
+        "pe_percentile": 84.5
+      },
+      {
+        "date": "20220531",
+        "close": 408.0,
+        "pe_ttm": 61.4,
+        "pe_percentile": 85.3
+      },
+      {
+        "date": "20220607",
+        "close": 459.0,
+        "pe_ttm": 69.08,
+        "pe_percentile": 89.3
+      },
+      {
+        "date": "20220613",
+        "close": 443.03,
+        "pe_ttm": 66.67,
+        "pe_percentile": 87.8
+      },
+      {
+        "date": "20220617",
+        "close": 486.06,
+        "pe_ttm": 73.15,
+        "pe_percentile": 93.3
+      },
+      {
+        "date": "20220623",
+        "close": 536.97,
+        "pe_ttm": 80.81,
+        "pe_percentile": 99.0
+      },
+      {
+        "date": "20220629",
+        "close": 532.54,
+        "pe_ttm": 80.15,
+        "pe_percentile": 98.8
+      },
+      {
+        "date": "20220705",
+        "close": 523.87,
+        "pe_ttm": 71.26,
+        "pe_percentile": 91.9
+      },
+      {
+        "date": "20220711",
+        "close": 518.5,
+        "pe_ttm": 70.53,
+        "pe_percentile": 90.9
+      },
+      {
+        "date": "20220715",
+        "close": 533.0,
+        "pe_ttm": 72.51,
+        "pe_percentile": 93.0
+      },
+      {
+        "date": "20220721",
+        "close": 521.0,
+        "pe_ttm": 70.87,
+        "pe_percentile": 91.0
+      },
+      {
+        "date": "20220727",
+        "close": 515.2,
+        "pe_ttm": 70.09,
+        "pe_percentile": 90.4
+      },
+      {
+        "date": "20220802",
+        "close": 523.87,
+        "pe_ttm": 71.26,
+        "pe_percentile": 91.9
+      },
+      {
+        "date": "20220808",
+        "close": 501.5,
+        "pe_ttm": 68.22,
+        "pe_percentile": 88.5
+      },
+      {
+        "date": "20220812",
+        "close": 502.0,
+        "pe_ttm": 68.29,
+        "pe_percentile": 88.6
+      },
+      {
+        "date": "20220818",
+        "close": 544.8,
+        "pe_ttm": 74.11,
+        "pe_percentile": 93.8
+      },
+      {
+        "date": "20220824",
+        "close": 524.0,
+        "pe_ttm": 71.28,
+        "pe_percentile": 92.1
+      },
+      {
+        "date": "20220830",
+        "close": 491.5,
+        "pe_ttm": 66.86,
+        "pe_percentile": 87.9
+      },
+      {
+        "date": "20220905",
+        "close": 468.36,
+        "pe_ttm": 63.71,
+        "pe_percentile": 86.7
+      },
+      {
+        "date": "20220909",
+        "close": 452.22,
+        "pe_ttm": 61.52,
+        "pe_percentile": 85.4
+      },
+      {
+        "date": "20220916",
+        "close": 410.0,
+        "pe_ttm": 55.77,
+        "pe_percentile": 82.6
+      },
+      {
+        "date": "20220922",
+        "close": 414.99,
+        "pe_ttm": 56.45,
+        "pe_percentile": 82.9
+      },
+      {
+        "date": "20220928",
+        "close": 416.79,
+        "pe_ttm": 56.7,
+        "pe_percentile": 83.2
+      },
+      {
+        "date": "20221011",
+        "close": 416.3,
+        "pe_ttm": 39.96,
+        "pe_percentile": 81.2
+      },
+      {
+        "date": "20221017",
+        "close": 429.35,
+        "pe_ttm": 41.22,
+        "pe_percentile": 81.9
+      },
+      {
+        "date": "20221021",
+        "close": 413.0,
+        "pe_ttm": 39.65,
+        "pe_percentile": 80.9
+      },
+      {
+        "date": "20221027",
+        "close": 390.3,
+        "pe_ttm": 37.47,
+        "pe_percentile": 77.5
+      },
+      {
+        "date": "20221102",
+        "close": 391.5,
+        "pe_ttm": 37.58,
+        "pe_percentile": 77.7
+      },
+      {
+        "date": "20221108",
+        "close": 409.8,
+        "pe_ttm": 39.34,
+        "pe_percentile": 80.7
+      },
+      {
+        "date": "20221114",
+        "close": 387.18,
+        "pe_ttm": 37.17,
+        "pe_percentile": 77.0
+      },
+      {
+        "date": "20221118",
+        "close": 380.79,
+        "pe_ttm": 36.55,
+        "pe_percentile": 76.2
+      },
+      {
+        "date": "20221124",
+        "close": 376.62,
+        "pe_ttm": 36.15,
+        "pe_percentile": 75.9
+      },
+      {
+        "date": "20221130",
+        "close": 385.0,
+        "pe_ttm": 36.96,
+        "pe_percentile": 76.5
+      },
+      {
+        "date": "20221206",
+        "close": 400.02,
+        "pe_ttm": 38.4,
+        "pe_percentile": 79.1
+      },
+      {
+        "date": "20221212",
+        "close": 414.35,
+        "pe_ttm": 39.78,
+        "pe_percentile": 81.0
+      },
+      {
+        "date": "20221216",
+        "close": 418.01,
+        "pe_ttm": 40.13,
+        "pe_percentile": 81.3
+      },
+      {
+        "date": "20221222",
+        "close": 402.0,
+        "pe_ttm": 38.59,
+        "pe_percentile": 79.6
+      },
+      {
+        "date": "20221228",
+        "close": 394.0,
+        "pe_ttm": 37.82,
+        "pe_percentile": 78.5
+      },
+      {
+        "date": "20230104",
+        "close": 384.01,
+        "pe_ttm": 30.61,
+        "pe_percentile": 69.9
+      },
+      {
+        "date": "20230110",
+        "close": 432.0,
+        "pe_ttm": 34.44,
+        "pe_percentile": 74.1
+      },
+      {
+        "date": "20230116",
+        "close": 446.63,
+        "pe_ttm": 35.6,
+        "pe_percentile": 75.1
+      },
+      {
+        "date": "20230120",
+        "close": 452.0,
+        "pe_ttm": 36.03,
+        "pe_percentile": 75.8
+      },
+      {
+        "date": "20230202",
+        "close": 466.1,
+        "pe_ttm": 38.91,
+        "pe_percentile": 80.3
+      },
+      {
+        "date": "20230208",
+        "close": 447.21,
+        "pe_ttm": 37.33,
+        "pe_percentile": 77.2
+      },
+      {
+        "date": "20230214",
+        "close": 451.05,
+        "pe_ttm": 37.65,
+        "pe_percentile": 78.0
+      },
+      {
+        "date": "20230220",
+        "close": 420.47,
+        "pe_ttm": 35.1,
+        "pe_percentile": 74.8
+      },
+      {
+        "date": "20230224",
+        "close": 405.4,
+        "pe_ttm": 33.84,
+        "pe_percentile": 73.6
+      },
+      {
+        "date": "20230302",
+        "close": 400.8,
+        "pe_ttm": 33.46,
+        "pe_percentile": 73.1
+      },
+      {
+        "date": "20230308",
+        "close": 397.73,
+        "pe_ttm": 33.2,
+        "pe_percentile": 72.4
+      },
+      {
+        "date": "20230314",
+        "close": 387.23,
+        "pe_ttm": 32.32,
+        "pe_percentile": 71.5
+      },
+      {
+        "date": "20230320",
+        "close": 379.95,
+        "pe_ttm": 31.72,
+        "pe_percentile": 71.2
+      },
+      {
+        "date": "20230324",
+        "close": 393.58,
+        "pe_ttm": 32.85,
+        "pe_percentile": 72.0
+      },
+      {
+        "date": "20230330",
+        "close": 400.11,
+        "pe_ttm": 33.4,
+        "pe_percentile": 72.9
+      },
+      {
+        "date": "20230406",
+        "close": 388.02,
+        "pe_ttm": 25.21,
+        "pe_percentile": 55.4
+      },
+      {
+        "date": "20230412",
+        "close": 392.01,
+        "pe_ttm": 25.47,
+        "pe_percentile": 56.1
+      },
+      {
+        "date": "20230418",
+        "close": 409.0,
+        "pe_ttm": 26.57,
+        "pe_percentile": 59.2
+      },
+      {
+        "date": "20230424",
+        "close": 396.88,
+        "pe_ttm": 25.78,
+        "pe_percentile": 56.7
+      },
+      {
+        "date": "20230428",
+        "close": 230.85,
+        "pe_ttm": 15.0,
+        "pe_percentile": 15.2
+      },
+      {
+        "date": "20230509",
+        "close": 225.83,
+        "pe_ttm": 14.67,
+        "pe_percentile": 14.3
+      },
+      {
+        "date": "20230515",
+        "close": 238.29,
+        "pe_ttm": 15.48,
+        "pe_percentile": 16.6
+      },
+      {
+        "date": "20230519",
+        "close": 230.0,
+        "pe_ttm": 14.94,
+        "pe_percentile": 14.8
+      },
+      {
+        "date": "20230525",
+        "close": 224.09,
+        "pe_ttm": 14.56,
+        "pe_percentile": 13.5
+      },
+      {
+        "date": "20230531",
+        "close": 221.17,
+        "pe_ttm": 14.37,
+        "pe_percentile": 13.0
+      },
+      {
+        "date": "20230606",
+        "close": 219.28,
+        "pe_ttm": 14.25,
+        "pe_percentile": 12.7
+      },
+      {
+        "date": "20230612",
+        "close": 211.95,
+        "pe_ttm": 13.77,
+        "pe_percentile": 11.7
+      },
+      {
+        "date": "20230616",
+        "close": 231.1,
+        "pe_ttm": 15.01,
+        "pe_percentile": 15.4
+      },
+      {
+        "date": "20230626",
+        "close": 225.17,
+        "pe_ttm": 14.63,
+        "pe_percentile": 13.9
+      },
+      {
+        "date": "20230630",
+        "close": 228.79,
+        "pe_ttm": 12.9,
+        "pe_percentile": 8.8
+      },
+      {
+        "date": "20230706",
+        "close": 224.85,
+        "pe_ttm": 12.68,
+        "pe_percentile": 7.7
+      },
+      {
+        "date": "20230712",
+        "close": 226.99,
+        "pe_ttm": 12.8,
+        "pe_percentile": 8.3
+      },
+      {
+        "date": "20230718",
+        "close": 225.5,
+        "pe_ttm": 12.71,
+        "pe_percentile": 7.8
+      },
+      {
+        "date": "20230724",
+        "close": 218.98,
+        "pe_ttm": 12.35,
+        "pe_percentile": 7.0
+      },
+      {
+        "date": "20230728",
+        "close": 230.05,
+        "pe_ttm": 12.97,
+        "pe_percentile": 9.4
+      },
+      {
+        "date": "20230803",
+        "close": 239.14,
+        "pe_ttm": 13.48,
+        "pe_percentile": 11.4
+      },
+      {
+        "date": "20230809",
+        "close": 247.0,
+        "pe_ttm": 13.93,
+        "pe_percentile": 12.4
+      },
+      {
+        "date": "20230815",
+        "close": 231.3,
+        "pe_ttm": 13.04,
+        "pe_percentile": 9.8
+      },
+      {
+        "date": "20230821",
+        "close": 232.96,
+        "pe_ttm": 13.13,
+        "pe_percentile": 10.0
+      },
+      {
+        "date": "20230825",
+        "close": 228.34,
+        "pe_ttm": 12.87,
+        "pe_percentile": 8.7
+      },
+      {
+        "date": "20230831",
+        "close": 236.55,
+        "pe_ttm": 13.34,
+        "pe_percentile": 10.8
+      },
+      {
+        "date": "20230906",
+        "close": 234.42,
+        "pe_ttm": 13.22,
+        "pe_percentile": 10.2
+      },
+      {
+        "date": "20230912",
+        "close": 217.93,
+        "pe_ttm": 12.29,
+        "pe_percentile": 6.9
+      },
+      {
+        "date": "20230918",
+        "close": 213.06,
+        "pe_ttm": 12.01,
+        "pe_percentile": 6.6
+      },
+      {
+        "date": "20230922",
+        "close": 210.93,
+        "pe_ttm": 11.89,
+        "pe_percentile": 6.4
+      },
+      {
+        "date": "20230928",
+        "close": 203.03,
+        "pe_ttm": 11.45,
+        "pe_percentile": 5.8
+      },
+      {
+        "date": "20231012",
+        "close": 195.94,
+        "pe_ttm": 10.8,
+        "pe_percentile": 5.6
+      },
+      {
+        "date": "20231018",
+        "close": 186.3,
+        "pe_ttm": 10.27,
+        "pe_percentile": 4.3
+      },
+      {
+        "date": "20231024",
+        "close": 176.42,
+        "pe_ttm": 9.72,
+        "pe_percentile": 2.6
+      },
+      {
+        "date": "20231030",
+        "close": 188.02,
+        "pe_ttm": 10.36,
+        "pe_percentile": 4.7
+      },
+      {
+        "date": "20231103",
+        "close": 187.44,
+        "pe_ttm": 10.33,
+        "pe_percentile": 4.4
+      },
+      {
+        "date": "20231109",
+        "close": 191.45,
+        "pe_ttm": 10.55,
+        "pe_percentile": 5.1
+      },
+      {
+        "date": "20231115",
+        "close": 184.48,
+        "pe_ttm": 10.16,
+        "pe_percentile": 3.8
+      },
+      {
+        "date": "20231121",
+        "close": 180.61,
+        "pe_ttm": 9.95,
+        "pe_percentile": 3.2
+      },
+      {
+        "date": "20231127",
+        "close": 170.7,
+        "pe_ttm": 9.41,
+        "pe_percentile": 2.2
+      },
+      {
+        "date": "20231201",
+        "close": 165.5,
+        "pe_ttm": 9.12,
+        "pe_percentile": 1.9
+      },
+      {
+        "date": "20231207",
+        "close": 164.49,
+        "pe_ttm": 9.06,
+        "pe_percentile": 1.7
+      },
+      {
+        "date": "20231213",
+        "close": 159.35,
+        "pe_ttm": 8.78,
+        "pe_percentile": 1.1
+      },
+      {
+        "date": "20231219",
+        "close": 149.0,
+        "pe_ttm": 8.21,
+        "pe_percentile": 0.2
+      },
+      {
+        "date": "20231225",
+        "close": 157.54,
+        "pe_ttm": 8.68,
+        "pe_percentile": 0.9
+      },
+      {
+        "date": "20231229",
+        "close": 163.26,
+        "pe_ttm": 9.0,
+        "pe_percentile": 1.4
+      },
+      {
+        "date": "20240105",
+        "close": 150.9,
+        "pe_ttm": 15.44,
+        "pe_percentile": 16.3
+      },
+      {
+        "date": "20240111",
+        "close": 154.82,
+        "pe_ttm": 15.84,
+        "pe_percentile": 17.8
+      },
+      {
+        "date": "20240117",
+        "close": 152.24,
+        "pe_ttm": 15.57,
+        "pe_percentile": 17.1
+      },
+      {
+        "date": "20240123",
+        "close": 153.91,
+        "pe_ttm": 15.74,
+        "pe_percentile": 17.5
+      },
+      {
+        "date": "20240129",
+        "close": 147.02,
+        "pe_ttm": 15.04,
+        "pe_percentile": 15.6
+      },
+      {
+        "date": "20240202",
+        "close": 146.0,
+        "pe_ttm": 14.94,
+        "pe_percentile": 14.8
+      },
+      {
+        "date": "20240208",
+        "close": 162.84,
+        "pe_ttm": 16.66,
+        "pe_percentile": 19.8
+      },
+      {
+        "date": "20240222",
+        "close": 160.35,
+        "pe_ttm": 16.4,
+        "pe_percentile": 19.4
+      },
+      {
+        "date": "20240228",
+        "close": 157.01,
+        "pe_ttm": 16.06,
+        "pe_percentile": 18.5
+      },
+      {
+        "date": "20240305",
+        "close": 164.65,
+        "pe_ttm": 16.84,
+        "pe_percentile": 21.0
+      },
+      {
+        "date": "20240311",
+        "close": 180.85,
+        "pe_ttm": 18.5,
+        "pe_percentile": 26.8
+      },
+      {
+        "date": "20240315",
+        "close": 181.0,
+        "pe_ttm": 18.52,
+        "pe_percentile": 26.9
+      },
+      {
+        "date": "20240321",
+        "close": 189.08,
+        "pe_ttm": 19.34,
+        "pe_percentile": 29.5
+      },
+      {
+        "date": "20240327",
+        "close": 188.0,
+        "pe_ttm": 19.23,
+        "pe_percentile": 28.7
+      },
+      {
+        "date": "20240402",
+        "close": 199.7,
+        "pe_ttm": 20.8,
+        "pe_percentile": 38.1
+      },
+      {
+        "date": "20240410",
+        "close": 192.74,
+        "pe_ttm": 20.07,
+        "pe_percentile": 32.8
+      },
+      {
+        "date": "20240416",
+        "close": 197.15,
+        "pe_ttm": 20.53,
+        "pe_percentile": 35.9
+      },
+      {
+        "date": "20240422",
+        "close": 190.6,
+        "pe_ttm": 19.85,
+        "pe_percentile": 31.9
+      },
+      {
+        "date": "20240426",
+        "close": 198.48,
+        "pe_ttm": 20.67,
+        "pe_percentile": 37.2
+      },
+      {
+        "date": "20240507",
+        "close": 206.88,
+        "pe_ttm": 21.55,
+        "pe_percentile": 41.2
+      },
+      {
+        "date": "20240513",
+        "close": 199.35,
+        "pe_ttm": 20.76,
+        "pe_percentile": 37.7
+      },
+      {
+        "date": "20240517",
+        "close": 203.0,
+        "pe_ttm": 21.14,
+        "pe_percentile": 39.6
+      },
+      {
+        "date": "20240523",
+        "close": 204.34,
+        "pe_ttm": 21.28,
+        "pe_percentile": 40.4
+      },
+      {
+        "date": "20240529",
+        "close": 198.79,
+        "pe_ttm": 20.7,
+        "pe_percentile": 37.4
+      },
+      {
+        "date": "20240604",
+        "close": 205.97,
+        "pe_ttm": 21.45,
+        "pe_percentile": 40.9
+      },
+      {
+        "date": "20240611",
+        "close": 188.77,
+        "pe_ttm": 19.66,
+        "pe_percentile": 31.1
+      },
+      {
+        "date": "20240617",
+        "close": 188.2,
+        "pe_ttm": 19.6,
+        "pe_percentile": 30.7
+      },
+      {
+        "date": "20240621",
+        "close": 185.16,
+        "pe_ttm": 19.28,
+        "pe_percentile": 28.9
+      },
+      {
+        "date": "20240627",
+        "close": 185.0,
+        "pe_ttm": 19.27,
+        "pe_percentile": 28.8
+      },
+      {
+        "date": "20240703",
+        "close": 179.5,
+        "pe_ttm": 17.38,
+        "pe_percentile": 22.6
+      },
+      {
+        "date": "20240709",
+        "close": 175.77,
+        "pe_ttm": 17.02,
+        "pe_percentile": 21.4
+      },
+      {
+        "date": "20240715",
+        "close": 178.12,
+        "pe_ttm": 17.25,
+        "pe_percentile": 22.3
+      },
+      {
+        "date": "20240719",
+        "close": 189.44,
+        "pe_ttm": 18.34,
+        "pe_percentile": 26.5
+      },
+      {
+        "date": "20240725",
+        "close": 187.73,
+        "pe_ttm": 18.18,
+        "pe_percentile": 25.8
+      },
+      {
+        "date": "20240731",
+        "close": 186.31,
+        "pe_ttm": 18.04,
+        "pe_percentile": 24.9
+      },
+      {
+        "date": "20240806",
+        "close": 174.95,
+        "pe_ttm": 16.94,
+        "pe_percentile": 21.2
+      },
+      {
+        "date": "20240812",
+        "close": 169.0,
+        "pe_ttm": 16.36,
+        "pe_percentile": 19.1
+      },
+      {
+        "date": "20240816",
+        "close": 173.62,
+        "pe_ttm": 16.81,
+        "pe_percentile": 20.6
+      },
+      {
+        "date": "20240822",
+        "close": 178.8,
+        "pe_ttm": 17.31,
+        "pe_percentile": 22.4
+      },
+      {
+        "date": "20240828",
+        "close": 182.82,
+        "pe_ttm": 17.7,
+        "pe_percentile": 23.7
+      },
+      {
+        "date": "20240903",
+        "close": 185.65,
+        "pe_ttm": 17.97,
+        "pe_percentile": 24.5
+      },
+      {
+        "date": "20240909",
+        "close": 185.15,
+        "pe_ttm": 17.93,
+        "pe_percentile": 24.4
+      },
+      {
+        "date": "20240913",
+        "close": 183.5,
+        "pe_ttm": 17.77,
+        "pe_percentile": 23.8
+      },
+      {
+        "date": "20240923",
+        "close": 188.2,
+        "pe_ttm": 18.22,
+        "pe_percentile": 26.0
+      },
+      {
+        "date": "20240927",
+        "close": 226.81,
+        "pe_ttm": 21.96,
+        "pe_percentile": 42.8
+      },
+      {
+        "date": "20241010",
+        "close": 258.0,
+        "pe_ttm": 23.57,
+        "pe_percentile": 49.8
+      },
+      {
+        "date": "20241016",
+        "close": 233.85,
+        "pe_ttm": 21.37,
+        "pe_percentile": 40.8
+      },
+      {
+        "date": "20241022",
+        "close": 250.55,
+        "pe_ttm": 22.89,
+        "pe_percentile": 46.4
+      },
+      {
+        "date": "20241028",
+        "close": 256.24,
+        "pe_ttm": 23.41,
+        "pe_percentile": 48.9
+      },
+      {
+        "date": "20241101",
+        "close": 246.2,
+        "pe_ttm": 22.49,
+        "pe_percentile": 44.6
+      },
+      {
+        "date": "20241107",
+        "close": 262.8,
+        "pe_ttm": 24.01,
+        "pe_percentile": 51.9
+      },
+      {
+        "date": "20241113",
+        "close": 282.0,
+        "pe_ttm": 25.77,
+        "pe_percentile": 56.6
+      },
+      {
+        "date": "20241119",
+        "close": 268.72,
+        "pe_ttm": 24.55,
+        "pe_percentile": 54.2
+      },
+      {
+        "date": "20241125",
+        "close": 264.1,
+        "pe_ttm": 24.13,
+        "pe_percentile": 52.6
+      },
+      {
+        "date": "20241129",
+        "close": 261.24,
+        "pe_ttm": 23.87,
+        "pe_percentile": 50.9
+      },
+      {
+        "date": "20241205",
+        "close": 256.0,
+        "pe_ttm": 23.39,
+        "pe_percentile": 48.8
+      },
+      {
+        "date": "20241211",
+        "close": 267.1,
+        "pe_ttm": 24.4,
+        "pe_percentile": 53.3
+      },
+      {
+        "date": "20241217",
+        "close": 273.8,
+        "pe_ttm": 25.02,
+        "pe_percentile": 55.0
+      },
+      {
+        "date": "20241223",
+        "close": 263.5,
+        "pe_ttm": 24.08,
+        "pe_percentile": 52.4
+      },
+      {
+        "date": "20241227",
+        "close": 262.0,
+        "pe_ttm": 23.94,
+        "pe_percentile": 51.3
+      },
+      {
+        "date": "20250103",
+        "close": 257.63,
+        "pe_ttm": 22.95,
+        "pe_percentile": 46.9
+      },
+      {
+        "date": "20250109",
+        "close": 247.33,
+        "pe_ttm": 22.03,
+        "pe_percentile": 43.0
+      },
+      {
+        "date": "20250115",
+        "close": 250.87,
+        "pe_ttm": 22.35,
+        "pe_percentile": 44.0
+      },
+      {
+        "date": "20250121",
+        "close": 264.18,
+        "pe_ttm": 23.53,
+        "pe_percentile": 49.4
+      },
+      {
+        "date": "20250127",
+        "close": 257.0,
+        "pe_ttm": 22.89,
+        "pe_percentile": 46.4
+      },
+      {
+        "date": "20250210",
+        "close": 258.45,
+        "pe_ttm": 23.02,
+        "pe_percentile": 47.5
+      },
+      {
+        "date": "20250214",
+        "close": 269.71,
+        "pe_ttm": 24.03,
+        "pe_percentile": 52.1
+      },
+      {
+        "date": "20250220",
+        "close": 270.2,
+        "pe_ttm": 24.07,
+        "pe_percentile": 52.3
+      },
+      {
+        "date": "20250226",
+        "close": 268.62,
+        "pe_ttm": 23.93,
+        "pe_percentile": 51.2
+      },
+      {
+        "date": "20250304",
+        "close": 263.0,
+        "pe_ttm": 23.43,
+        "pe_percentile": 49.0
+      },
+      {
+        "date": "20250310",
+        "close": 256.5,
+        "pe_ttm": 22.85,
+        "pe_percentile": 46.2
+      },
+      {
+        "date": "20250314",
+        "close": 262.0,
+        "pe_ttm": 23.34,
+        "pe_percentile": 48.7
+      },
+      {
+        "date": "20250320",
+        "close": 262.15,
+        "pe_ttm": 23.35,
+        "pe_percentile": 48.8
+      },
+      {
+        "date": "20250326",
+        "close": 256.92,
+        "pe_ttm": 22.89,
+        "pe_percentile": 46.4
+      },
+      {
+        "date": "20250401",
+        "close": 249.06,
+        "pe_ttm": 20.17,
+        "pe_percentile": 33.4
+      },
+      {
+        "date": "20250408",
+        "close": 219.05,
+        "pe_ttm": 17.74,
+        "pe_percentile": 23.8
+      },
+      {
+        "date": "20250414",
+        "close": 224.0,
+        "pe_ttm": 18.14,
+        "pe_percentile": 25.6
+      },
+      {
+        "date": "20250418",
+        "close": 225.46,
+        "pe_ttm": 18.26,
+        "pe_percentile": 26.2
+      },
+      {
+        "date": "20250424",
+        "close": 236.87,
+        "pe_ttm": 19.18,
+        "pe_percentile": 28.6
+      },
+      {
+        "date": "20250430",
+        "close": 231.5,
+        "pe_ttm": 18.75,
+        "pe_percentile": 27.2
+      },
+      {
+        "date": "20250509",
+        "close": 248.27,
+        "pe_ttm": 20.11,
+        "pe_percentile": 33.0
+      },
+      {
+        "date": "20250515",
+        "close": 260.18,
+        "pe_ttm": 21.07,
+        "pe_percentile": 39.2
+      },
+      {
+        "date": "20250521",
+        "close": 274.08,
+        "pe_ttm": 22.2,
+        "pe_percentile": 43.4
+      },
+      {
+        "date": "20250527",
+        "close": 253.99,
+        "pe_ttm": 20.57,
+        "pe_percentile": 36.2
+      },
+      {
+        "date": "20250603",
+        "close": 251.15,
+        "pe_ttm": 20.34,
+        "pe_percentile": 34.2
+      },
+      {
+        "date": "20250609",
+        "close": 245.58,
+        "pe_ttm": 19.89,
+        "pe_percentile": 32.1
+      },
+      {
+        "date": "20250613",
+        "close": 248.2,
+        "pe_ttm": 20.1,
+        "pe_percentile": 32.9
+      },
+      {
+        "date": "20250619",
+        "close": 242.1,
+        "pe_ttm": 19.61,
+        "pe_percentile": 30.8
+      },
+      {
+        "date": "20250625",
+        "close": 254.9,
+        "pe_ttm": 20.64,
+        "pe_percentile": 37.1
+      },
+      {
+        "date": "20250701",
+        "close": 251.5,
+        "pe_ttm": 19.51,
+        "pe_percentile": 30.3
+      },
+      {
+        "date": "20250707",
+        "close": 260.89,
+        "pe_ttm": 20.24,
+        "pe_percentile": 33.7
+      },
+      {
+        "date": "20250711",
+        "close": 271.5,
+        "pe_ttm": 21.06,
+        "pe_percentile": 39.0
+      },
+      {
+        "date": "20250717",
+        "close": 265.5,
+        "pe_ttm": 20.59,
+        "pe_percentile": 36.4
+      },
+      {
+        "date": "20250723",
+        "close": 287.02,
+        "pe_ttm": 22.26,
+        "pe_percentile": 43.8
+      },
+      {
+        "date": "20250729",
+        "close": 291.82,
+        "pe_ttm": 22.63,
+        "pe_percentile": 45.1
+      },
+      {
+        "date": "20250804",
+        "close": 266.48,
+        "pe_ttm": 20.67,
+        "pe_percentile": 37.2
+      },
+      {
+        "date": "20250808",
+        "close": 263.48,
+        "pe_ttm": 20.44,
+        "pe_percentile": 35.3
+      },
+      {
+        "date": "20250814",
+        "close": 279.89,
+        "pe_ttm": 21.71,
+        "pe_percentile": 41.9
+      },
+      {
+        "date": "20250820",
+        "close": 279.2,
+        "pe_ttm": 21.66,
+        "pe_percentile": 41.7
+      },
+      {
+        "date": "20250826",
+        "close": 289.5,
+        "pe_ttm": 22.45,
+        "pe_percentile": 44.3
+      },
+      {
+        "date": "20250901",
+        "close": 304.0,
+        "pe_ttm": 23.58,
+        "pe_percentile": 49.9
+      },
+      {
+        "date": "20250905",
+        "close": 325.11,
+        "pe_ttm": 25.22,
+        "pe_percentile": 55.7
+      },
+      {
+        "date": "20250911",
+        "close": 322.55,
+        "pe_ttm": 25.02,
+        "pe_percentile": 55.0
+      },
+      {
+        "date": "20250917",
+        "close": 377.1,
+        "pe_ttm": 29.25,
+        "pe_percentile": 66.0
+      },
+      {
+        "date": "20250923",
+        "close": 368.15,
+        "pe_ttm": 28.55,
+        "pe_percentile": 63.8
+      },
+      {
+        "date": "20250929",
+        "close": 397.37,
+        "pe_ttm": 30.82,
+        "pe_percentile": 70.4
+      },
+      {
+        "date": "20251013",
+        "close": 374.5,
+        "pe_ttm": 28.66,
+        "pe_percentile": 64.4
+      },
+      {
+        "date": "20251017",
+        "close": 358.14,
+        "pe_ttm": 27.41,
+        "pe_percentile": 60.7
+      },
+      {
+        "date": "20251023",
+        "close": 376.45,
+        "pe_ttm": 28.81,
+        "pe_percentile": 65.0
+      },
+      {
+        "date": "20251029",
+        "close": 400.0,
+        "pe_ttm": 30.62,
+        "pe_percentile": 70.0
+      },
+      {
+        "date": "20251104",
+        "close": 378.95,
+        "pe_ttm": 29.0,
+        "pe_percentile": 65.4
+      },
+      {
+        "date": "20251110",
+        "close": 384.51,
+        "pe_ttm": 29.43,
+        "pe_percentile": 66.5
+      },
+      {
+        "date": "20251114",
+        "close": 404.12,
+        "pe_ttm": 30.93,
+        "pe_percentile": 70.6
+      },
+      {
+        "date": "20251120",
+        "close": 379.39,
+        "pe_ttm": 29.04,
+        "pe_percentile": 65.5
+      },
+      {
+        "date": "20251126",
+        "close": 372.82,
+        "pe_ttm": 28.53,
+        "pe_percentile": 63.7
+      },
+      {
+        "date": "20251202",
+        "close": 380.08,
+        "pe_ttm": 29.09,
+        "pe_percentile": 65.6
+      },
+      {
+        "date": "20251208",
+        "close": 392.5,
+        "pe_ttm": 30.04,
+        "pe_percentile": 68.8
+      },
+      {
+        "date": "20251212",
+        "close": 391.8,
+        "pe_ttm": 29.99,
+        "pe_percentile": 68.4
+      },
+      {
+        "date": "20251218",
+        "close": 372.0,
+        "pe_ttm": 28.47,
+        "pe_percentile": 63.5
+      },
+      {
+        "date": "20251224",
+        "close": 375.6,
+        "pe_ttm": 28.75,
+        "pe_percentile": 64.7
+      },
+      {
+        "date": "20251230",
+        "close": 369.2,
+        "pe_ttm": 28.26,
+        "pe_percentile": 62.4
+      },
+      {
+        "date": "20260107",
+        "close": 371.01,
+        "pe_ttm": 28.06,
+        "pe_percentile": 62.1
+      },
+      {
+        "date": "20260113",
+        "close": 359.0,
+        "pe_ttm": 27.15,
+        "pe_percentile": 59.9
+      },
+      {
+        "date": "20260119",
+        "close": 348.9,
+        "pe_ttm": 26.39,
+        "pe_percentile": 58.4
+      },
+      {
+        "date": "20260123",
+        "close": 347.0,
+        "pe_ttm": 26.24,
+        "pe_percentile": 58.0
+      },
+      {
+        "date": "20260129",
+        "close": 341.89,
+        "pe_ttm": 25.86,
+        "pe_percentile": 56.9
+      },
+      {
+        "date": "20260204",
+        "close": 365.03,
+        "pe_ttm": 27.61,
+        "pe_percentile": 61.3
+      },
+      {
+        "date": "20260210",
+        "close": 364.97,
+        "pe_ttm": 27.6,
+        "pe_percentile": 61.2
+      },
+      {
+        "date": "20260224",
+        "close": 361.95,
+        "pe_ttm": 27.37,
+        "pe_percentile": 60.4
+      },
+      {
+        "date": "20260302",
+        "close": 340.22,
+        "pe_ttm": 25.73,
+        "pe_percentile": 56.4
+      },
+      {
+        "date": "20260306",
+        "close": 354.77,
+        "pe_ttm": 26.83,
+        "pe_percentile": 59.7
+      },
+      {
+        "date": "20260312",
+        "close": 395.5,
+        "pe_ttm": 29.91,
+        "pe_percentile": 68.1
+      },
+      {
+        "date": "20260318",
+        "close": 402.02,
+        "pe_ttm": 30.41,
+        "pe_percentile": 69.5
+      },
+      {
+        "date": "20260324",
+        "close": 396.99,
+        "pe_ttm": 30.02,
+        "pe_percentile": 68.6
+      },
+      {
+        "date": "20260330",
+        "close": 413.0,
+        "pe_ttm": 31.24,
+        "pe_percentile": 70.8
+      },
+      {
+        "date": "20260403",
+        "close": 386.46,
+        "pe_ttm": 26.2,
+        "pe_percentile": 57.9
+      },
+      {
+        "date": "20260410",
+        "close": 416.0,
+        "pe_ttm": 28.2,
+        "pe_percentile": 62.2
+      },
+      {
+        "date": "20260416",
+        "close": 453.98,
+        "pe_ttm": 30.77,
+        "pe_percentile": 70.2
+      },
+      {
+        "date": "20260421",
+        "close": 447.6,
+        "pe_ttm": 30.34,
+        "pe_percentile": 69.3
+      }
+    ]
   },
   "price_series": [
     {
@@ -491,10 +2162,10 @@
       "PE 25.0x 处于合理区间",
       "AH溢价 -30.6% 偏低",
       "价格站上20日均线(414)",
-      "个股PE低于行业13%"
+      "个股PE低于行业31%"
     ],
-    "add_triggered": true,
-    "add_ready": 3,
+    "add_triggered": false,
+    "add_ready": 2,
     "add_total": 4,
     "target_price": 394.5
   }
