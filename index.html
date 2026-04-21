@@ -111,6 +111,12 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     </div>
   </div>
 
+  <!-- AH溢价波动图 -->
+  <div class="card g-full">
+    <div class="card-title"><span class="icon">🔄</span> AH 溢价趋势（60日）</div>
+    <div id="ahChart" class="chart-box" style="height:200px"></div>
+  </div>
+
   <!-- 模块二：估值温度计 -->
   <div class="card">
     <div class="card-title"><span class="icon">🌡️</span> 估值温度计 · PE(TTM)</div>
@@ -401,6 +407,7 @@ function render(d){
 
   // 图表
   renderPriceChart(d);
+  renderAhChart(d);
 }
 
 function renderPriceChart(d){
@@ -424,6 +431,55 @@ function renderPriceChart(d){
       {name:'MA20',type:'line',data:ma20Vals,lineStyle:{color:'#d29922',width:1,type:'dashed'},itemStyle:{color:'#d29922'},symbol:'none'},
       {name:'MA60',type:'line',data:ma60Vals,lineStyle:{color:'#f85149',width:1,type:'dotted'},itemStyle:{color:'#f85149'},symbol:'none'}
     ]
+  });
+  window.addEventListener('resize', function(){ chart.resize(); });
+}
+
+function renderAhChart(d){
+  var dom = document.getElementById('ahChart');
+  if(!dom || !d.ah_premium_series || d.ah_premium_series.length < 2) return;
+  var chart = echarts.init(dom);
+  var dates = d.ah_premium_series.map(function(p){ return p.date.slice(4,6)+'/'+p.date.slice(6,8); });
+  var vals = d.ah_premium_series.map(function(p){ return p.premium; });
+  
+  chart.setOption({
+    backgroundColor:'transparent',
+    grid:{top:30,right:20,bottom:24,left:55},
+    xAxis:{type:'category',data:dates,axisLabel:{fontSize:10,color:'#8b949e',interval:Math.floor(dates.length/8)},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
+    yAxis:{type:'value',scale:true,axisLabel:{fontSize:10,color:'#8b949e',formatter:'{value}%'},splitLine:{lineStyle:{color:'#21262d'}},axisLine:{show:false}},
+    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:12},
+      formatter:function(params){
+        var p = params[0];
+        var idx = p.dataIndex;
+        var s = d.ah_premium_series[idx];
+        return s.date.slice(0,4)+'/'+s.date.slice(4,6)+'/'+s.date.slice(6,8)+'<br/>'
+          +'AH溢价: <b>'+s.premium+'%</b><br/>'
+          +'A股: ¥'+s.a_close+' / H股(CNY): ¥'+s.h_close_cny;
+      }
+    },
+    visualMap:{
+      show:false,
+      pieces:[
+        {lte:0,color:'#58a6ff'},
+        {gt:0,lte:40,color:'#3fb950'},
+        {gt:40,lte:70,color:'#d29922'},
+        {gt:70,color:'#f85149'}
+      ]
+    },
+    series:[{
+      name:'AH溢价',
+      type:'line',
+      data:vals,
+      lineStyle:{width:2},
+      areaStyle:{opacity:0.15},
+      symbol:'none',
+      markLine:{
+        silent:true,
+        data:[
+          {yAxis:0,lineStyle:{color:'#58a6ff',type:'solid',width:1,opacity:0.5},label:{show:true,formatter:'A=H',fontSize:10,color:'#8b949e',position:'insideEndTop'}}
+        ]
+      }
+    }]
   });
   window.addEventListener('resize', function(){ chart.resize(); });
 }
