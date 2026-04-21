@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-21 23:06",
+  "update_time": "2026-04-21 23:59",
   "trade_date": "20260421",
   "catl": {
     "close": 447.6,
@@ -10,7 +10,7 @@
     "vol": 58.0,
     "amount": 2541.0,
     "mv": 19694.0,
-    "pe_ttm": 27.28,
+    "pe_ttm": 24.96,
     "ma20": 413.53,
     "ma60": 380.94,
     "ma20_trend": "up",
@@ -27,38 +27,38 @@
     "hkd_cny": 0.8766
   },
   "industry": {
-    "pe_median": 28.3,
-    "peer_premium": -3.6,
+    "pe_median": 28.54,
+    "peer_premium": -12.54,
     "peers": [
       {
         "code": "002594.SZ",
         "name": "比亚迪",
         "close": 101.53,
-        "pe": 5.63
+        "pe": 9.06
       },
       {
         "code": "300014.SZ",
         "name": "亿纬锂能",
         "close": 71.98,
-        "pe": 28.3
+        "pe": 36.15
       },
       {
         "code": "002074.SZ",
         "name": "国轩高科",
         "close": 40.56,
-        "pe": 38.72
+        "pe": 25.58
       },
       {
         "code": "300207.SZ",
         "name": "欣旺达",
         "close": 29.65,
-        "pe": 25.25
+        "pe": 28.54
       },
       {
         "code": "300438.SZ",
         "name": "鹏辉能源",
         "close": 67.12,
-        "pe": 92.17
+        "pe": 377.89
       }
     ]
   },
@@ -241,6 +241,236 @@
       "close": 736.0
     }
   ],
+  "ah_premium_series": [
+    {
+      "date": "20260224",
+      "premium": -21.43,
+      "a_close": 361.95,
+      "h_close_cny": 460.65
+    },
+    {
+      "date": "20260225",
+      "premium": -22.48,
+      "a_close": 362.18,
+      "h_close_cny": 467.23
+    },
+    {
+      "date": "20260226",
+      "premium": -20.81,
+      "a_close": 346.0,
+      "h_close_cny": 436.9
+    },
+    {
+      "date": "20260227",
+      "premium": -21.34,
+      "a_close": 342.01,
+      "h_close_cny": 434.79
+    },
+    {
+      "date": "20260302",
+      "premium": -19.88,
+      "a_close": 340.22,
+      "h_close_cny": 424.63
+    },
+    {
+      "date": "20260303",
+      "premium": -19.4,
+      "a_close": 344.07,
+      "h_close_cny": 426.9
+    },
+    {
+      "date": "20260304",
+      "premium": -19.32,
+      "a_close": 338.9,
+      "h_close_cny": 420.07
+    },
+    {
+      "date": "20260305",
+      "premium": -20.06,
+      "a_close": 350.25,
+      "h_close_cny": 438.12
+    },
+    {
+      "date": "20260306",
+      "premium": -21.11,
+      "a_close": 354.77,
+      "h_close_cny": 449.7
+    },
+    {
+      "date": "20260309",
+      "premium": -18.92,
+      "a_close": 357.5,
+      "h_close_cny": 440.93
+    },
+    {
+      "date": "20260310",
+      "premium": -21.95,
+      "a_close": 376.3,
+      "h_close_cny": 482.13
+    },
+    {
+      "date": "20260311",
+      "premium": -24.49,
+      "a_close": 396.8,
+      "h_close_cny": 525.52
+    },
+    {
+      "date": "20260312",
+      "premium": -26.04,
+      "a_close": 395.5,
+      "h_close_cny": 534.73
+    },
+    {
+      "date": "20260313",
+      "premium": -27.07,
+      "a_close": 397.0,
+      "h_close_cny": 544.37
+    },
+    {
+      "date": "20260316",
+      "premium": -30.46,
+      "a_close": 408.4,
+      "h_close_cny": 587.32
+    },
+    {
+      "date": "20260317",
+      "premium": -28.7,
+      "a_close": 405.0,
+      "h_close_cny": 568.04
+    },
+    {
+      "date": "20260318",
+      "premium": -29.5,
+      "a_close": 402.02,
+      "h_close_cny": 570.23
+    },
+    {
+      "date": "20260319",
+      "premium": -29.06,
+      "a_close": 400.5,
+      "h_close_cny": 564.53
+    },
+    {
+      "date": "20260320",
+      "premium": -32.5,
+      "a_close": 413.0,
+      "h_close_cny": 611.87
+    },
+    {
+      "date": "20260323",
+      "premium": -30.73,
+      "a_close": 401.99,
+      "h_close_cny": 580.31
+    },
+    {
+      "date": "20260324",
+      "premium": -29.79,
+      "a_close": 396.99,
+      "h_close_cny": 565.41
+    },
+    {
+      "date": "20260325",
+      "premium": -28.81,
+      "a_close": 397.81,
+      "h_close_cny": 558.83
+    },
+    {
+      "date": "20260326",
+      "premium": -25.46,
+      "a_close": 402.5,
+      "h_close_cny": 539.99
+    },
+    {
+      "date": "20260327",
+      "premium": -25.12,
+      "a_close": 416.18,
+      "h_close_cny": 555.76
+    },
+    {
+      "date": "20260330",
+      "premium": -25.45,
+      "a_close": 413.0,
+      "h_close_cny": 554.01
+    },
+    {
+      "date": "20260331",
+      "premium": -25.31,
+      "a_close": 401.7,
+      "h_close_cny": 537.79
+    },
+    {
+      "date": "20260401",
+      "premium": -26.83,
+      "a_close": 405.71,
+      "h_close_cny": 554.45
+    },
+    {
+      "date": "20260402",
+      "premium": -27.07,
+      "a_close": 401.17,
+      "h_close_cny": 550.07
+    },
+    {
+      "date": "20260408",
+      "premium": -30.2,
+      "a_close": 391.3,
+      "h_close_cny": 560.59
+    },
+    {
+      "date": "20260409",
+      "premium": -29.72,
+      "a_close": 389.99,
+      "h_close_cny": 554.89
+    },
+    {
+      "date": "20260410",
+      "premium": -30.37,
+      "a_close": 416.0,
+      "h_close_cny": 597.4
+    },
+    {
+      "date": "20260413",
+      "premium": -28.61,
+      "a_close": 427.13,
+      "h_close_cny": 598.28
+    },
+    {
+      "date": "20260414",
+      "premium": -25.54,
+      "a_close": 430.79,
+      "h_close_cny": 578.56
+    },
+    {
+      "date": "20260415",
+      "premium": -24.99,
+      "a_close": 431.0,
+      "h_close_cny": 574.61
+    },
+    {
+      "date": "20260416",
+      "premium": -27.52,
+      "a_close": 453.98,
+      "h_close_cny": 626.33
+    },
+    {
+      "date": "20260417",
+      "premium": -26.77,
+      "a_close": 444.2,
+      "h_close_cny": 606.61
+    },
+    {
+      "date": "20260420",
+      "premium": -29.77,
+      "a_close": 432.5,
+      "h_close_cny": 615.81
+    },
+    {
+      "date": "20260421",
+      "premium": -30.62,
+      "a_close": 447.6,
+      "h_close_cny": 645.18
+    }
+  ],
   "params": {
     "pe_cheap": 22,
     "pe_reasonable": 30,
@@ -253,18 +483,19 @@
     "lithium_high": 12
   },
   "signals": {
-    "score": 2,
-    "verdict": "watch",
-    "verdict_text": "估值偏向合理偏低，可适当关注",
-    "color": "yellow",
+    "score": 3,
+    "verdict": "intensive",
+    "verdict_text": "多个指标显示估值偏低，认真考虑加仓",
+    "color": "green",
     "details": [
-      "PE 27.3x 处于合理区间",
+      "PE 25.0x 处于合理区间",
       "AH溢价 -30.6% 偏低",
-      "价格站上20日均线(414)"
+      "价格站上20日均线(414)",
+      "个股PE低于行业13%"
     ],
-    "add_triggered": false,
-    "add_ready": 2,
+    "add_triggered": true,
+    "add_ready": 3,
     "add_total": 4,
-    "target_price": 361.0
+    "target_price": 394.5
   }
 }
