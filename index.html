@@ -136,45 +136,44 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <div id="ahChart" class="chart-box" style="height:200px"></div>
   </div>
 
-  <!-- 模块二：估值温度计 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">🌡️</span> 估值温度计 · PE(TTM)</div>
-    <div class="pe-display">
-      <span class="pe-num" id="peNum">--</span>
-      <span class="pe-label">倍</span>
-    </div>
-    <div class="pe-bar">
-      <div class="pe-bar-fill" id="peBarFill"></div>
-      <div style="position:absolute;top:0;left:0;height:100%;width:33%;background:rgba(63,185,80,.15)"></div>
-      <div style="position:absolute;top:0;left:33%;height:100%;width:34%;background:rgba(210,153,34,.1)"></div>
-    </div>
-    <div class="pe-bar-marks">
-      <span class="zone zone-green">18x 便宜</span>
-      <span class="zone zone-yellow">22x</span>
-      <span class="zone zone-yellow">30x 合理</span>
-      <span class="zone zone-red">40x</span>
-      <span class="zone zone-red">55x 贵</span>
+  <!-- 估值温度计 + PE历史分位（统一PE口径） -->
+  <div class="card g-full">
+    <div class="card-title"><span class="icon">🌡️</span> 估值温度计 · PE(TTM) 动态滚动</div>
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-bottom:12px">
+      <div class="pe-display">
+        <span class="pe-num" id="peNum">--</span>
+        <span class="pe-label">倍</span>
+      </div>
+      <div style="flex:1;min-width:200px">
+        <div class="pe-bar">
+          <div class="pe-bar-fill" id="peBarFill"></div>
+          <div style="position:absolute;top:0;left:0;height:100%;width:33%;background:rgba(63,185,80,.15)"></div>
+          <div style="position:absolute;top:0;left:33%;height:100%;width:34%;background:rgba(210,153,34,.1)"></div>
+        </div>
+        <div class="pe-bar-marks">
+          <span class="zone zone-green">18x 便宜</span>
+          <span class="zone zone-yellow">22x</span>
+          <span class="zone zone-yellow">30x 合理</span>
+          <span class="zone zone-red">40x</span>
+          <span class="zone zone-red">55x 贵</span>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-size:11px;color:var(--text2)">5年历史分位</div>
+        <div class="pe-hist-pct" id="peHistPctInline" style="font-size:28px;font-weight:700">--</div>
+      </div>
     </div>
     <div class="signal-box" id="peSignal">--</div>
-  </div>
-
-  <!-- PE 5年历史分位图 -->
-  <div class="card">
-    <div class="card-title"><span class="icon">📏</span> PE 历史分位（5年）</div>
-    <div class="pe-hist-header">
-      <span style="color:var(--text2);font-size:12px">当前PE</span>
-      <span class="pe-hist-big" id="peHistCurrent">--</span>
-      <span style="color:var(--text2);font-size:12px">历史分位</span>
-      <span class="pe-hist-pct" id="peHistPct">--</span>
-    </div>
-    <div class="pe-hist-stats">
+    <!-- PE历史分位统计 -->
+    <div class="pe-hist-stats" style="margin-top:12px">
       <div class="pe-hist-stat"><div class="label">最低</div><div class="val" id="peHistMin">--</div></div>
       <div class="pe-hist-stat"><div class="label">25%分位</div><div class="val" id="peHistP25">--</div></div>
       <div class="pe-hist-stat"><div class="label">中位数</div><div class="val" id="peHistMed">--</div></div>
       <div class="pe-hist-stat"><div class="label">75%分位</div><div class="val" id="peHistP75">--</div></div>
       <div class="pe-hist-stat"><div class="label">最高</div><div class="val" id="peHistMax">--</div></div>
     </div>
-    <div id="peHistChart" class="chart-box" style="height:240px"></div>
+    <div id="peHistNote" style="font-size:12px;color:var(--text2);margin-top:8px"></div>
+    <div id="peHistChart" class="chart-box" style="height:240px;margin-top:8px"></div>
   </div>
 
   <!-- 模块三：行业对标 -->
@@ -186,7 +185,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
         <span style="font-size:20px;font-weight:700;margin-left:6px" id="indPe">--</span>
         <span style="font-size:13px;margin-left:6px" id="peerPremium">--</span>
       </div>
-      <div id="peHistNote" style="font-size:12px;color:var(--text2)"></div>
+      <div id="peSourceNote" style="font-size:11px;color:var(--text2)"></div>
     </div>
     <!-- 对标柱状图 -->
     <div class="peer-charts">
@@ -339,7 +338,7 @@ function render(d){
   document.getElementById('ahDetail').textContent = 'H股折CNY: \u00a5'+fmt(h.close_cny);
   document.getElementById('ahFx').textContent = 'HKD/CNY '+fmt(ah.hkd_cny,4);
 
-  // PE温度计
+  // PE温度计（统一用动态TTM）
   var pe = c.pe_ttm;
   document.getElementById('peNum').textContent = pe != null ? fmt(pe,1) : '--';
   var peMin = p.pe_hist_low, peMax = p.pe_hist_high;
@@ -351,12 +350,12 @@ function render(d){
   fill.innerHTML = '<div style="position:absolute;right:-1px;top:-6px;width:2px;height:22px;background:#fff;border-radius:1px"></div>';
 
   var peBox = document.getElementById('peSignal');
-  if(pe <= p.pe_cheap){ peBox.className='signal-box signal-green'; peBox.textContent='🟢 PE处于历史低位区间，估值便宜，关注加仓机会'; }
-  else if(pe <= p.pe_reasonable){ peBox.className='signal-box signal-yellow'; peBox.textContent='🟡 PE处于合理区间，持有观察'; }
-  else if(pe <= p.pe_expensive){ peBox.className='signal-box signal-yellow'; peBox.textContent='🟠 PE偏贵，不建议加仓'; }
-  else { peBox.className='signal-box signal-red'; peBox.textContent='🔴 PE处于历史高位，高估风险'; }
+  if(pe <= p.pe_cheap){ peBox.className='signal-box signal-green'; peBox.textContent='PE处于历史低位区间，估值便宜，关注加仓机会'; }
+  else if(pe <= p.pe_reasonable){ peBox.className='signal-box signal-yellow'; peBox.textContent='PE处于合理区间，持有观察'; }
+  else if(pe <= p.pe_expensive){ peBox.className='signal-box signal-yellow'; peBox.textContent='PE偏贵，不建议加仓'; }
+  else { peBox.className='signal-box signal-red'; peBox.textContent='PE处于历史高位，高估风险'; }
 
-  // PE历史分位
+  // PE历史分位（统一在同一模块）
   renderPeHistory(d);
 
   // 行业对标
@@ -415,13 +414,11 @@ function render(d){
 function renderPeHistory(d){
   var ph = d.pe_history;
   if(!ph){ 
-    document.getElementById('peHistCurrent').textContent = '--';
-    document.getElementById('peHistPct').textContent = '--';
+    document.getElementById('peHistPctInline').textContent = '--';
     return; 
   }
 
-  document.getElementById('peHistCurrent').textContent = fmt(ph.current_pe,1)+'x';
-  var pctEl = document.getElementById('peHistPct');
+  var pctEl = document.getElementById('peHistPctInline');
   pctEl.textContent = fmt(ph.current_percentile,0)+'%';
   pctEl.style.color = ph.current_percentile <= 25 ? 'var(--green)' : ph.current_percentile <= 75 ? 'var(--yellow)' : 'var(--red)';
 
@@ -509,6 +506,10 @@ function renderIndustry(d){
     pp.textContent = (ppv >= 0 ? '+' : '') + fmt(ppv,1) + '% vs行业';
     pp.style.color = ppv < 0 ? 'var(--green)' : ppv > 20 ? 'var(--red)' : 'var(--text2)';
   } else { pp.textContent = '--'; }
+
+  // 数据源说明
+  var srcNote = document.getElementById('peSourceNote');
+  srcNote.textContent = 'PE口径：宁德=动态TTM(滚动4季度)，对标=年报EPS | 数据源：东财F10 + 新浪行情';
 
   // 准备包含宁德时代在内的完整对标列表
   var allPeers = [];
