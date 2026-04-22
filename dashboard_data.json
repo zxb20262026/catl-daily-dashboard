@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-22 17:26",
+  "update_time": "2026-04-22 22:10",
   "trade_date": "20260422",
   "catl": {
     "close": 436.35,
@@ -169,9 +169,9 @@
     "price": null
   },
   "northbound": {
-    "north_money": 301042.98,
-    "south_money": 53445.0,
-    "trade_date": "20260421"
+    "north_money": 306404.91,
+    "south_money": 53493.9,
+    "trade_date": "20260422"
   },
   "southbound": {
     "trade_date": "20260421",
@@ -1841,350 +1841,7 @@
     }
   ],
   "hk_price_series": [],
-  "ah_premium_series": [
-    {
-      "date": "20260121",
-      "premium": -16.54,
-      "a_close": 349.81,
-      "h_close_cny": 419.12
-    },
-    {
-      "date": "20260122",
-      "premium": -15.04,
-      "a_close": 345.8,
-      "h_close_cny": 407.02
-    },
-    {
-      "date": "20260123",
-      "premium": -14.6,
-      "a_close": 347.0,
-      "h_close_cny": 406.32
-    },
-    {
-      "date": "20260126",
-      "premium": -14.83,
-      "a_close": 342.05,
-      "h_close_cny": 401.59
-    },
-    {
-      "date": "20260127",
-      "premium": -15.67,
-      "a_close": 339.4,
-      "h_close_cny": 402.46
-    },
-    {
-      "date": "20260128",
-      "premium": -17.04,
-      "a_close": 339.99,
-      "h_close_cny": 409.83
-    },
-    {
-      "date": "20260129",
-      "premium": -16.93,
-      "a_close": 341.89,
-      "h_close_cny": 411.58
-    },
-    {
-      "date": "20260130",
-      "premium": -17.36,
-      "a_close": 350.0,
-      "h_close_cny": 423.5
-    },
-    {
-      "date": "20260202",
-      "premium": -16.84,
-      "a_close": 348.98,
-      "h_close_cny": 419.64
-    },
-    {
-      "date": "20260203",
-      "premium": -16.22,
-      "a_close": 347.91,
-      "h_close_cny": 415.26
-    },
-    {
-      "date": "20260204",
-      "premium": -15.81,
-      "a_close": 365.03,
-      "h_close_cny": 433.58
-    },
-    {
-      "date": "20260205",
-      "premium": -14.62,
-      "a_close": 362.94,
-      "h_close_cny": 425.08
-    },
-    {
-      "date": "20260206",
-      "premium": -14.7,
-      "a_close": 369.11,
-      "h_close_cny": 432.7
-    },
-    {
-      "date": "20260209",
-      "premium": -16.79,
-      "a_close": 368.82,
-      "h_close_cny": 443.22
-    },
-    {
-      "date": "20260210",
-      "premium": -17.25,
-      "a_close": 364.97,
-      "h_close_cny": 441.03
-    },
-    {
-      "date": "20260211",
-      "premium": -15.89,
-      "a_close": 368.0,
-      "h_close_cny": 437.53
-    },
-    {
-      "date": "20260212",
-      "premium": -17.56,
-      "a_close": 375.87,
-      "h_close_cny": 455.93
-    },
-    {
-      "date": "20260213",
-      "premium": -18.22,
-      "a_close": 365.34,
-      "h_close_cny": 446.73
-    },
-    {
-      "date": "20260224",
-      "premium": -20.23,
-      "a_close": 361.95,
-      "h_close_cny": 453.74
-    },
-    {
-      "date": "20260225",
-      "premium": -21.32,
-      "a_close": 362.18,
-      "h_close_cny": 460.32
-    },
-    {
-      "date": "20260226",
-      "premium": -19.53,
-      "a_close": 346.0,
-      "h_close_cny": 429.99
-    },
-    {
-      "date": "20260227",
-      "premium": -20.07,
-      "a_close": 342.01,
-      "h_close_cny": 427.88
-    },
-    {
-      "date": "20260302",
-      "premium": -18.55,
-      "a_close": 340.22,
-      "h_close_cny": 417.71
-    },
-    {
-      "date": "20260303",
-      "premium": -18.08,
-      "a_close": 344.07,
-      "h_close_cny": 419.99
-    },
-    {
-      "date": "20260304",
-      "premium": -17.97,
-      "a_close": 338.9,
-      "h_close_cny": 413.16
-    },
-    {
-      "date": "20260305",
-      "premium": -18.78,
-      "a_close": 350.25,
-      "h_close_cny": 431.21
-    },
-    {
-      "date": "20260306",
-      "premium": -19.88,
-      "a_close": 354.77,
-      "h_close_cny": 442.79
-    },
-    {
-      "date": "20260309",
-      "premium": -17.63,
-      "a_close": 357.5,
-      "h_close_cny": 434.02
-    },
-    {
-      "date": "20260310",
-      "premium": -20.82,
-      "a_close": 376.3,
-      "h_close_cny": 475.22
-    },
-    {
-      "date": "20260311",
-      "premium": -23.49,
-      "a_close": 396.8,
-      "h_close_cny": 518.61
-    },
-    {
-      "date": "20260312",
-      "premium": -25.07,
-      "a_close": 395.5,
-      "h_close_cny": 527.82
-    },
-    {
-      "date": "20260313",
-      "premium": -26.13,
-      "a_close": 397.0,
-      "h_close_cny": 537.46
-    },
-    {
-      "date": "20260316",
-      "premium": -29.64,
-      "a_close": 408.4,
-      "h_close_cny": 580.41
-    },
-    {
-      "date": "20260317",
-      "premium": -27.82,
-      "a_close": 405.0,
-      "h_close_cny": 561.13
-    },
-    {
-      "date": "20260318",
-      "premium": -28.63,
-      "a_close": 402.02,
-      "h_close_cny": 563.32
-    },
-    {
-      "date": "20260319",
-      "premium": -28.18,
-      "a_close": 400.5,
-      "h_close_cny": 557.62
-    },
-    {
-      "date": "20260320",
-      "premium": -31.73,
-      "a_close": 413.0,
-      "h_close_cny": 604.96
-    },
-    {
-      "date": "20260323",
-      "premium": -29.89,
-      "a_close": 401.99,
-      "h_close_cny": 573.4
-    },
-    {
-      "date": "20260324",
-      "premium": -28.92,
-      "a_close": 396.99,
-      "h_close_cny": 558.5
-    },
-    {
-      "date": "20260325",
-      "premium": -27.92,
-      "a_close": 397.81,
-      "h_close_cny": 551.92
-    },
-    {
-      "date": "20260326",
-      "premium": -24.49,
-      "a_close": 402.5,
-      "h_close_cny": 533.08
-    },
-    {
-      "date": "20260327",
-      "premium": -24.17,
-      "a_close": 416.18,
-      "h_close_cny": 548.85
-    },
-    {
-      "date": "20260330",
-      "premium": -24.51,
-      "a_close": 413.0,
-      "h_close_cny": 547.1
-    },
-    {
-      "date": "20260331",
-      "premium": -24.33,
-      "a_close": 401.7,
-      "h_close_cny": 530.88
-    },
-    {
-      "date": "20260401",
-      "premium": -25.9,
-      "a_close": 405.71,
-      "h_close_cny": 547.54
-    },
-    {
-      "date": "20260402",
-      "premium": -26.14,
-      "a_close": 401.17,
-      "h_close_cny": 543.16
-    },
-    {
-      "date": "20260408",
-      "premium": -29.33,
-      "a_close": 391.3,
-      "h_close_cny": 553.68
-    },
-    {
-      "date": "20260409",
-      "premium": -28.83,
-      "a_close": 389.99,
-      "h_close_cny": 547.98
-    },
-    {
-      "date": "20260410",
-      "premium": -30.37,
-      "a_close": 416.0,
-      "h_close_cny": 597.4
-    },
-    {
-      "date": "20260413",
-      "premium": -28.61,
-      "a_close": 427.13,
-      "h_close_cny": 598.28
-    },
-    {
-      "date": "20260414",
-      "premium": -25.54,
-      "a_close": 430.79,
-      "h_close_cny": 578.56
-    },
-    {
-      "date": "20260415",
-      "premium": -24.99,
-      "a_close": 431.0,
-      "h_close_cny": 574.61
-    },
-    {
-      "date": "20260416",
-      "premium": -27.52,
-      "a_close": 453.98,
-      "h_close_cny": 626.33
-    },
-    {
-      "date": "20260417",
-      "premium": -26.77,
-      "a_close": 444.2,
-      "h_close_cny": 606.61
-    },
-    {
-      "date": "20260420",
-      "premium": -29.77,
-      "a_close": 432.5,
-      "h_close_cny": 615.81
-    },
-    {
-      "date": "20260421",
-      "premium": -30.62,
-      "a_close": 447.6,
-      "h_close_cny": 645.18
-    },
-    {
-      "date": "20260422",
-      "premium": -28.79,
-      "a_close": 436.35,
-      "h_close_cny": 612.74
-    }
-  ],
+  "ah_premium_series": [],
   "news": {
     "articles": [
       {
@@ -2200,6 +1857,14 @@
         "date": "2026-04-22",
         "source": "财联社",
         "url": "http://finance.eastmoney.com/a/202604223713987232.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代：授予2026年A股员工持股计划预留份额",
+        "date": "2026-04-22",
+        "source": "财联社",
+        "url": "http://finance.eastmoney.com/a/202604223714319687.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
@@ -2224,6 +1889,14 @@
         "date": "2026-04-22",
         "source": "每日经济新闻",
         "url": "http://finance.eastmoney.com/a/202604223713919190.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "换电要被干掉？宁德时代高管详解新一代电池八大疑问",
+        "date": "2026-04-22",
+        "source": "蓝鲸财经",
+        "url": "http://finance.eastmoney.com/a/202604223714622072.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
@@ -2300,10 +1973,26 @@
         "sentiment_label": "neutral"
       },
       {
+        "title": "丰田印尼子公司与宁德时代就电动汽车电池生产达成合作",
+        "date": "2026-04-22",
+        "source": "界面新闻",
+        "url": "http://finance.eastmoney.com/a/202604223714233860.html",
+        "sentiment_score": 2,
+        "sentiment_label": "positive"
+      },
+      {
         "title": "宁德时代首席科学家：锂电产业要多化学体系协同发展",
         "date": "2026-04-22",
         "source": "第一财经",
         "url": "http://finance.eastmoney.com/a/202604223713880135.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "五大电池产品、一场换电布局，宁德时代千亿研发“交卷”",
+        "date": "2026-04-22",
+        "source": "国际金融报",
+        "url": "http://finance.eastmoney.com/a/202604223714456358.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
@@ -2314,46 +2003,14 @@
         "url": "http://finance.eastmoney.com/a/202604223713703779.html",
         "sentiment_score": 5,
         "sentiment_label": "positive"
-      },
-      {
-        "title": "宁德时代麒麟凝聚态电池发布，最高续航1500公里",
-        "date": "2026-04-21",
-        "source": "新京报",
-        "url": "http://finance.eastmoney.com/a/202604213712715190.html",
-        "sentiment_score": 15,
-        "sentiment_label": "positive"
-      },
-      {
-        "title": "宁德时代连发5款电池新品，曾毓群判断行业仍在持续向前",
-        "date": "2026-04-22",
-        "source": "中国基金报",
-        "url": "http://finance.eastmoney.com/a/202604223713800210.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代将举办2026年“超级科技日”发布会，创业板50（159949）重仓宁德时代，含量超23%",
-        "date": "2026-04-21",
-        "source": "每日经济新闻",
-        "url": "http://finance.eastmoney.com/a/202604213711657840.html",
-        "sentiment_score": 5,
-        "sentiment_label": "positive"
-      },
-      {
-        "title": "宁德时代发布六大创新成果  多化学材料体系全面突破",
-        "date": "2026-04-21",
-        "source": "新华财经",
-        "url": "http://finance.eastmoney.com/a/202604213712845117.html",
-        "sentiment_score": 11,
-        "sentiment_label": "positive"
       }
     ],
     "sentiment": {
-      "score": 100,
+      "score": 90,
       "label": "positive",
-      "positive_count": 9,
+      "positive_count": 7,
       "negative_count": 2,
-      "neutral_count": 12
+      "neutral_count": 14
     }
   },
   "params": {
