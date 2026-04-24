@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-23 20:02",
+  "update_time": "2026-04-24 08:28",
   "trade_date": "20260423",
   "catl": {
     "close": 438.9,
@@ -174,11 +174,11 @@
     "trade_date": "20260423"
   },
   "southbound": {
-    "trade_date": "20260422",
-    "vol": 5690888,
-    "ratio": 3.64,
-    "change": -98000,
-    "change_pct": -1.69
+    "trade_date": "20260423",
+    "vol": 5861388,
+    "ratio": 3.75,
+    "change": 170500,
+    "change_pct": 3.0
   },
   "pe_history": {
     "current_pe": 29.75,
@@ -2189,10 +2189,42 @@
         "sentiment_label": "neutral"
       },
       {
+        "title": "宁德时代：宁波联创询价转让完毕 持股比例降至4.96%",
+        "date": "2026-04-23",
+        "source": "第一财经",
+        "url": "http://finance.eastmoney.com/a/202604233716676228.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代：宁波联创询价转让完毕 持股比例降至5%以下",
+        "date": "2026-04-23",
+        "source": "财联社",
+        "url": "http://finance.eastmoney.com/a/202604233716575670.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
         "title": "宁德时代在古田成立新能源科技公司",
         "date": "2026-04-23",
         "source": "南方财经网",
         "url": "http://finance.eastmoney.com/a/202604233715904479.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代：宁波联创询价转让完毕，持股比例降至5%以下",
+        "date": "2026-04-23",
+        "source": "界面新闻",
+        "url": "http://finance.eastmoney.com/a/202604233716601931.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "深度丨宁德时代等AH股倒挂 中国硬科技正迎全球性重估",
+        "date": "2026-04-23",
+        "source": "证券时报",
+        "url": "http://finance.eastmoney.com/a/202604233716468347.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
@@ -2299,46 +2331,14 @@
         "url": "http://stock.eastmoney.com/a/202604223714031096.html",
         "sentiment_score": -2,
         "sentiment_label": "negative"
-      },
-      {
-        "title": "宁德时代出资300亿成立时代资源集团",
-        "date": "2026-04-22",
-        "source": "大河财立方",
-        "url": "http://finance.eastmoney.com/a/202604223713896832.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代钠电池年内将实现大规模量产",
-        "date": "2026-04-21",
-        "source": "界面新闻",
-        "url": "http://finance.eastmoney.com/a/202604213712596485.html",
-        "sentiment_score": 12,
-        "sentiment_label": "positive"
-      },
-      {
-        "title": "宁德时代在古田成立新能源科技公司 注册资本20亿",
-        "date": "2026-04-23",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202604233715856272.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代A股成交额达200亿元",
-        "date": "2026-04-21",
-        "source": "第一财经",
-        "url": "http://finance.eastmoney.com/a/202604213712152995.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
       }
     ],
     "sentiment": {
-      "score": 97,
+      "score": 80,
       "label": "positive",
-      "positive_count": 7,
+      "positive_count": 5,
       "negative_count": 2,
-      "neutral_count": 14
+      "neutral_count": 16
     }
   },
   "params": {
