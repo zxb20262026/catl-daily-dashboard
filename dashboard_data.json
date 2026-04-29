@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-28 16:07",
+  "update_time": "2026-04-29 08:29",
   "trade_date": "20260428",
   "catl": {
     "close": 427.67,
@@ -23,17 +23,17 @@
     "ma60_dev": 10.14
   },
   "hk": {
-    "close": 675.5,
-    "pct_chg": -2.81,
-    "close_cny": 592.14
+    "close": 629.0,
+    "pct_chg": -6.88,
+    "close_cny": 551.38
   },
   "ah": {
-    "premium": -27.78,
+    "premium": -22.44,
     "hkd_cny": 0.8766
   },
   "industry": {
-    "pe_median": 45.6,
-    "peer_premium": -36.43,
+    "pe_median": 34.87,
+    "peer_premium": -16.86,
     "peers": [
       {
         "code": "002594.SZ",
@@ -43,13 +43,13 @@
         "pct_chg": -0.84,
         "pe": 28.35,
         "pe_source": "f10_eps",
-        "pb": 4.07,
+        "pb": 3.99,
         "roe": 15.31,
-        "gpm": 17.74,
-        "npm": 4.2,
+        "gpm": 18.81,
+        "npm": 2.67,
         "mv": 9252.0,
         "f10_report": "2025-12-31",
-        "f10_latest": "2025-12-31"
+        "f10_latest": "2026-03-31"
       },
       {
         "code": "300014.SZ",
@@ -73,15 +73,15 @@
         "chain": "电池(大众系)",
         "close": 39.04,
         "pct_chg": -1.06,
-        "pe": 57.41,
+        "pe": 29.58,
         "pe_source": "f10_eps",
-        "pb": 2.49,
-        "roe": 4.77,
-        "gpm": 16.82,
-        "npm": 8.28,
+        "pb": 2.45,
+        "roe": 8.65,
+        "gpm": 16.06,
+        "npm": 0.21,
         "mv": 708.0,
-        "f10_report": "2024-12-31",
-        "f10_latest": "2025-09-30"
+        "f10_report": "2025-12-31",
+        "f10_latest": "2026-03-31"
       },
       {
         "code": "300207.SZ",
@@ -169,16 +169,16 @@
     "price": null
   },
   "northbound": {
-    "north_money": 322477.72,
-    "south_money": 53573.57,
-    "trade_date": "20260427"
+    "north_money": 333311.4,
+    "south_money": 53718.79,
+    "trade_date": "20260428"
   },
   "southbound": {
-    "trade_date": "20260427",
-    "vol": 6126888,
-    "ratio": 3.92,
-    "change": -88800,
-    "change_pct": -1.43
+    "trade_date": "20260428",
+    "vol": 6196929,
+    "ratio": 3.97,
+    "change": 70041,
+    "change_pct": 1.14
   },
   "pe_history": {
     "current_pe": 28.99,
@@ -1848,10 +1848,6 @@
   ],
   "hk_price_series": [
     {
-      "date": "20260326",
-      "close": 616.0
-    },
-    {
       "date": "20260327",
       "close": 634.0
     },
@@ -1926,15 +1922,13 @@
     {
       "date": "20260427",
       "close": 675.5
+    },
+    {
+      "date": "20260428",
+      "close": 629.0
     }
   ],
   "ah_premium_series": [
-    {
-      "date": "20260227",
-      "premium": -21.34,
-      "a_close": 342.01,
-      "h_close_cny": 434.79
-    },
     {
       "date": "20260302",
       "premium": -19.88,
@@ -2162,6 +2156,12 @@
       "premium": -26.56,
       "a_close": 434.88,
       "h_close_cny": 592.14
+    },
+    {
+      "date": "20260428",
+      "premium": -22.44,
+      "a_close": 427.67,
+      "h_close_cny": 551.38
     }
   ],
   "news": {
@@ -2231,12 +2231,52 @@
         "sentiment_label": "negative"
       },
       {
+        "title": "宁德时代拟H股配售募资391亿港元 专项用于海外业务发展",
+        "date": "2026-04-29",
+        "source": "中国经营报",
+        "url": "http://finance.eastmoney.com/a/202604283722868228.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代完成港股闪电配售 锚定全球价值赋能零碳科技长期发展",
+        "date": "2026-04-28",
+        "source": "证券日报",
+        "url": "http://finance.eastmoney.com/a/202604283722614951.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
         "title": "募资约392亿港元！宁德时代配售引发H股股价震荡",
         "date": "2026-04-28",
         "source": "证券时报",
         "url": "http://finance.eastmoney.com/a/202604283721965021.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
+      },
+      {
+        "title": "港股收盘 | 三大指数全线走低 宁德时代单日跌超7%",
+        "date": "2026-04-28",
+        "source": "财联社",
+        "url": "http://finance.eastmoney.com/a/202604283722300428.html",
+        "sentiment_score": -2,
+        "sentiment_label": "negative"
+      },
+      {
+        "title": "港股收盘｜恒指跌0.95% 宁德时代跌近7%",
+        "date": "2026-04-28",
+        "source": "第一财经",
+        "url": "http://finance.eastmoney.com/a/202604283722244773.html",
+        "sentiment_score": -2,
+        "sentiment_label": "negative"
+      },
+      {
+        "title": "宁德时代融资近400亿港元 H股一度大跌近10%",
+        "date": "2026-04-28",
+        "source": "第一财经",
+        "url": "http://finance.eastmoney.com/a/202604283722146844.html",
+        "sentiment_score": -2,
+        "sentiment_label": "negative"
       },
       {
         "title": "宁德时代拟配售6239万股新H股 净筹391.1亿港元",
@@ -2263,12 +2303,12 @@
         "sentiment_label": "neutral"
       },
       {
-        "title": "宁德时代融资近400亿港元，H股一度大跌近10%｜公司观察",
+        "title": "宁德时代H股全球最大新股增发：罕见溢价发行、机构踊跃参与",
         "date": "2026-04-28",
-        "source": "第一财经",
-        "url": "http://finance.eastmoney.com/a/202604283722146844.html",
-        "sentiment_score": -2,
-        "sentiment_label": "negative"
+        "source": "央广财经",
+        "url": "http://finance.eastmoney.com/a/202604283722448268.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
       },
       {
         "title": "宁德时代392亿港元配售成焦点 H股大跌超8%",
@@ -2285,53 +2325,13 @@
         "url": "http://finance.eastmoney.com/a/202604283721322772.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代：拟配售6238.5万股H股 配售价每股628.2港元",
-        "date": "2026-04-28",
-        "source": "人民财讯",
-        "url": "http://finance.eastmoney.com/a/202604283721232037.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代香港股票配售价据悉为每股628.20港元",
-        "date": "2026-04-28",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202604283721016242.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代拟根据一般性授权配售新H股，每股配售股份628.2港元",
-        "date": "2026-04-28",
-        "source": "北京商报",
-        "url": "http://finance.eastmoney.com/a/202604283721665991.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代：根据一般授权配售新H股 配售价为每股628.2港元",
-        "date": "2026-04-28",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202604283721207646.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代拟发行50亿元绿色科创债，用于3个锂离子电池项目",
-        "date": "2026-04-28",
-        "source": "大河财立方",
-        "url": "http://finance.eastmoney.com/a/202604283722160849.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
       }
     ],
     "sentiment": {
-      "score": 52,
-      "label": "neutral",
-      "positive_count": 2,
-      "negative_count": 8,
+      "score": 30,
+      "label": "negative",
+      "positive_count": 0,
+      "negative_count": 10,
       "neutral_count": 15
     }
   },
@@ -2353,9 +2353,9 @@
     "color": "green",
     "details": [
       "PE 29.0x 处于合理区间",
-      "AH溢价 -27.8% 偏低",
+      "AH溢价 -22.4% 偏低",
       "价格站上20日均线(421)",
-      "个股PE低于行业36%"
+      "个股PE低于行业17%"
     ],
     "add_triggered": false,
     "add_ready": 2,
