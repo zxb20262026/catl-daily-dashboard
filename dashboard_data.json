@@ -1,53 +1,53 @@
 {
-  "update_time": "2026-04-29 08:29",
-  "trade_date": "20260428",
+  "update_time": "2026-04-30 08:28",
+  "trade_date": "20260429",
   "catl": {
-    "close": 427.67,
-    "pct_chg": -1.66,
-    "open": 426.19,
-    "high": 433.3,
-    "low": 423.0,
-    "vol": 35.0,
-    "amount": 1499.0,
-    "mv": 19519.0,
-    "pe_ttm": 28.99,
+    "close": 445.0,
+    "pct_chg": 4.05,
+    "open": 432.0,
+    "high": 445.15,
+    "low": 428.0,
+    "vol": 38.0,
+    "amount": 1647.0,
+    "mv": 20310.0,
+    "pe_ttm": 30.17,
     "pe_source": "dynamic_ttm",
-    "pb": 5.46,
+    "pb": 5.68,
     "roe": 24.91,
     "gpm": 24.82,
     "npm": 17.61,
-    "ma20": 421.34,
-    "ma60": 388.3,
+    "ma20": 423.51,
+    "ma60": 390.02,
     "ma20_trend": "up",
-    "ma20_dev": 1.5,
-    "ma60_dev": 10.14
+    "ma20_dev": 5.07,
+    "ma60_dev": 14.1
   },
   "hk": {
-    "close": 629.0,
-    "pct_chg": -6.88,
-    "close_cny": 551.38
+    "close": 627.5,
+    "pct_chg": -0.24,
+    "close_cny": 550.07
   },
   "ah": {
-    "premium": -22.44,
+    "premium": -19.1,
     "hkd_cny": 0.8766
   },
   "industry": {
-    "pe_median": 34.87,
-    "peer_premium": -16.86,
+    "pe_median": 36.68,
+    "peer_premium": -17.75,
     "peers": [
       {
         "code": "002594.SZ",
         "name": "比亚迪",
         "chain": "电池+整车",
-        "close": 101.48,
-        "pct_chg": -0.84,
-        "pe": 28.35,
+        "close": 105.4,
+        "pct_chg": 3.86,
+        "pe": 29.44,
         "pe_source": "f10_eps",
-        "pb": 3.99,
+        "pb": 4.14,
         "roe": 15.31,
         "gpm": 18.81,
         "npm": 2.67,
-        "mv": 9252.0,
+        "mv": 9610.0,
         "f10_report": "2025-12-31",
         "f10_latest": "2026-03-31"
       },
@@ -55,15 +55,15 @@
         "code": "300014.SZ",
         "name": "亿纬锂能",
         "chain": "电池",
-        "close": 70.43,
-        "pct_chg": -1.4,
-        "pe": 34.87,
+        "close": 74.1,
+        "pct_chg": 5.21,
+        "pe": 36.68,
         "pe_source": "f10_eps",
-        "pb": 3.35,
+        "pb": 3.52,
         "roe": 10.5,
         "gpm": 14.04,
         "npm": 6.98,
-        "mv": 1516.0,
+        "mv": 1595.0,
         "f10_report": "2025-12-31",
         "f10_latest": "2026-03-31"
       },
@@ -71,15 +71,15 @@
         "code": "002074.SZ",
         "name": "国轩高科",
         "chain": "电池(大众系)",
-        "close": 39.04,
-        "pct_chg": -1.06,
-        "pe": 29.58,
+        "close": 37.75,
+        "pct_chg": -3.3,
+        "pe": 28.6,
         "pe_source": "f10_eps",
-        "pb": 2.45,
+        "pb": 2.37,
         "roe": 8.65,
         "gpm": 16.06,
         "npm": 0.21,
-        "mv": 708.0,
+        "mv": 685.0,
         "f10_report": "2025-12-31",
         "f10_latest": "2026-03-31"
       },
@@ -87,15 +87,15 @@
         "code": "300207.SZ",
         "name": "欣旺达",
         "chain": "电池+消费",
-        "close": 26.45,
-        "pct_chg": -2.29,
-        "pe": 45.6,
+        "close": 27.75,
+        "pct_chg": 4.91,
+        "pe": 47.84,
         "pe_source": "f10_eps",
-        "pb": 1.98,
+        "pb": 2.08,
         "roe": 4.39,
         "gpm": 17.96,
         "npm": 1.0,
-        "mv": 489.0,
+        "mv": 513.0,
         "f10_report": "2025-12-31",
         "f10_latest": "2026-03-31"
       },
@@ -103,15 +103,15 @@
         "code": "002709.SZ",
         "name": "天赐材料",
         "chain": "电解液",
-        "close": 54.23,
-        "pct_chg": -1.86,
-        "pe": 76.38,
+        "close": 59.32,
+        "pct_chg": 9.99,
+        "pe": 83.55,
         "pe_source": "f10_eps",
-        "pb": 5.79,
+        "pb": 6.34,
         "roe": 9.79,
         "gpm": 38.65,
         "npm": 24.68,
-        "mv": 1106.0,
+        "mv": 1209.0,
         "f10_report": "2025-12-31",
         "f10_latest": "2026-03-31"
       },
@@ -119,15 +119,15 @@
         "code": "603799.SZ",
         "name": "华友钴业",
         "chain": "钴镍资源",
-        "close": 64.76,
-        "pct_chg": -2.32,
-        "pe": 19.39,
+        "close": 67.66,
+        "pct_chg": 4.48,
+        "pe": 20.26,
         "pe_source": "f10_eps",
-        "pb": 2.43,
+        "pb": 2.54,
         "roe": 13.7,
         "gpm": 20.69,
         "npm": 12.22,
-        "mv": 1228.0,
+        "mv": 1283.0,
         "f10_report": "2025-12-31",
         "f10_latest": "2026-03-31"
       },
@@ -135,31 +135,31 @@
         "code": "002460.SZ",
         "name": "赣锋锂业",
         "chain": "锂资源",
-        "close": 82.1,
-        "pct_chg": -2.39,
-        "pe": 102.62,
+        "close": 86.9,
+        "pct_chg": 5.85,
+        "pe": 108.62,
         "pe_source": "f10_eps",
-        "pb": 3.81,
+        "pb": 3.92,
         "roe": 3.8,
-        "gpm": 15.72,
-        "npm": 5.47,
-        "mv": 1721.0,
+        "gpm": 29.72,
+        "npm": 20.9,
+        "mv": 1822.0,
         "f10_report": "2025-12-31",
-        "f10_latest": "2025-12-31"
+        "f10_latest": "2026-03-31"
       },
       {
         "code": "002466.SZ",
         "name": "天齐锂业",
         "chain": "锂资源",
-        "close": 72.53,
-        "pct_chg": -1.52,
-        "pe": 259.04,
+        "close": 75.52,
+        "pct_chg": 4.12,
+        "pe": 269.71,
         "pe_source": "f10_eps",
-        "pb": 2.67,
+        "pb": 2.78,
         "roe": 1.1,
         "gpm": 62.66,
         "npm": 55.4,
-        "mv": 1238.0,
+        "mv": 1289.0,
         "f10_report": "2025-12-31",
         "f10_latest": "2026-03-31"
       }
@@ -169,26 +169,20 @@
     "price": null
   },
   "northbound": {
-    "north_money": 333311.4,
-    "south_money": 53718.79,
-    "trade_date": "20260428"
+    "north_money": 341241.51,
+    "south_money": 53679.28,
+    "trade_date": "20260429"
   },
-  "southbound": {
-    "trade_date": "20260428",
-    "vol": 6196929,
-    "ratio": 3.97,
-    "change": 70041,
-    "change_pct": 1.14
-  },
+  "southbound": null,
   "pe_history": {
-    "current_pe": 28.99,
-    "current_percentile": 65.1,
+    "current_pe": 30.17,
+    "current_percentile": 69.1,
     "min": 8.1,
     "max": 84.8,
     "median": 23.6,
     "p25": 18.1,
     "p75": 35.1,
-    "data_days": 1045,
+    "data_days": 1046,
     "series": [
       {
         "date": "20211231",
@@ -350,7 +344,7 @@
         "date": "20220613",
         "close": 443.03,
         "pe_ttm": 66.67,
-        "pe_percentile": 87.8
+        "pe_percentile": 87.9
       },
       {
         "date": "20220617",
@@ -434,7 +428,7 @@
         "date": "20220830",
         "close": 491.5,
         "pe_ttm": 66.86,
-        "pe_percentile": 87.9
+        "pe_percentile": 88.0
       },
       {
         "date": "20220905",
@@ -470,7 +464,7 @@
         "date": "20221011",
         "close": 416.3,
         "pe_ttm": 39.96,
-        "pe_percentile": 81.3
+        "pe_percentile": 81.4
       },
       {
         "date": "20221017",
@@ -506,7 +500,7 @@
         "date": "20221114",
         "close": 387.18,
         "pe_ttm": 37.17,
-        "pe_percentile": 77.1
+        "pe_percentile": 77.2
       },
       {
         "date": "20221118",
@@ -530,7 +524,7 @@
         "date": "20221206",
         "close": 400.02,
         "pe_ttm": 38.4,
-        "pe_percentile": 79.2
+        "pe_percentile": 79.3
       },
       {
         "date": "20221212",
@@ -542,7 +536,7 @@
         "date": "20221216",
         "close": 418.01,
         "pe_ttm": 40.13,
-        "pe_percentile": 81.4
+        "pe_percentile": 81.5
       },
       {
         "date": "20221222",
@@ -560,7 +554,7 @@
         "date": "20230104",
         "close": 384.01,
         "pe_ttm": 30.61,
-        "pe_percentile": 70.0
+        "pe_percentile": 70.1
       },
       {
         "date": "20230110",
@@ -602,7 +596,7 @@
         "date": "20230220",
         "close": 420.47,
         "pe_ttm": 35.1,
-        "pe_percentile": 74.9
+        "pe_percentile": 75.0
       },
       {
         "date": "20230224",
@@ -620,7 +614,7 @@
         "date": "20230308",
         "close": 397.73,
         "pe_ttm": 33.2,
-        "pe_percentile": 72.5
+        "pe_percentile": 72.6
       },
       {
         "date": "20230314",
@@ -656,7 +650,7 @@
         "date": "20230412",
         "close": 392.01,
         "pe_ttm": 25.47,
-        "pe_percentile": 55.8
+        "pe_percentile": 55.7
       },
       {
         "date": "20230418",
@@ -668,7 +662,7 @@
         "date": "20230424",
         "close": 396.88,
         "pe_ttm": 25.78,
-        "pe_percentile": 56.5
+        "pe_percentile": 56.4
       },
       {
         "date": "20230428",
@@ -680,13 +674,13 @@
         "date": "20230509",
         "close": 225.83,
         "pe_ttm": 14.67,
-        "pe_percentile": 14.3
+        "pe_percentile": 14.2
       },
       {
         "date": "20230515",
         "close": 238.29,
         "pe_ttm": 15.48,
-        "pe_percentile": 16.6
+        "pe_percentile": 16.5
       },
       {
         "date": "20230519",
@@ -740,7 +734,7 @@
         "date": "20230706",
         "close": 224.85,
         "pe_ttm": 12.68,
-        "pe_percentile": 7.7
+        "pe_percentile": 7.6
       },
       {
         "date": "20230712",
@@ -752,7 +746,7 @@
         "date": "20230718",
         "close": 225.5,
         "pe_ttm": 12.71,
-        "pe_percentile": 7.8
+        "pe_percentile": 7.7
       },
       {
         "date": "20230724",
@@ -788,7 +782,7 @@
         "date": "20230821",
         "close": 232.96,
         "pe_ttm": 13.13,
-        "pe_percentile": 10.0
+        "pe_percentile": 9.9
       },
       {
         "date": "20230825",
@@ -836,7 +830,7 @@
         "date": "20231012",
         "close": 195.94,
         "pe_ttm": 10.8,
-        "pe_percentile": 5.6
+        "pe_percentile": 5.5
       },
       {
         "date": "20231018",
@@ -980,7 +974,7 @@
         "date": "20240305",
         "close": 164.65,
         "pe_ttm": 16.84,
-        "pe_percentile": 20.9
+        "pe_percentile": 20.8
       },
       {
         "date": "20240311",
@@ -998,7 +992,7 @@
         "date": "20240321",
         "close": 189.08,
         "pe_ttm": 19.34,
-        "pe_percentile": 29.4
+        "pe_percentile": 29.3
       },
       {
         "date": "20240327",
@@ -1028,7 +1022,7 @@
         "date": "20240422",
         "close": 190.6,
         "pe_ttm": 19.85,
-        "pe_percentile": 31.8
+        "pe_percentile": 31.7
       },
       {
         "date": "20240426",
@@ -1040,7 +1034,7 @@
         "date": "20240507",
         "close": 206.88,
         "pe_ttm": 21.55,
-        "pe_percentile": 41.0
+        "pe_percentile": 40.9
       },
       {
         "date": "20240513",
@@ -1070,7 +1064,7 @@
         "date": "20240604",
         "close": 205.97,
         "pe_ttm": 21.45,
-        "pe_percentile": 40.7
+        "pe_percentile": 40.6
       },
       {
         "date": "20240611",
@@ -1190,19 +1184,19 @@
         "date": "20240927",
         "close": 226.81,
         "pe_ttm": 21.96,
-        "pe_percentile": 42.6
+        "pe_percentile": 42.5
       },
       {
         "date": "20241010",
         "close": 258.0,
         "pe_ttm": 23.57,
-        "pe_percentile": 49.6
+        "pe_percentile": 49.5
       },
       {
         "date": "20241016",
         "close": 233.85,
         "pe_ttm": 21.37,
-        "pe_percentile": 40.6
+        "pe_percentile": 40.5
       },
       {
         "date": "20241022",
@@ -1226,19 +1220,19 @@
         "date": "20241107",
         "close": 262.8,
         "pe_ttm": 24.01,
-        "pe_percentile": 51.7
+        "pe_percentile": 51.6
       },
       {
         "date": "20241113",
         "close": 282.0,
         "pe_ttm": 25.77,
-        "pe_percentile": 56.4
+        "pe_percentile": 56.3
       },
       {
         "date": "20241119",
         "close": 268.72,
         "pe_ttm": 24.55,
-        "pe_percentile": 54.0
+        "pe_percentile": 53.9
       },
       {
         "date": "20241125",
@@ -1274,7 +1268,7 @@
         "date": "20241223",
         "close": 263.5,
         "pe_ttm": 24.08,
-        "pe_percentile": 52.2
+        "pe_percentile": 52.1
       },
       {
         "date": "20241227",
@@ -1292,7 +1286,7 @@
         "date": "20250109",
         "close": 247.33,
         "pe_ttm": 22.03,
-        "pe_percentile": 42.8
+        "pe_percentile": 42.7
       },
       {
         "date": "20250115",
@@ -1304,7 +1298,7 @@
         "date": "20250121",
         "close": 264.18,
         "pe_ttm": 23.53,
-        "pe_percentile": 49.2
+        "pe_percentile": 49.1
       },
       {
         "date": "20250127",
@@ -1316,19 +1310,19 @@
         "date": "20250210",
         "close": 258.45,
         "pe_ttm": 23.02,
-        "pe_percentile": 47.3
+        "pe_percentile": 47.2
       },
       {
         "date": "20250214",
         "close": 269.71,
         "pe_ttm": 24.03,
-        "pe_percentile": 51.9
+        "pe_percentile": 51.8
       },
       {
         "date": "20250220",
         "close": 270.2,
         "pe_ttm": 24.07,
-        "pe_percentile": 52.1
+        "pe_percentile": 52.0
       },
       {
         "date": "20250226",
@@ -1382,7 +1376,7 @@
         "date": "20250414",
         "close": 224.0,
         "pe_ttm": 18.14,
-        "pe_percentile": 25.5
+        "pe_percentile": 25.4
       },
       {
         "date": "20250418",
@@ -1418,25 +1412,25 @@
         "date": "20250521",
         "close": 274.08,
         "pe_ttm": 22.2,
-        "pe_percentile": 43.2
+        "pe_percentile": 43.1
       },
       {
         "date": "20250527",
         "close": 253.99,
         "pe_ttm": 20.57,
-        "pe_percentile": 36.1
+        "pe_percentile": 36.0
       },
       {
         "date": "20250603",
         "close": 251.15,
         "pe_ttm": 20.34,
-        "pe_percentile": 34.1
+        "pe_percentile": 34.0
       },
       {
         "date": "20250609",
         "close": 245.58,
         "pe_ttm": 19.89,
-        "pe_percentile": 32.0
+        "pe_percentile": 31.9
       },
       {
         "date": "20250613",
@@ -1472,13 +1466,13 @@
         "date": "20250711",
         "close": 271.5,
         "pe_ttm": 21.06,
-        "pe_percentile": 38.9
+        "pe_percentile": 38.8
       },
       {
         "date": "20250717",
         "close": 265.5,
         "pe_ttm": 20.59,
-        "pe_percentile": 36.3
+        "pe_percentile": 36.2
       },
       {
         "date": "20250723",
@@ -1490,7 +1484,7 @@
         "date": "20250729",
         "close": 291.82,
         "pe_ttm": 22.63,
-        "pe_percentile": 44.9
+        "pe_percentile": 44.8
       },
       {
         "date": "20250804",
@@ -1526,7 +1520,7 @@
         "date": "20250901",
         "close": 304.0,
         "pe_ttm": 23.58,
-        "pe_percentile": 49.7
+        "pe_percentile": 49.6
       },
       {
         "date": "20250905",
@@ -1556,7 +1550,7 @@
         "date": "20250929",
         "close": 397.37,
         "pe_ttm": 30.82,
-        "pe_percentile": 70.5
+        "pe_percentile": 70.6
       },
       {
         "date": "20251013",
@@ -1568,25 +1562,25 @@
         "date": "20251017",
         "close": 358.14,
         "pe_ttm": 27.41,
-        "pe_percentile": 60.4
+        "pe_percentile": 60.3
       },
       {
         "date": "20251023",
         "close": 376.45,
         "pe_ttm": 28.81,
-        "pe_percentile": 64.7
+        "pe_percentile": 64.6
       },
       {
         "date": "20251029",
         "close": 400.0,
         "pe_ttm": 30.62,
-        "pe_percentile": 70.1
+        "pe_percentile": 70.2
       },
       {
         "date": "20251104",
         "close": 378.95,
         "pe_ttm": 29.0,
-        "pe_percentile": 65.2
+        "pe_percentile": 65.1
       },
       {
         "date": "20251110",
@@ -1604,7 +1598,7 @@
         "date": "20251120",
         "close": 379.39,
         "pe_ttm": 29.04,
-        "pe_percentile": 65.3
+        "pe_percentile": 65.2
       },
       {
         "date": "20251126",
@@ -1616,13 +1610,13 @@
         "date": "20251202",
         "close": 380.08,
         "pe_ttm": 29.09,
-        "pe_percentile": 65.4
+        "pe_percentile": 65.3
       },
       {
         "date": "20251208",
         "close": 392.5,
         "pe_ttm": 30.04,
-        "pe_percentile": 68.8
+        "pe_percentile": 68.7
       },
       {
         "date": "20251212",
@@ -1634,19 +1628,19 @@
         "date": "20251218",
         "close": 372.0,
         "pe_ttm": 28.47,
-        "pe_percentile": 63.2
+        "pe_percentile": 63.1
       },
       {
         "date": "20251224",
         "close": 375.6,
         "pe_ttm": 28.75,
-        "pe_percentile": 64.4
+        "pe_percentile": 64.3
       },
       {
         "date": "20251230",
         "close": 369.2,
         "pe_ttm": 28.26,
-        "pe_percentile": 62.1
+        "pe_percentile": 62.0
       },
       {
         "date": "20260107",
@@ -1664,43 +1658,43 @@
         "date": "20260119",
         "close": 348.9,
         "pe_ttm": 26.39,
-        "pe_percentile": 58.1
+        "pe_percentile": 58.0
       },
       {
         "date": "20260123",
         "close": 347.0,
         "pe_ttm": 26.24,
-        "pe_percentile": 57.7
+        "pe_percentile": 57.6
       },
       {
         "date": "20260129",
         "close": 341.89,
         "pe_ttm": 25.86,
-        "pe_percentile": 56.7
+        "pe_percentile": 56.6
       },
       {
         "date": "20260204",
         "close": 365.03,
         "pe_ttm": 27.61,
-        "pe_percentile": 61.0
+        "pe_percentile": 60.9
       },
       {
         "date": "20260210",
         "close": 364.97,
         "pe_ttm": 27.6,
-        "pe_percentile": 60.9
+        "pe_percentile": 60.8
       },
       {
         "date": "20260224",
         "close": 361.95,
         "pe_ttm": 27.37,
-        "pe_percentile": 60.1
+        "pe_percentile": 60.0
       },
       {
         "date": "20260302",
         "close": 340.22,
         "pe_ttm": 25.73,
-        "pe_percentile": 56.2
+        "pe_percentile": 56.1
       },
       {
         "date": "20260306",
@@ -1724,7 +1718,7 @@
         "date": "20260324",
         "close": 396.99,
         "pe_ttm": 30.02,
-        "pe_percentile": 68.6
+        "pe_percentile": 68.5
       },
       {
         "date": "20260330",
@@ -1748,27 +1742,29 @@
         "date": "20260416",
         "close": 453.98,
         "pe_ttm": 30.77,
-        "pe_percentile": 70.3
+        "pe_percentile": 70.4
       },
       {
         "date": "20260422",
         "close": 436.35,
         "pe_ttm": 29.58,
-        "pe_percentile": 67.3
+        "pe_percentile": 67.2
       },
       {
         "date": "20260428",
         "close": 427.67,
         "pe_ttm": 28.99,
-        "pe_percentile": 65.1
+        "pe_percentile": 65.0
+      },
+      {
+        "date": "20260429",
+        "close": 445.0,
+        "pe_ttm": 30.17,
+        "pe_percentile": 69.1
       }
     ]
   },
   "price_series": [
-    {
-      "date": "20260331",
-      "close": 401.7
-    },
     {
       "date": "20260401",
       "close": 405.71
@@ -1844,246 +1840,271 @@
     {
       "date": "20260428",
       "close": 427.67
+    },
+    {
+      "date": "20260429",
+      "close": 445.0
     }
   ],
-  "hk_price_series": [
-    {
-      "date": "20260327",
-      "close": 634.0
-    },
-    {
-      "date": "20260330",
-      "close": 632.0
-    },
-    {
-      "date": "20260331",
-      "close": 613.5
-    },
-    {
-      "date": "20260401",
-      "close": 632.5
-    },
-    {
-      "date": "20260402",
-      "close": 627.5
-    },
-    {
-      "date": "20260408",
-      "close": 639.5
-    },
-    {
-      "date": "20260409",
-      "close": 633.0
-    },
-    {
-      "date": "20260410",
-      "close": 681.5
-    },
-    {
-      "date": "20260413",
-      "close": 682.5
-    },
-    {
-      "date": "20260414",
-      "close": 660.0
-    },
-    {
-      "date": "20260415",
-      "close": 655.5
-    },
-    {
-      "date": "20260416",
-      "close": 714.5
-    },
-    {
-      "date": "20260417",
-      "close": 692.0
-    },
-    {
-      "date": "20260420",
-      "close": 702.5
-    },
-    {
-      "date": "20260421",
-      "close": 736.0
-    },
-    {
-      "date": "20260422",
-      "close": 699.0
-    },
-    {
-      "date": "20260423",
-      "close": 702.5
-    },
-    {
-      "date": "20260424",
-      "close": 695.0
-    },
-    {
-      "date": "20260427",
-      "close": 675.5
-    },
-    {
-      "date": "20260428",
-      "close": 629.0
-    }
-  ],
+  "hk_price_series": [],
   "ah_premium_series": [
     {
+      "date": "20260128",
+      "premium": -17.04,
+      "a_close": 339.99,
+      "h_close_cny": 409.83
+    },
+    {
+      "date": "20260129",
+      "premium": -16.93,
+      "a_close": 341.89,
+      "h_close_cny": 411.58
+    },
+    {
+      "date": "20260130",
+      "premium": -17.36,
+      "a_close": 350.0,
+      "h_close_cny": 423.5
+    },
+    {
+      "date": "20260202",
+      "premium": -16.84,
+      "a_close": 348.98,
+      "h_close_cny": 419.64
+    },
+    {
+      "date": "20260203",
+      "premium": -16.22,
+      "a_close": 347.91,
+      "h_close_cny": 415.26
+    },
+    {
+      "date": "20260204",
+      "premium": -15.81,
+      "a_close": 365.03,
+      "h_close_cny": 433.58
+    },
+    {
+      "date": "20260205",
+      "premium": -14.62,
+      "a_close": 362.94,
+      "h_close_cny": 425.08
+    },
+    {
+      "date": "20260206",
+      "premium": -14.7,
+      "a_close": 369.11,
+      "h_close_cny": 432.7
+    },
+    {
+      "date": "20260209",
+      "premium": -16.79,
+      "a_close": 368.82,
+      "h_close_cny": 443.22
+    },
+    {
+      "date": "20260210",
+      "premium": -17.25,
+      "a_close": 364.97,
+      "h_close_cny": 441.03
+    },
+    {
+      "date": "20260211",
+      "premium": -15.89,
+      "a_close": 368.0,
+      "h_close_cny": 437.53
+    },
+    {
+      "date": "20260212",
+      "premium": -17.56,
+      "a_close": 375.87,
+      "h_close_cny": 455.93
+    },
+    {
+      "date": "20260213",
+      "premium": -18.22,
+      "a_close": 365.34,
+      "h_close_cny": 446.73
+    },
+    {
+      "date": "20260224",
+      "premium": -20.23,
+      "a_close": 361.95,
+      "h_close_cny": 453.74
+    },
+    {
+      "date": "20260225",
+      "premium": -21.32,
+      "a_close": 362.18,
+      "h_close_cny": 460.32
+    },
+    {
+      "date": "20260226",
+      "premium": -19.53,
+      "a_close": 346.0,
+      "h_close_cny": 429.99
+    },
+    {
+      "date": "20260227",
+      "premium": -20.07,
+      "a_close": 342.01,
+      "h_close_cny": 427.88
+    },
+    {
       "date": "20260302",
-      "premium": -19.88,
+      "premium": -18.55,
       "a_close": 340.22,
-      "h_close_cny": 424.63
+      "h_close_cny": 417.71
     },
     {
       "date": "20260303",
-      "premium": -19.4,
+      "premium": -18.08,
       "a_close": 344.07,
-      "h_close_cny": 426.9
+      "h_close_cny": 419.99
     },
     {
       "date": "20260304",
-      "premium": -19.32,
+      "premium": -17.97,
       "a_close": 338.9,
-      "h_close_cny": 420.07
+      "h_close_cny": 413.16
     },
     {
       "date": "20260305",
-      "premium": -20.06,
+      "premium": -18.78,
       "a_close": 350.25,
-      "h_close_cny": 438.12
+      "h_close_cny": 431.21
     },
     {
       "date": "20260306",
-      "premium": -21.11,
+      "premium": -19.88,
       "a_close": 354.77,
-      "h_close_cny": 449.7
+      "h_close_cny": 442.79
     },
     {
       "date": "20260309",
-      "premium": -18.92,
+      "premium": -17.63,
       "a_close": 357.5,
-      "h_close_cny": 440.93
+      "h_close_cny": 434.02
     },
     {
       "date": "20260310",
-      "premium": -21.95,
+      "premium": -20.82,
       "a_close": 376.3,
-      "h_close_cny": 482.13
+      "h_close_cny": 475.22
     },
     {
       "date": "20260311",
-      "premium": -24.49,
+      "premium": -23.49,
       "a_close": 396.8,
-      "h_close_cny": 525.52
+      "h_close_cny": 518.61
     },
     {
       "date": "20260312",
-      "premium": -26.04,
+      "premium": -25.07,
       "a_close": 395.5,
-      "h_close_cny": 534.73
+      "h_close_cny": 527.82
     },
     {
       "date": "20260313",
-      "premium": -27.07,
+      "premium": -26.13,
       "a_close": 397.0,
-      "h_close_cny": 544.37
+      "h_close_cny": 537.46
     },
     {
       "date": "20260316",
-      "premium": -30.46,
+      "premium": -29.64,
       "a_close": 408.4,
-      "h_close_cny": 587.32
+      "h_close_cny": 580.41
     },
     {
       "date": "20260317",
-      "premium": -28.7,
+      "premium": -27.82,
       "a_close": 405.0,
-      "h_close_cny": 568.04
+      "h_close_cny": 561.13
     },
     {
       "date": "20260318",
-      "premium": -29.5,
+      "premium": -28.63,
       "a_close": 402.02,
-      "h_close_cny": 570.23
+      "h_close_cny": 563.32
     },
     {
       "date": "20260319",
-      "premium": -29.06,
+      "premium": -28.18,
       "a_close": 400.5,
-      "h_close_cny": 564.53
+      "h_close_cny": 557.62
     },
     {
       "date": "20260320",
-      "premium": -32.5,
+      "premium": -31.73,
       "a_close": 413.0,
-      "h_close_cny": 611.87
+      "h_close_cny": 604.96
     },
     {
       "date": "20260323",
-      "premium": -30.73,
+      "premium": -29.89,
       "a_close": 401.99,
-      "h_close_cny": 580.31
+      "h_close_cny": 573.4
     },
     {
       "date": "20260324",
-      "premium": -29.79,
+      "premium": -28.92,
       "a_close": 396.99,
-      "h_close_cny": 565.41
+      "h_close_cny": 558.5
     },
     {
       "date": "20260325",
-      "premium": -28.81,
+      "premium": -27.92,
       "a_close": 397.81,
-      "h_close_cny": 558.83
+      "h_close_cny": 551.92
     },
     {
       "date": "20260326",
-      "premium": -25.46,
+      "premium": -24.49,
       "a_close": 402.5,
-      "h_close_cny": 539.99
+      "h_close_cny": 533.08
     },
     {
       "date": "20260327",
-      "premium": -25.12,
+      "premium": -24.17,
       "a_close": 416.18,
-      "h_close_cny": 555.76
+      "h_close_cny": 548.85
     },
     {
       "date": "20260330",
-      "premium": -25.45,
+      "premium": -24.51,
       "a_close": 413.0,
-      "h_close_cny": 554.01
+      "h_close_cny": 547.1
     },
     {
       "date": "20260331",
-      "premium": -25.31,
+      "premium": -24.33,
       "a_close": 401.7,
-      "h_close_cny": 537.79
+      "h_close_cny": 530.88
     },
     {
       "date": "20260401",
-      "premium": -26.83,
+      "premium": -25.9,
       "a_close": 405.71,
-      "h_close_cny": 554.45
+      "h_close_cny": 547.54
     },
     {
       "date": "20260402",
-      "premium": -27.07,
+      "premium": -26.14,
       "a_close": 401.17,
-      "h_close_cny": 550.07
+      "h_close_cny": 543.16
     },
     {
       "date": "20260408",
-      "premium": -30.2,
+      "premium": -29.33,
       "a_close": 391.3,
-      "h_close_cny": 560.59
+      "h_close_cny": 553.68
     },
     {
       "date": "20260409",
-      "premium": -29.72,
+      "premium": -28.83,
       "a_close": 389.99,
-      "h_close_cny": 554.89
+      "h_close_cny": 547.98
     },
     {
       "date": "20260410",
@@ -2162,6 +2183,12 @@
       "premium": -22.44,
       "a_close": 427.67,
       "h_close_cny": 551.38
+    },
+    {
+      "date": "20260429",
+      "premium": -19.1,
+      "a_close": 445.0,
+      "h_close_cny": 550.07
     }
   ],
   "news": {
@@ -2171,6 +2198,14 @@
         "date": "2026-04-28",
         "source": "第一财经",
         "url": "http://finance.eastmoney.com/a/202604283721642690.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "雅化集团：宁德时代为公司重要客户之一",
+        "date": "2026-04-29",
+        "source": "每日经济新闻",
+        "url": "http://finance.eastmoney.com/a/202604293725031929.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
@@ -2191,6 +2226,14 @@
         "sentiment_label": "negative"
       },
       {
+        "title": "摩根士丹利上调宁德时代目标价",
+        "date": "2026-04-29",
+        "source": "南方财经网",
+        "url": "http://finance.eastmoney.com/a/202604293723915958.html",
+        "sentiment_score": 6,
+        "sentiment_label": "positive"
+      },
+      {
         "title": "港股宁德时代跌超6%",
         "date": "2026-04-28",
         "source": "南方财经网",
@@ -2203,6 +2246,14 @@
         "date": "2026-04-27",
         "source": "第一财经",
         "url": "http://finance.eastmoney.com/a/202604273719944722.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代闪电配售何以获得海外长线资金热捧？",
+        "date": "2026-04-29",
+        "source": "上海证券报·中国证券网",
+        "url": "http://finance.eastmoney.com/a/202604293724082832.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
@@ -2235,6 +2286,22 @@
         "date": "2026-04-29",
         "source": "中国经营报",
         "url": "http://finance.eastmoney.com/a/202604283722868228.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "Millennium、挪威主权财富基金据悉参与了宁德时代50亿美元的股票配售",
+        "date": "2026-04-29",
+        "source": "财联社",
+        "url": "http://finance.eastmoney.com/a/202604293724524776.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代在西安投资成立新公司 含机动车充电销售业务",
+        "date": "2026-04-29",
+        "source": "人民财讯",
+        "url": "http://finance.eastmoney.com/a/202604293723963544.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
@@ -2279,60 +2346,20 @@
         "sentiment_label": "negative"
       },
       {
-        "title": "宁德时代拟配售6239万股新H股 净筹391.1亿港元",
-        "date": "2026-04-28",
-        "source": "财中社",
-        "url": "http://finance.eastmoney.com/a/202604283722146567.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代A股、港股大跌，拟折价配股募资近392亿港元",
-        "date": "2026-04-28",
-        "source": "大河财立方",
-        "url": "http://finance.eastmoney.com/a/202604283721653640.html",
-        "sentiment_score": -2,
-        "sentiment_label": "negative"
-      },
-      {
-        "title": "宁德时代拟通过香港新股配售募资50亿美元",
-        "date": "2026-04-27",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202604273720255941.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代H股全球最大新股增发：罕见溢价发行、机构踊跃参与",
-        "date": "2026-04-28",
-        "source": "央广财经",
-        "url": "http://finance.eastmoney.com/a/202604283722448268.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代392亿港元配售成焦点 H股大跌超8%",
-        "date": "2026-04-28",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202604283721874640.html",
-        "sentiment_score": -2,
-        "sentiment_label": "negative"
-      },
-      {
-        "title": "宁德时代50亿美元股票配售据悉获得超过150名投资者认购",
-        "date": "2026-04-28",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202604283721322772.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
+        "title": "宁德时代“小伙伴”，亿纬锂能合作商今日上市丨打新早知道",
+        "date": "2026-04-30",
+        "source": "21世纪经济报道",
+        "url": "http://finance.eastmoney.com/a/202604303725326859.html",
+        "sentiment_score": 2,
+        "sentiment_label": "positive"
       }
     ],
     "sentiment": {
-      "score": 30,
-      "label": "negative",
-      "positive_count": 0,
-      "negative_count": 10,
-      "neutral_count": 15
+      "score": 40,
+      "label": "neutral",
+      "positive_count": 2,
+      "negative_count": 9,
+      "neutral_count": 13
     }
   },
   "params": {
@@ -2347,15 +2374,15 @@
     "lithium_high": 12
   },
   "signals": {
-    "score": 3,
-    "verdict": "intensive",
-    "verdict_text": "多个指标显示估值偏低，认真考虑加仓",
-    "color": "green",
+    "score": 1,
+    "verdict": "watch",
+    "verdict_text": "估值偏向合理偏低，可适当关注",
+    "color": "yellow",
     "details": [
-      "PE 29.0x 处于合理区间",
-      "AH溢价 -22.4% 偏低",
-      "价格站上20日均线(421)",
-      "个股PE低于行业17%"
+      "PE 30.2x 偏贵",
+      "AH溢价 -19.1% 偏低",
+      "价格站上20日均线(424)",
+      "个股PE低于行业18%"
     ],
     "add_triggered": false,
     "add_ready": 2,
