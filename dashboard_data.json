@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-30 08:28",
+  "update_time": "2026-04-30 08:31",
   "trade_date": "20260429",
   "catl": {
     "close": 445.0,
@@ -173,7 +173,13 @@
     "south_money": 53679.28,
     "trade_date": "20260429"
   },
-  "southbound": null,
+  "southbound": {
+    "trade_date": "20260429",
+    "vol": 6360988,
+    "ratio": 4.07,
+    "change": 164059,
+    "change_pct": 2.65
+  },
   "pe_history": {
     "current_pe": 30.17,
     "current_percentile": 69.1,
@@ -1846,265 +1852,244 @@
       "close": 445.0
     }
   ],
-  "hk_price_series": [],
-  "ah_premium_series": [
-    {
-      "date": "20260128",
-      "premium": -17.04,
-      "a_close": 339.99,
-      "h_close_cny": 409.83
-    },
-    {
-      "date": "20260129",
-      "premium": -16.93,
-      "a_close": 341.89,
-      "h_close_cny": 411.58
-    },
-    {
-      "date": "20260130",
-      "premium": -17.36,
-      "a_close": 350.0,
-      "h_close_cny": 423.5
-    },
-    {
-      "date": "20260202",
-      "premium": -16.84,
-      "a_close": 348.98,
-      "h_close_cny": 419.64
-    },
-    {
-      "date": "20260203",
-      "premium": -16.22,
-      "a_close": 347.91,
-      "h_close_cny": 415.26
-    },
-    {
-      "date": "20260204",
-      "premium": -15.81,
-      "a_close": 365.03,
-      "h_close_cny": 433.58
-    },
-    {
-      "date": "20260205",
-      "premium": -14.62,
-      "a_close": 362.94,
-      "h_close_cny": 425.08
-    },
-    {
-      "date": "20260206",
-      "premium": -14.7,
-      "a_close": 369.11,
-      "h_close_cny": 432.7
-    },
-    {
-      "date": "20260209",
-      "premium": -16.79,
-      "a_close": 368.82,
-      "h_close_cny": 443.22
-    },
-    {
-      "date": "20260210",
-      "premium": -17.25,
-      "a_close": 364.97,
-      "h_close_cny": 441.03
-    },
-    {
-      "date": "20260211",
-      "premium": -15.89,
-      "a_close": 368.0,
-      "h_close_cny": 437.53
-    },
-    {
-      "date": "20260212",
-      "premium": -17.56,
-      "a_close": 375.87,
-      "h_close_cny": 455.93
-    },
-    {
-      "date": "20260213",
-      "premium": -18.22,
-      "a_close": 365.34,
-      "h_close_cny": 446.73
-    },
-    {
-      "date": "20260224",
-      "premium": -20.23,
-      "a_close": 361.95,
-      "h_close_cny": 453.74
-    },
-    {
-      "date": "20260225",
-      "premium": -21.32,
-      "a_close": 362.18,
-      "h_close_cny": 460.32
-    },
-    {
-      "date": "20260226",
-      "premium": -19.53,
-      "a_close": 346.0,
-      "h_close_cny": 429.99
-    },
-    {
-      "date": "20260227",
-      "premium": -20.07,
-      "a_close": 342.01,
-      "h_close_cny": 427.88
-    },
-    {
-      "date": "20260302",
-      "premium": -18.55,
-      "a_close": 340.22,
-      "h_close_cny": 417.71
-    },
-    {
-      "date": "20260303",
-      "premium": -18.08,
-      "a_close": 344.07,
-      "h_close_cny": 419.99
-    },
-    {
-      "date": "20260304",
-      "premium": -17.97,
-      "a_close": 338.9,
-      "h_close_cny": 413.16
-    },
-    {
-      "date": "20260305",
-      "premium": -18.78,
-      "a_close": 350.25,
-      "h_close_cny": 431.21
-    },
-    {
-      "date": "20260306",
-      "premium": -19.88,
-      "a_close": 354.77,
-      "h_close_cny": 442.79
-    },
-    {
-      "date": "20260309",
-      "premium": -17.63,
-      "a_close": 357.5,
-      "h_close_cny": 434.02
-    },
-    {
-      "date": "20260310",
-      "premium": -20.82,
-      "a_close": 376.3,
-      "h_close_cny": 475.22
-    },
-    {
-      "date": "20260311",
-      "premium": -23.49,
-      "a_close": 396.8,
-      "h_close_cny": 518.61
-    },
-    {
-      "date": "20260312",
-      "premium": -25.07,
-      "a_close": 395.5,
-      "h_close_cny": 527.82
-    },
-    {
-      "date": "20260313",
-      "premium": -26.13,
-      "a_close": 397.0,
-      "h_close_cny": 537.46
-    },
-    {
-      "date": "20260316",
-      "premium": -29.64,
-      "a_close": 408.4,
-      "h_close_cny": 580.41
-    },
-    {
-      "date": "20260317",
-      "premium": -27.82,
-      "a_close": 405.0,
-      "h_close_cny": 561.13
-    },
-    {
-      "date": "20260318",
-      "premium": -28.63,
-      "a_close": 402.02,
-      "h_close_cny": 563.32
-    },
-    {
-      "date": "20260319",
-      "premium": -28.18,
-      "a_close": 400.5,
-      "h_close_cny": 557.62
-    },
-    {
-      "date": "20260320",
-      "premium": -31.73,
-      "a_close": 413.0,
-      "h_close_cny": 604.96
-    },
-    {
-      "date": "20260323",
-      "premium": -29.89,
-      "a_close": 401.99,
-      "h_close_cny": 573.4
-    },
-    {
-      "date": "20260324",
-      "premium": -28.92,
-      "a_close": 396.99,
-      "h_close_cny": 558.5
-    },
-    {
-      "date": "20260325",
-      "premium": -27.92,
-      "a_close": 397.81,
-      "h_close_cny": 551.92
-    },
-    {
-      "date": "20260326",
-      "premium": -24.49,
-      "a_close": 402.5,
-      "h_close_cny": 533.08
-    },
-    {
-      "date": "20260327",
-      "premium": -24.17,
-      "a_close": 416.18,
-      "h_close_cny": 548.85
-    },
+  "hk_price_series": [
     {
       "date": "20260330",
-      "premium": -24.51,
-      "a_close": 413.0,
-      "h_close_cny": 547.1
+      "close": 632.0
     },
     {
       "date": "20260331",
-      "premium": -24.33,
-      "a_close": 401.7,
-      "h_close_cny": 530.88
+      "close": 613.5
     },
     {
       "date": "20260401",
-      "premium": -25.9,
-      "a_close": 405.71,
-      "h_close_cny": 547.54
+      "close": 632.5
     },
     {
       "date": "20260402",
-      "premium": -26.14,
-      "a_close": 401.17,
-      "h_close_cny": 543.16
+      "close": 627.5
     },
     {
       "date": "20260408",
-      "premium": -29.33,
-      "a_close": 391.3,
-      "h_close_cny": 553.68
+      "close": 639.5
     },
     {
       "date": "20260409",
-      "premium": -28.83,
+      "close": 633.0
+    },
+    {
+      "date": "20260410",
+      "close": 681.5
+    },
+    {
+      "date": "20260413",
+      "close": 682.5
+    },
+    {
+      "date": "20260414",
+      "close": 660.0
+    },
+    {
+      "date": "20260415",
+      "close": 655.5
+    },
+    {
+      "date": "20260416",
+      "close": 714.5
+    },
+    {
+      "date": "20260417",
+      "close": 692.0
+    },
+    {
+      "date": "20260420",
+      "close": 702.5
+    },
+    {
+      "date": "20260421",
+      "close": 736.0
+    },
+    {
+      "date": "20260422",
+      "close": 699.0
+    },
+    {
+      "date": "20260423",
+      "close": 702.5
+    },
+    {
+      "date": "20260424",
+      "close": 695.0
+    },
+    {
+      "date": "20260427",
+      "close": 675.5
+    },
+    {
+      "date": "20260428",
+      "close": 629.0
+    },
+    {
+      "date": "20260429",
+      "close": 627.5
+    }
+  ],
+  "ah_premium_series": [
+    {
+      "date": "20260302",
+      "premium": -19.88,
+      "a_close": 340.22,
+      "h_close_cny": 424.63
+    },
+    {
+      "date": "20260303",
+      "premium": -19.4,
+      "a_close": 344.07,
+      "h_close_cny": 426.9
+    },
+    {
+      "date": "20260304",
+      "premium": -19.32,
+      "a_close": 338.9,
+      "h_close_cny": 420.07
+    },
+    {
+      "date": "20260305",
+      "premium": -20.06,
+      "a_close": 350.25,
+      "h_close_cny": 438.12
+    },
+    {
+      "date": "20260306",
+      "premium": -21.11,
+      "a_close": 354.77,
+      "h_close_cny": 449.7
+    },
+    {
+      "date": "20260309",
+      "premium": -18.92,
+      "a_close": 357.5,
+      "h_close_cny": 440.93
+    },
+    {
+      "date": "20260310",
+      "premium": -21.95,
+      "a_close": 376.3,
+      "h_close_cny": 482.13
+    },
+    {
+      "date": "20260311",
+      "premium": -24.49,
+      "a_close": 396.8,
+      "h_close_cny": 525.52
+    },
+    {
+      "date": "20260312",
+      "premium": -26.04,
+      "a_close": 395.5,
+      "h_close_cny": 534.73
+    },
+    {
+      "date": "20260313",
+      "premium": -27.07,
+      "a_close": 397.0,
+      "h_close_cny": 544.37
+    },
+    {
+      "date": "20260316",
+      "premium": -30.46,
+      "a_close": 408.4,
+      "h_close_cny": 587.32
+    },
+    {
+      "date": "20260317",
+      "premium": -28.7,
+      "a_close": 405.0,
+      "h_close_cny": 568.04
+    },
+    {
+      "date": "20260318",
+      "premium": -29.5,
+      "a_close": 402.02,
+      "h_close_cny": 570.23
+    },
+    {
+      "date": "20260319",
+      "premium": -29.06,
+      "a_close": 400.5,
+      "h_close_cny": 564.53
+    },
+    {
+      "date": "20260320",
+      "premium": -32.5,
+      "a_close": 413.0,
+      "h_close_cny": 611.87
+    },
+    {
+      "date": "20260323",
+      "premium": -30.73,
+      "a_close": 401.99,
+      "h_close_cny": 580.31
+    },
+    {
+      "date": "20260324",
+      "premium": -29.79,
+      "a_close": 396.99,
+      "h_close_cny": 565.41
+    },
+    {
+      "date": "20260325",
+      "premium": -28.81,
+      "a_close": 397.81,
+      "h_close_cny": 558.83
+    },
+    {
+      "date": "20260326",
+      "premium": -25.46,
+      "a_close": 402.5,
+      "h_close_cny": 539.99
+    },
+    {
+      "date": "20260327",
+      "premium": -25.12,
+      "a_close": 416.18,
+      "h_close_cny": 555.76
+    },
+    {
+      "date": "20260330",
+      "premium": -25.45,
+      "a_close": 413.0,
+      "h_close_cny": 554.01
+    },
+    {
+      "date": "20260331",
+      "premium": -25.31,
+      "a_close": 401.7,
+      "h_close_cny": 537.79
+    },
+    {
+      "date": "20260401",
+      "premium": -26.83,
+      "a_close": 405.71,
+      "h_close_cny": 554.45
+    },
+    {
+      "date": "20260402",
+      "premium": -27.07,
+      "a_close": 401.17,
+      "h_close_cny": 550.07
+    },
+    {
+      "date": "20260408",
+      "premium": -30.2,
+      "a_close": 391.3,
+      "h_close_cny": 560.59
+    },
+    {
+      "date": "20260409",
+      "premium": -29.72,
       "a_close": 389.99,
-      "h_close_cny": 547.98
+      "h_close_cny": 554.89
     },
     {
       "date": "20260410",
