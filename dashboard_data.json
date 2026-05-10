@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-05-09 20:31",
+  "update_time": "2026-05-10 21:06",
   "trade_date": "20260508",
   "catl": {
     "close": 437.0,
@@ -1941,12 +1941,6 @@
     }
   ],
   "ah_premium_series": [
-    {
-      "date": "20260310",
-      "premium": -21.95,
-      "a_close": 376.3,
-      "h_close_cny": 482.13
-    },
     {
       "date": "20260311",
       "premium": -24.49,
