@@ -1,12 +1,12 @@
 {
-  "update_time": "2026-05-10 22:31",
-  "trade_date": "20260508",
+  "update_time": "2026-05-10 22:39",
+  "trade_date": "20260510",
   "catl": {
     "close": 437.0,
     "pct_chg": -3.24,
-    "open": 449.0,
-    "high": 455.5,
-    "low": 436.2,
+    "open": null,
+    "high": null,
+    "low": null,
     "vol": null,
     "amount": null,
     "mv": 19228.0,
@@ -16,11 +16,11 @@
     "roe": 24.91,
     "gpm": 24.82,
     "npm": 17.61,
-    "ma20": 430.39,
-    "ma60": 391.15,
-    "ma20_trend": "up",
-    "ma20_dev": 1.54,
-    "ma60_dev": 11.72
+    "ma20": null,
+    "ma60": null,
+    "ma20_trend": "unknown",
+    "ma20_dev": null,
+    "ma60_dev": null
   },
   "hk": {
     "close": 651.0,
@@ -159,88 +159,7 @@
   },
   "southbound": null,
   "pe_history": null,
-  "price_series": [
-    {
-      "date": "20260408",
-      "close": 384.39
-    },
-    {
-      "date": "20260409",
-      "close": 383.08
-    },
-    {
-      "date": "20260410",
-      "close": 409.09
-    },
-    {
-      "date": "20260413",
-      "close": 420.22
-    },
-    {
-      "date": "20260414",
-      "close": 423.88
-    },
-    {
-      "date": "20260415",
-      "close": 424.09
-    },
-    {
-      "date": "20260416",
-      "close": 447.07
-    },
-    {
-      "date": "20260417",
-      "close": 437.29
-    },
-    {
-      "date": "20260420",
-      "close": 425.59
-    },
-    {
-      "date": "20260421",
-      "close": 440.69
-    },
-    {
-      "date": "20260422",
-      "close": 436.35
-    },
-    {
-      "date": "20260423",
-      "close": 438.9
-    },
-    {
-      "date": "20260424",
-      "close": 444.9
-    },
-    {
-      "date": "20260427",
-      "close": 434.88
-    },
-    {
-      "date": "20260428",
-      "close": 427.67
-    },
-    {
-      "date": "20260429",
-      "close": 445.0
-    },
-    {
-      "date": "20260430",
-      "close": 436.0
-    },
-    {
-      "date": "20260506",
-      "close": 460.0
-    },
-    {
-      "date": "20260507",
-      "close": 451.64
-    },
-    {
-      "date": "20260508",
-      "close": 437.0
-    }
-  ],
+  "price_series": [],
   "hk_price_series": [],
   "ah_premium_series": [],
   "news": {
@@ -432,8 +351,7 @@
     "color": "green",
     "details": [
       "PE 29.6x 处于合理区间",
-      "AH溢价 -23.4% 偏低",
-      "价格站上20日均线"
+      "AH溢价 -23.4% 偏低"
     ]
   }
 }
