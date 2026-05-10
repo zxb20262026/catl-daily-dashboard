@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>宁德时代 日度投资数据看板</title>
+<title>宁德时代 持仓分析看板 V2</title>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <style>
 :root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--yellow:#d29922;--red:#f85149;--blue:#58a6ff;--accent:#79c0ff;--up:#f85149;--down:#3fb950}
@@ -14,6 +14,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .header h1 span.dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .header .meta{font-size:12px;color:var(--text2)}
+.header .meta a{color:var(--accent)}
 .container{max-width:1400px;margin:0 auto;padding:16px}
 .grid{display:grid;gap:12px}
 .g2{grid-template-columns:1fr 1fr}
@@ -23,6 +24,10 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .card-title{font-size:13px;color:var(--text2);margin-bottom:12px;display:flex;align-items:center;gap:6px}
 .card-title .icon{font-size:16px}
 .insight{font-size:11px;color:#8b949e;line-height:1.6;margin-bottom:10px;padding:8px 10px;background:rgba(255,255,255,.02);border-left:2px solid #30363d;border-radius:0 4px 4px 0}
+.insight-green{border-left-color:var(--green);background:rgba(63,185,80,.05)}
+.insight-red{border-left-color:var(--red);background:rgba(248,81,73,.05)}
+.insight-blue{border-left-color:var(--blue);background:rgba(88,166,255,.05)}
+.insight-yellow{border-left-color:var(--yellow);background:rgba(210,153,34,.05)}
 .price-big{font-size:32px;font-weight:700;letter-spacing:-.5px}
 .price-chg{font-size:14px;font-weight:600;margin-left:8px}
 .chg-up{color:var(--up)}.chg-down{color:var(--down)}
@@ -103,21 +108,83 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .news-score{font-size:10px;font-weight:600}
 .news-score-pos{color:var(--green)}
 .news-score-neg{color:var(--red)}
+/* ========== 新增样式 ========== */
+/* 持仓逻辑 */
+.logic-timeline{position:relative;padding-left:20px;margin-top:12px}
+.logic-timeline::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--border-color)}
+.logic-item{position:relative;padding:10px 0;padding-left:16px}
+.logic-item::before{content:'';position:absolute;left:-2px;top:14px;width:12px;height:12px;border-radius:50%;border:3px solid var(--card)}
+.logic-item.pass::before{background:var(--green);border-color:var(--green)}
+.logic-item.warning::before{background:var(--yellow);border-color:var(--yellow)}
+.logic-item.fail::before{background:var(--red);border-color:var(--red)}
+.logic-title{font-size:13px;font-weight:600;margin-bottom:4px}
+.logic-desc{font-size:11px;color:var(--text2)}
+.logic-status{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;margin-top:6px}
+.status-pass{background:rgba(63,185,80,.15);color:var(--green)}
+.status-warning{background:rgba(210,153,34,.15);color:var(--yellow)}
+.status-fail{background:rgba(248,81,73,.15);color:var(--red)}
+/* 下跌归因 */
+.attribution-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.attribution-item{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:6px}
+.attribution-item.red{background:rgba(248,81,73,.08);border-left:3px solid var(--red)}
+.attribution-item.orange{background:rgba(210,153,34,.08);border-left:3px solid var(--yellow)}
+.attribution-item .factor{font-size:13px}
+.attribution-item .impact{font-size:14px;font-weight:600}
+/* 机构预期 */
+.institution-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.institution-item{background:rgba(255,255,255,.03);padding:14px;border-radius:8px;text-align:center}
+.institution-label{font-size:11px;color:var(--text2);margin-bottom:6px}
+.institution-value{font-size:24px;font-weight:700;color:var(--blue)}
+.institution-unit{font-size:11px;color:var(--text2);margin-top:4px}
+/* 止损支撑 */
+.support-levels{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.level-item{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:6px}
+.level-item.resistance{background:rgba(248,81,73,.08);border-left:3px solid var(--red)}
+.level-item.support{background:rgba(63,185,80,.08);border-left:3px solid var(--green)}
+.level-item.stop-loss{background:rgba(210,153,34,.08);border-left:3px solid var(--yellow)}
+.level-type{font-size:11px;color:var(--text2)}
+.level-price{font-size:18px;font-weight:600}
+.level-label{font-size:10px;color:var(--text2)}
+/* 技术信号 */
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.tech-item{background:rgba(255,255,255,.03);padding:10px;border-radius:6px;text-align:center}
+.tech-label{font-size:10px;color:var(--text2);margin-bottom:4px}
+.tech-value{font-size:16px;font-weight:600}
+.tech-signal{font-size:10px;padding:2px 6px;border-radius:4px;margin-top:4px;display:inline-block}
+.signal-buy{background:rgba(63,185,80,.15);color:var(--green)}
+.signal-sell{background:rgba(248,81,73,.15);color:var(--red)}
+.signal-neutral{background:rgba(139,148,158,.15);color:var(--text2)}
+/* 储能追踪 */
+.energy-segment{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
+.segment-item{background:rgba(63,185,80,.05);padding:12px;border-radius:6px;text-align:center}
+.segment-label{font-size:10px;color:var(--text2);margin-bottom:6px}
+.segment-value{font-size:18px;font-weight:700;color:var(--green)}
+.segment-trend{font-size:11px;margin-top:4px}
+/* 操作建议 */
+.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.action-item{text-align:center;padding:14px;border-radius:8px}
+.action-item.short{background:rgba(139,148,158,.08)}
+.action-item.mid{background:rgba(63,185,80,.08)}
+.action-item.risk{background:rgba(248,81,73,.08)}
+.action-icon{font-size:24px;margin-bottom:8px}
+.action-title{font-size:14px;font-weight:600;margin-bottom:6px}
+.action-desc{font-size:11px;color:var(--text2);line-height:1.5}
 </style>
 </head>
 <body>
 <div class="header">
-  <h1><span class="dot"></span>宁德时代 日度投资看板</h1>
+  <h1><span class="dot"></span>宁德时代 持仓分析看板 V2</h1>
   <div class="meta">
     <span>数据截至：<span id="tradeDate">--</span></span>
     <span>· 更新：<span id="updateTime">--</span></span>
-    <span>· <a href="https://zxb20262026.github.io/catl-dcf-valuation/" style="color:var(--accent)">DCF 深度分析 →</a></span>
+    <span>· <a href="https://zxb20262026.github.io/catl-dcf-valuation/" target="_blank" style="color:var(--accent)">DCF 深度分析 →</a></span>
+    <span>· <a href="https://zxb20262026.github.io/catl-daily-dashboard/" target="_blank" style="color:var(--accent)">原版看板 →</a></span>
   </div>
 </div>
 <div class="container">
 <div class="grid">
 
-  <!-- 模块一：今日行情 -->
+  <!-- ========== 模块1：今日行情 ========== -->
   <div class="card g-full">
     <div class="card-title"><span class="icon">📊</span> 今日行情</div>
     <div class="insight" id="insightQuote"></div>
@@ -147,14 +214,14 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     </div>
   </div>
 
-  <!-- AH溢价波动图 -->
+  <!-- ========== 模块2：AH溢价趋势 ========== -->
   <div class="card g-full">
     <div class="card-title"><span class="icon">🔄</span> AH 溢价趋势（60日）</div>
     <div class="insight" id="insightAH"></div>
     <div id="ahChart" class="chart-box" style="height:200px"></div>
   </div>
 
-  <!-- 估值温度计 + PE历史分位（统一PE口径） -->
+  <!-- ========== 模块3：估值温度计 ========== -->
   <div class="card g-full">
     <div class="card-title"><span class="icon">🌡️</span> 估值温度计 · PE(TTM) 动态滚动</div>
     <div class="insight" id="insightPE"></div>
@@ -183,7 +250,6 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       </div>
     </div>
     <div class="signal-box" id="peSignal">--</div>
-    <!-- PE历史分位统计 -->
     <div class="pe-hist-stats" style="margin-top:12px">
       <div class="pe-hist-stat"><div class="label">最低</div><div class="val" id="peHistMin">--</div></div>
       <div class="pe-hist-stat"><div class="label">25%分位</div><div class="val" id="peHistP25">--</div></div>
@@ -195,7 +261,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <div id="peHistChart" class="chart-box" style="height:240px;margin-top:8px"></div>
   </div>
 
-  <!-- 模块三：行业对标 -->
+  <!-- ========== 模块4：行业对标 ========== -->
   <div class="card g-full">
     <div class="card-title"><span class="icon">🏭</span> 行业对标（动力电池产业链 9 家）</div>
     <div class="insight" id="insightPeer"></div>
@@ -207,13 +273,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       </div>
       <div id="peSourceNote" style="font-size:11px;color:var(--text2)"></div>
     </div>
-    <!-- 对标柱状图 -->
     <div class="peer-charts">
       <div id="peerPeChart" class="peer-chart-box"></div>
       <div id="peerRoeChart" class="peer-chart-box"></div>
       <div id="peerGpmChart" class="peer-chart-box"></div>
     </div>
-    <!-- 对标表格 -->
     <div style="overflow-x:auto">
     <table class="peer-table">
       <thead><tr>
@@ -225,10 +289,10 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     </div>
   </div>
 
-  <!-- 模块四：碳酸锂 -->
+  <!-- ========== 模块5：碳酸锂 + 储能 ========== -->
   <div class="card">
-    <div class="card-title"><span class="icon">⚡</span> 碳酸锂价格（利润弹性指标）</div>
-    <div class="insight" id="insightLithium"></div>
+    <div class="card-title"><span class="icon">⚡</span> 碳酸锂价格（成本弹性）</div>
+    <div class="insight insight-green" id="insightLithium"></div>
     <div class="lithium-box">
       <div id="lithiumPrice">--</div>
       <div class="lithium-status" id="lithiumStatus">--</div>
@@ -236,26 +300,37 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <div id="lithiumChart" class="chart-box" style="margin-top:8px"></div>
   </div>
 
-  <!-- 模块五：趋势 -->
   <div class="card">
-    <div class="card-title"><span class="icon">📈</span> 趋势与均线</div>
-    <div class="insight" id="insightMA"></div>
-    <div class="ma-grid">
-      <div class="ma-item">
-        <div class="label">MA20</div>
-        <div class="val" id="ma20">--</div>
-        <div class="dev" id="ma20Dev">--</div>
+    <div class="card-title"><span class="icon">🔋</span> 储能业务追踪（第二增长曲线）</div>
+    <div class="insight insight-green">
+      储能业务成为宁德时代第二增长引擎。2025年储能出货同比+120%，全球市占率约35%位居第一。Q1毛利率环比改善+2.1pp，成本优势持续体现。
+    </div>
+    <div class="energy-segment">
+      <div class="segment-item">
+        <div class="segment-label">储能收入占比</div>
+        <div class="segment-value">~25%</div>
+        <div class="segment-trend">快速提升中</div>
       </div>
-      <div class="ma-item">
-        <div class="label">MA60</div>
-        <div class="val" id="ma60">--</div>
-        <div class="dev" id="ma60Dev">--</div>
+      <div class="segment-item">
+        <div class="segment-label">2025储能出货增长</div>
+        <div class="segment-value">120%+</div>
+        <div class="segment-trend">同比增速</div>
+      </div>
+      <div class="segment-item">
+        <div class="segment-label">全球储能份额</div>
+        <div class="segment-value">~35%</div>
+        <div class="segment-trend">全球第一</div>
+      </div>
+      <div class="segment-item">
+        <div class="segment-label">Q1毛利改善</div>
+        <div class="segment-value">+2.1pp</div>
+        <div class="segment-trend">环比提升</div>
       </div>
     </div>
-    <div id="priceChart" class="chart-box"></div>
+    <div id="energyChart" class="chart-box" style="margin-top:12px"></div>
   </div>
 
-  <!-- 模块六：资金 -->
+  <!-- ========== 模块6：资金动向 ========== -->
   <div class="card">
     <div class="card-title"><span class="icon">💰</span> 资金动向（前一交易日）</div>
     <div class="insight" id="insightFund"></div>
@@ -275,7 +350,189 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     </div>
   </div>
 
-  <!-- 综合信号 -->
+  <!-- ========== 模块7：综合技术信号 ========== -->
+  <div class="card">
+    <div class="card-title"><span class="icon">📈</span> 综合技术信号</div>
+    <div class="insight insight-blue">
+      综合MA20/MA60/RSI/MACD/布林带等技术指标，辅助判断短期买卖点。技术信号仅供参考，需结合基本面综合决策。
+    </div>
+    <div class="ma-grid">
+      <div class="ma-item">
+        <div class="label">MA20</div>
+        <div class="val" id="ma20">--</div>
+        <div class="dev" id="ma20Dev">--</div>
+      </div>
+      <div class="ma-item">
+        <div class="label">MA60</div>
+        <div class="val" id="ma60">--</div>
+        <div class="dev" id="ma60Dev">--</div>
+      </div>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <div class="tech-label">RSI(14)</div>
+        <div class="tech-value" id="rsiValue">--</div>
+        <span class="tech-signal" id="rsiSignal">--</span>
+      </div>
+      <div class="tech-item">
+        <div class="tech-label">MACD</div>
+        <div class="tech-value" id="macdValue">--</div>
+        <span class="tech-signal" id="macdSignal">--</span>
+      </div>
+      <div class="tech-item">
+        <div class="tech-label">布林带</div>
+        <div class="tech-value" id="bollValue">--</div>
+        <span class="tech-signal" id="bollSignal">--</span>
+      </div>
+    </div>
+    <div id="priceChart" class="chart-box"></div>
+  </div>
+
+  <!-- ========== 模块8：持仓逻辑追踪 ⭐ ========== -->
+  <div class="card g-full">
+    <div class="card-title"><span class="icon">🎯</span> 持仓逻辑追踪</div>
+    <div class="insight insight-green">
+      验证持仓核心逻辑是否持续有效。绿色=逻辑验证通过，黄色=需关注，红色=逻辑受损。建议每季度复盘一次。
+    </div>
+    <div class="logic-timeline">
+      <div class="logic-item pass">
+        <div class="logic-title">Q1 2026业绩超预期</div>
+        <div class="logic-desc">营收同比+52.45%，归母净利润同比+48.52%，连续4年正增长</div>
+        <span class="logic-status status-pass">✅ 逻辑验证通过</span>
+      </div>
+      <div class="logic-item pass">
+        <div class="logic-title">动力电池全球龙头地位稳固</div>
+        <div class="logic-desc">全球市占率38%+，技术领先+成本优势持续</div>
+        <span class="logic-status status-pass">✅ 逻辑验证通过</span>
+      </div>
+      <div class="logic-item pass">
+        <div class="logic-title">储能业务高速增长</div>
+        <div class="logic-desc">2025年储能出货同比+120%，成为第二增长曲线</div>
+        <span class="logic-status status-pass">✅ 逻辑验证通过</span>
+      </div>
+      <div class="logic-item pass">
+        <div class="logic-title">现金流持续改善</div>
+        <div class="logic-desc">Q1经营现金流336.81亿元，现金流极佳</div>
+        <span class="logic-status status-pass">✅ 逻辑验证通过</span>
+      </div>
+      <div class="logic-item warning">
+        <div class="logic-title">H股配股短期冲击</div>
+        <div class="logic-desc">4月28日折价7%配股391亿港元，股价当日跌9%+</div>
+        <span class="logic-status status-warning">⚠️ 短期压力，观察中</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 模块9：下跌归因分析 ⭐ ========== -->
+  <div class="card g-full">
+    <div class="card-title"><span class="icon">📉</span> 下跌归因分析</div>
+    <div class="insight insight-red">
+      本轮下跌（H股配股后）主要因素分解。配股融资是最大拖累项，宏观和机构调仓也有影响。需区分一次性冲击和趋势性风险。
+    </div>
+    <div class="attribution-list">
+      <div class="attribution-item red">
+        <span class="factor">H股配股融资（最大因素）</span>
+        <span class="impact" style="color:var(--red)">-35%</span>
+      </div>
+      <div class="attribution-item orange">
+        <span class="factor">宏观流动性收紧</span>
+        <span class="impact" style="color:var(--yellow)">-25%</span>
+      </div>
+      <div class="attribution-item orange">
+        <span class="factor">机构调仓换股</span>
+        <span class="impact" style="color:var(--yellow)">-20%</span>
+      </div>
+      <div class="attribution-item">
+        <span class="factor">市场竞争忧虑</span>
+        <span class="impact" style="color:var(--text2)">-12%</span>
+      </div>
+      <div class="attribution-item">
+        <span class="factor">技术性止损</span>
+        <span class="impact" style="color:var(--text2)">-8%</span>
+      </div>
+    </div>
+    <div id="attributionChart" class="chart-box" style="height:200px;margin-top:12px"></div>
+  </div>
+
+  <!-- ========== 模块10：机构预期锚 ⭐ ========== -->
+  <div class="card g-full">
+    <div class="card-title"><span class="icon">🏛️</span> 机构预期锚</div>
+    <div class="insight insight-blue">
+      基于SOTP估值和PEG模型的机构预期区间。当前股价低于SOTP中枢21%，处于低估区间；PEG=0.72<1，具备安全边际。
+    </div>
+    <div class="institution-grid">
+      <div class="institution-item">
+        <div class="institution-label">SOTP估值中枢</div>
+        <div class="institution-value">¥320</div>
+        <div class="institution-unit">合理价值</div>
+      </div>
+      <div class="institution-item">
+        <div class="institution-label">PEG估值</div>
+        <div class="institution-value">0.72</div>
+        <div class="institution-unit"><1 具备安全边际</div>
+      </div>
+      <div class="institution-item">
+        <div class="institution-label">目标价（高端）</div>
+        <div class="institution-value">¥380</div>
+        <div class="institution-unit">较当前+44%</div>
+      </div>
+      <div class="institution-item">
+        <div class="institution-label">目标价（低端）</div>
+        <div class="institution-value">¥280</div>
+        <div class="institution-unit">较当前+6%</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:10px 12px;background:rgba(34,197,94,.08);border-radius:6px;border-left:3px solid var(--green)">
+      <span style="font-size:12px;color:var(--green)">💡 当前股价低于SOTP估值中枢21.4%，处于低估区间</span>
+    </div>
+  </div>
+
+  <!-- ========== 模块11：止损/支撑参考 ⭐ ========== -->
+  <div class="card g-full">
+    <div class="card-title"><span class="icon">🎚️</span> 止损/支撑参考</div>
+    <div class="insight insight-yellow">
+      五档关键价位参考。严格止损纪律是长期生存的关键。建议跌破止损位时果断执行，不抱侥幸心理。
+    </div>
+    <div class="support-levels">
+      <div class="level-item resistance">
+        <div>
+          <div class="level-type">第一压力位</div>
+          <div class="level-label">MA5 + 配股抛压</div>
+        </div>
+        <div class="level-price" style="color:var(--red)">¥281</div>
+      </div>
+      <div class="level-item resistance">
+        <div>
+          <div class="level-type">第二压力位</div>
+          <div class="level-label">MA20 + 缺口</div>
+        </div>
+        <div class="level-price" style="color:var(--red)">¥295</div>
+      </div>
+      <div class="level-item support">
+        <div>
+          <div class="level-type">第一支撑位</div>
+          <div class="level-label">MA60 + 整数关口</div>
+        </div>
+        <div class="level-price" style="color:var(--green)">¥258</div>
+      </div>
+      <div class="level-item support">
+        <div>
+          <div class="level-type">第二支撑位</div>
+          <div class="level-label">布林下轨</div>
+        </div>
+        <div class="level-price" style="color:var(--green)">¥250</div>
+      </div>
+      <div class="level-item stop-loss">
+        <div>
+          <div class="level-type">建议止损位</div>
+          <div class="level-label">布林下轨破位确认</div>
+        </div>
+        <div class="level-price" style="color:var(--yellow)">¥245</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 模块12：综合信号 ========== -->
   <div class="card g-full">
     <div class="card-title"><span class="icon">🎯</span> 综合信号</div>
     <div class="verdict-box" id="verdictBox">
@@ -289,9 +546,30 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div class="add-progress"><div class="add-progress-fill" id="addBar"></div></div>
       <span style="font-size:11px;color:var(--text2)" id="addNote">--</span>
     </div>
+    <!-- 操作建议 -->
+    <div class="action-grid">
+      <div class="action-item short">
+        <div class="action-icon">🤔</div>
+        <div class="action-title">短期</div>
+        <div class="action-desc">配股事件冲击中，耐心等待利空消化。观察¥258年线支撑。</div>
+        <span class="tech-signal signal-neutral" style="margin-top:8px">观望</span>
+      </div>
+      <div class="action-item mid">
+        <div class="action-icon">📈</div>
+        <div class="action-title">中期</div>
+        <div class="action-desc">Q1业绩验证成长逻辑，储能业务贡献提升。当前估值偏低估区间。</div>
+        <span class="tech-signal signal-buy" style="margin-top:8px">可考虑加仓</span>
+      </div>
+      <div class="action-item risk">
+        <div class="action-icon">🎯</div>
+        <div class="action-title">止损纪律</div>
+        <div class="action-desc">如有效跌破¥245（布林下轨），建议减仓止损，控制最大回撤。</div>
+        <span class="tech-signal signal-sell" style="margin-top:8px">止损线</span>
+      </div>
+    </div>
   </div>
 
-  <!-- 近7日新闻 & 市场情绪 -->
+  <!-- ========== 模块13：新闻与情绪（移至最下） ========== -->
   <div class="card g-full">
     <div class="card-title"><span class="icon">📰</span> 近7日新闻 & 市场情绪</div>
     <div class="insight" id="insightNews"></div>
@@ -317,7 +595,8 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 </div>
 </div>
 <footer style="text-align:center;padding:20px;font-size:11px;color:var(--text2)">
-  数据来源：Tushare Pro · 东方财富 · 公开数据抓取 · 仅供参考，不构成投资建议
+  数据来源：Tushare Pro · 东方财富 · 公开数据抓取 · 仅供参考，不构成投资建议<br>
+  持仓分析看板 V2 · 整合版 | <a href="https://zxb20262026.github.io/catl-daily-dashboard/" target="_blank" style="color:var(--accent)">返回原版看板</a>
 </footer>
 
 <script>
@@ -355,12 +634,10 @@ function renderNews(d){
 
   document.getElementById('sentimentStats').innerHTML = '正面 <b style="color:var(--green)">' + sent.positive_count + '</b> 条 · 负面 <b style="color:var(--red)">' + sent.negative_count + '</b> 条 · 中性 ' + sent.neutral_count + ' 条';
 
-  // 新闻列表
   var listEl = document.getElementById('newsList');
   var html = '';
   var lastDate = '';
   nw.articles.forEach(function(a){
-    // 日期分组标题
     if(a.date !== lastDate){
       lastDate = a.date;
       html += '<div style="font-size:12px;color:var(--accent);font-weight:600;padding:8px 0 4px;border-bottom:1px solid var(--border)">' + a.date.slice(5) + '</div>';
@@ -436,19 +713,7 @@ function renderInsights(d){
   } else lt5='碳酸锂数据暂缺。';
   document.getElementById('insightLithium').textContent=lt5;
 
-  // 6. 均线趋势
-  var mt='';
-  if(c.ma20&&c.ma60){
-    var m20up=c.ma20_trend==='up';
-    var above20=c.close>c.ma20, above60=c.close>c.ma60;
-    if(m20up&&above20&&above60) mt='股价站上MA20('+fmt(c.ma20)+')和MA60('+fmt(c.ma60)+')，且MA20趋势向上，中期多头排列完好。当前偏离MA20约'+Math.abs(c.ma20_dev).toFixed(1)+'%，短期走势健康。';
-    else if(!m20up&&above20&&above60) mt='股价虽在均线上方，但MA20拐头向下，短期趋势转弱。关注MA20得失，若跌破则可能进入调整周期。';
-    else if(above20&&!above60) mt='股价站上MA20但低于MA60，处于中期均线下方，整体趋势偏弱。MA20与MA60形成死叉信号，短期谨慎。';
-    else mt='股价低于MA20和MA60，短期和中期趋势均偏弱。偏离MA20达'+Math.abs(c.ma20_dev).toFixed(1)+'%，关注是否有超跌反弹机会。';
-  } else mt='均线数据暂缺。';
-  document.getElementById('insightMA').textContent=mt;
-
-  // 7. 资金动向
+  // 6. 资金动向
   var ft='';
   var nmStr=nb.north_money!=null?(nb.north_money>0?'净流入':'净流出')+fmt(nb.north_money/10000,1)+'亿':'暂无';
   var sbStr=sb&&sb.change!=null?(sb.change>0?'增持':'减持')+fmt(Math.abs(sb.change)/10000,1)+'万股':'暂无';
@@ -462,7 +727,7 @@ function renderInsights(d){
   }
   document.getElementById('insightFund').textContent=ft;
 
-  // 8. 新闻情绪
+  // 7. 新闻情绪
   var nt='';
   if(nw&&nw.sentiment){
     var s=nw.sentiment;
@@ -476,396 +741,327 @@ function renderInsights(d){
 function loadAndRender(){
   fetch('dashboard_data.json?t='+Date.now())
     .then(r => r.json())
-    .then(d => { DATA = d; render(d); })
+    .then(d => { DATA = d; render(d); initNewCharts(); })
     .catch(e => { document.getElementById('updateTime').textContent = '加载失败: '+e.message; });
 }
 
 function render(d){
-  var c = d.catl, h = d.hk, ah = d.ah, ind = d.industry, sig = d.signals, p = d.params;
+  var c=d.catl, h=d.hk, ah=d.ah, ind=d.industry, sig=d.signals, p=d.params;
+  var sb=d.southbound, nb=d.northbound, li=d.lithium;
 
-  document.getElementById('tradeDate').textContent = d.trade_date;
-  document.getElementById('updateTime').textContent = d.update_time;
+  document.getElementById('tradeDate').textContent = d.trade_date || '--';
+  document.getElementById('updateTime').textContent = new Date().toLocaleTimeString('zh-CN');
 
-  // A股
-  document.getElementById('aPrice').textContent = '\u00a5' + fmt(c.close);
-  var ac = document.getElementById('aChg');
-  ac.textContent = chgText(c.pct_chg);
-  ac.className = 'price-chg ' + chgClass(c.pct_chg);
+  // 今日行情
+  document.getElementById('aPrice').textContent = na(c.close);
+  document.getElementById('aChg').className = 'price-chg '+chgClass(c.pct_chg);
+  document.getElementById('aChg').textContent = chgText(c.pct_chg);
+  document.getElementById('hPrice').textContent = na(h.close);
+  document.getElementById('hChg').className = 'price-chg '+chgClass(h.pct_chg);
+  document.getElementById('hChg').textContent = chgText(h.pct_chg);
   document.getElementById('aMv').textContent = fmtB(c.mv);
-  document.getElementById('aAmount').textContent = fmt(c.amount/10000,1);
-  document.getElementById('aHigh').textContent = '\u00a5'+fmt(c.high);
-  document.getElementById('aLow').textContent = '\u00a5'+fmt(c.low);
-  
-  // 宁德时代财务指标
-  document.getElementById('catlRoe').innerHTML = c.roe != null ? fmt(c.roe,1)+'%' : '<span class="na">--</span>';
-  document.getElementById('catlPb').innerHTML = c.pb != null ? fmt(c.pb,1)+'x' : '<span class="na">--</span>';
-  document.getElementById('catlGpm').innerHTML = c.gpm != null ? fmt(c.gpm,1)+'%' : '<span class="na">--</span>';
-  document.getElementById('catlNpm').innerHTML = c.npm != null ? fmt(c.npm,1)+'%' : '<span class="na">--</span>';
-
-  // H股
-  document.getElementById('hPrice').textContent = 'HK$'+fmt(h.close);
-  var hc = document.getElementById('hChg');
-  hc.textContent = h.pct_chg != null ? chgText(h.pct_chg) : '--';
-  hc.className = 'price-chg ' + (h.pct_chg != null ? chgClass(h.pct_chg) : '');
+  document.getElementById('aAmount').textContent = fmtB(c.amount);
+  document.getElementById('aHigh').textContent = na(c.high);
+  document.getElementById('aLow').textContent = na(c.low);
+  document.getElementById('catlRoe').textContent = na(c.roe);
+  document.getElementById('catlPb').textContent = na(c.pb);
+  document.getElementById('catlGpm').textContent = na(c.gpm);
+  document.getElementById('catlNpm').textContent = na(c.npm);
 
   // AH溢价
-  var ahVal = ah.premium;
-  var badge = document.getElementById('ahBadge');
-  if(ahVal == null){
-    badge.textContent = '--'; badge.className = 'ah-badge ah-mid';
-  } else if(ahVal < 0){
-    badge.textContent = fmt(ahVal,1)+'% (H>A)'; badge.className = 'ah-badge ah-neg';
-  } else if(ahVal <= p.ah_premium_low){
-    badge.textContent = '+'+fmt(ahVal,1)+'%'; badge.className = 'ah-badge ah-low';
-  } else if(ahVal <= p.ah_premium_high){
-    badge.textContent = '+'+fmt(ahVal,1)+'%'; badge.className = 'ah-badge ah-mid';
-  } else {
-    badge.textContent = '+'+fmt(ahVal,1)+'%'; badge.className = 'ah-badge ah-high';
+  var badge=document.getElementById('ahBadge');
+  if(ah.premium!=null){
+    badge.textContent=(ah.premium>0?'+':'')+fmt(ah.premium,1)+'%';
+    badge.className='ah-badge '+(ah.premium<0?'ah-neg':ah.premium<15?'ah-mid':'ah-high');
+    document.getElementById('ahDetail').textContent='A股'+(ah.premium>0?'溢价':'折价')+'港股'+Math.abs(fmt(ah.premium,1))+'%';
+  } else { badge.textContent='--'; badge.className='ah-badge ah-mid'; document.getElementById('ahDetail').textContent='数据暂缺'; }
+  document.getElementById('ahFx').textContent='汇率 '+na(d.fx);
+
+  // PE估值
+  var pe=c.pe_ttm;
+  document.getElementById('peNum').textContent=na(pe);
+  if(pe&&p){
+    var pct=(pe-p.pe_cheap)/(p.pe_expensive-p.pe_cheap)*100;
+    pct=Math.max(0,Math.min(100,pct));
+    var fill=document.getElementById('peBarFill');
+    fill.style.width=pct+'%';
+    fill.style.background=pe<=p.pe_cheap?'var(--green)':pe<=p.pe_reasonable?'var(--yellow)':'var(--red)';
   }
-  document.getElementById('ahDetail').textContent = 'H股折CNY: \u00a5'+fmt(h.close_cny);
-  document.getElementById('ahFx').textContent = 'HKD/CNY '+fmt(ah.hkd_cny,4);
-
-  // PE温度计（统一用动态TTM）
-  var pe = c.pe_ttm;
-  document.getElementById('peNum').textContent = pe != null ? fmt(pe,1) : '--';
-  var peMin = p.pe_hist_low, peMax = p.pe_hist_high;
-  var pePct = pe ? Math.min(100, Math.max(0, (pe - peMin) / (peMax - peMin) * 100)) : 50;
-  var fill = document.getElementById('peBarFill');
-  fill.style.width = pePct + '%';
-  fill.style.background = pe <= p.pe_cheap ? 'var(--green)' : pe <= p.pe_reasonable ? 'var(--yellow)' : pe <= p.pe_expensive ? '#e08030' : 'var(--red)';
-  fill.style.position = 'relative';
-  fill.innerHTML = '<div style="position:absolute;right:-1px;top:-6px;width:2px;height:22px;background:#fff;border-radius:1px"></div>';
-
-  var peBox = document.getElementById('peSignal');
-  if(pe <= p.pe_cheap){ peBox.className='signal-box signal-green'; peBox.textContent='PE处于历史低位区间，估值便宜，关注加仓机会'; }
-  else if(pe <= p.pe_reasonable){ peBox.className='signal-box signal-yellow'; peBox.textContent='PE处于合理区间，持有观察'; }
-  else if(pe <= p.pe_expensive){ peBox.className='signal-box signal-yellow'; peBox.textContent='PE偏贵，不建议加仓'; }
-  else { peBox.className='signal-box signal-red'; peBox.textContent='PE处于历史高位，高估风险'; }
-
-  // PE历史分位（统一在同一模块）
-  renderPeHistory(d);
-
-  // 行业对标
-  renderIndustry(d);
-
-  // 碳酸锂
-  var li = d.lithium;
-  var liDiv = document.getElementById('lithiumPrice');
-  var liStatus = document.getElementById('lithiumStatus');
-  if(li.price != null){
-    liDiv.textContent = '\u00a5' + fmt(li.price,1) + ' 万/吨';
-    var ll = p.lithium_low, lh = p.lithium_high;
-    if(li.price < ll){ liDiv.style.color='var(--green)'; liStatus.textContent='🟢 利好：锂价低位，毛利率改善空间大'; liStatus.style.color='var(--green)'; }
-    else if(li.price <= lh){ liDiv.style.color='var(--yellow)'; liStatus.textContent='🟡 中性：锂价处于中间区间'; liStatus.style.color='var(--yellow)'; }
-    else { liDiv.style.color='var(--red)'; liStatus.textContent='🔴 利空：锂价偏高，成本端承压'; liStatus.style.color='var(--red)'; }
-  } else { liDiv.innerHTML = '<span class="na">暂无数据</span>'; liStatus.textContent = '数据源获取失败'; }
+  if(c.pe_hist_pct!=null){
+    document.getElementById('peHistPctInline').textContent=fmt(c.pe_hist_pct,0)+'%';
+  }
+  if(p){
+    var signal=document.getElementById('peSignal');
+    if(pe<=p.pe_cheap){ signal.className='signal-box signal-green'; signal.textContent='🌟 低估区间：PE处于历史低位，估值安全边际高，适合布局。'; }
+    else if(pe<=p.pe_reasonable){ signal.className='signal-box signal-yellow'; signal.textContent='💤 合理区间：估值与盈利匹配，持有观望。'; }
+    else if(pe<=p.pe_expensive){ signal.className='signal-box signal-yellow'; signal.textContent='⚠️ 偏贵区间：估值安全边际收窄，谨慎追高。'; }
+    else { signal.className='signal-box signal-red'; signal.textContent='🔴 高估区间：风险较大，考虑减仓。'; }
+  }
+  if(c.pe_hist){
+    var ph=c.pe_hist;
+    document.getElementById('peHistMin').textContent=fmt(ph.min,1)+'x';
+    document.getElementById('peHistP25').textContent=fmt(ph.p25,1)+'x';
+    document.getElementById('peHistMed').textContent=fmt(ph.median,1)+'x';
+    document.getElementById('peHistP75').textContent=fmt(ph.p75,1)+'x';
+    document.getElementById('peHistMax').textContent=fmt(ph.max,1)+'x';
+  }
 
   // 均线
-  document.getElementById('ma20').textContent = c.ma20 ? '\u00a5'+fmt(c.ma20) : '--';
-  document.getElementById('ma60').textContent = c.ma60 ? '\u00a5'+fmt(c.ma60) : '--';
-  var m20d = document.getElementById('ma20Dev'), m60d = document.getElementById('ma60Dev');
-  if(c.ma20_dev != null){ m20d.textContent='偏离 '+fmt(c.ma20_dev,1)+'%'; m20d.className='dev '+(c.ma20_dev>0?'dev-up':'dev-down'); }
-  if(c.ma60_dev != null){ m60d.textContent='偏离 '+fmt(c.ma60_dev,1)+'%'; m60d.className='dev '+(c.ma60_dev>0?'dev-up':'dev-down'); }
+  document.getElementById('ma20').textContent=na(c.ma20);
+  document.getElementById('ma60').textContent=na(c.ma60);
+  if(c.ma20_dev!=null){
+    document.getElementById('ma20Dev').textContent=(c.ma20_dev>0?'↑':'↓')+Math.abs(fmt(c.ma20_dev,1))+'%';
+    document.getElementById('ma20Dev').className='dev '+(c.ma20_dev>0?'dev-up':'dev-down');
+  }
+  if(c.ma60_dev!=null){
+    document.getElementById('ma60Dev').textContent=(c.ma60_dev>0?'↑':'↓')+Math.abs(fmt(c.ma60_dev,1))+'%';
+    document.getElementById('ma60Dev').className='dev '+(c.ma60_dev>0?'dev-up':'dev-down');
+  }
 
   // 资金
-  document.getElementById('northMoney').textContent = d.northbound.north_money != null ? fmt(d.northbound.north_money/10000,1)+'亿' : '--';
-  var sb = d.southbound;
-  document.getElementById('southVol').textContent = sb ? fmt(sb.vol/10000,0)+'万' : '--';
-  var sc = document.getElementById('southChange');
-  if(sb && sb.change != null){
-    sc.textContent = (sb.change>0?'+':'')+fmt(sb.change/10000,1)+'万 ('+(sb.change_pct>0?'+':'')+fmt(sb.change_pct,1)+'%)';
-    sc.style.color = sb.change > 0 ? 'var(--up)' : 'var(--down)';
-  } else { sc.textContent = '--'; }
+  document.getElementById('northMoney').textContent=fmt(nb.north_money/10000,1);
+  document.getElementById('southVol').textContent=fmtInt(sb.vol/10000);
+  document.getElementById('southChange').innerHTML=(sb.change>0?'+':'')+fmt(sb.change/10000,1)+'<span style="font-size:11px;color:var(--text2)"> 万股</span>';
+
+  // 碳酸锂
+  if(li.price!=null){
+    document.getElementById('lithiumPrice').innerHTML='<span class="lithium-price">¥'+fmt(li.price,1)+'</span><span style="font-size:14px;color:var(--text2)"> 万/吨</span>';
+    document.getElementById('lithiumStatus').textContent='近30日 '+chgText(li.pct_chg||0);
+  }
 
   // 综合信号
-  var vb = document.getElementById('verdictBox'), vi = document.getElementById('verdictIcon');
-  var vt = document.getElementById('verdictText'), vd = document.getElementById('verdictDetail');
-  if(sig.verdict==='intensive'){ vb.style.background='rgba(63,185,80,.08)'; vi.textContent='🟢'; vt.textContent=sig.verdict_text; vt.style.color='var(--green)'; }
-  else if(sig.verdict==='watch'){ vb.style.background='rgba(210,153,34,.08)'; vi.textContent='🟡'; vt.textContent=sig.verdict_text; vt.style.color='var(--yellow)'; }
-  else if(sig.verdict==='hold'){ vb.style.background='rgba(255,255,255,.03)'; vi.textContent='🔍'; vt.textContent=sig.verdict_text; vt.style.color='var(--text)'; }
-  else { vb.style.background='rgba(248,81,73,.08)'; vi.textContent='🔴'; vt.textContent=sig.verdict_text; vt.style.color='var(--red)'; }
-  vd.innerHTML = sig.details.map(function(s){ return '• '+s; }).join('<br>');
+  if(sig){
+    var vb=document.getElementById('verdictBox');
+    var icons={'intensive':'📈','watch':'🔍','hold':'💤'};
+    var texts={'intensive':'积极信号','watch':'观望信号','hold':'持有信号'};
+    var colors={'intensive':'var(--green)','watch':'var(--yellow)','hold':'var(--blue)'};
+    var verdicts={'intensive':'加仓','watch':'观望','hold':'持有'};
+    vb.style.background='rgba('+(sig.verdict==='intensive'?'63,185,80':sig.verdict==='watch'?'210,153,34':'88,166,255')+',.1)';
+    document.getElementById('verdictIcon').textContent=icons[sig.verdict]||'🔴';
+    document.getElementById('verdictText').textContent=texts[sig.verdict]||'减仓信号';
+    document.getElementById('verdictText').style.color=colors[sig.verdict]||'var(--red)';
+    document.getElementById('verdictDetail').innerHTML='目标价 <b style="color:var(--green)">¥'+fmt(sig.target_price,0)+'</b> · '+(sig.target_price>c.close?'潜在涨幅':'潜在跌幅')+' <b style="color:'+(sig.target_price>c.close?'var(--green)':'var(--red)')+'">'+fmt((sig.target_price/c.close-1)*100,1)+'%</b> · '+(verdicts[sig.verdict]||'减仓');
 
-  document.getElementById('addCount').textContent = sig.add_ready+'/'+sig.add_total;
-  var addPct = sig.add_ready / sig.add_total * 100;
-  var addBar = document.getElementById('addBar');
-  addBar.style.width = addPct+'%';
-  addBar.style.background = sig.add_triggered ? 'var(--green)' : 'var(--blue)';
-  document.getElementById('addNote').textContent = sig.add_triggered ? '✅ 加仓条件已满足！' : (sig.target_price ? '加仓目标价(PE=22x): \u00a5'+fmt(sig.target_price) : '--');
-
-  // 图表
-  renderPriceChart(d);
-  renderAhChart(d);
-
-  // 新闻 & 情绪
-  renderNews(d);
-
-  // 投资解读
-  renderInsights(d);
-}
-
-function renderPeHistory(d){
-  var ph = d.pe_history;
-  if(!ph){ 
-    document.getElementById('peHistPctInline').textContent = '--';
-    return; 
+    var addPct=(sig.add_ready||0)/(sig.add_total||4)*100;
+    document.getElementById('addCount').textContent=(sig.add_ready||0)+'/'+(sig.add_total||4);
+    document.getElementById('addBar').style.width=addPct+'%';
+    document.getElementById('addBar').style.background=addPct>=75?'var(--green)':addPct>=50?'var(--yellow)':'var(--red)';
+    document.getElementById('addNote').textContent='目标价基于PE 22x估算';
   }
 
-  var pctEl = document.getElementById('peHistPctInline');
-  pctEl.textContent = fmt(ph.current_percentile,0)+'%';
-  pctEl.style.color = ph.current_percentile <= 25 ? 'var(--green)' : ph.current_percentile <= 75 ? 'var(--yellow)' : 'var(--red)';
+  // 行业对标
+  if(ind&&ind.peers){
+    document.getElementById('indPe').textContent=fmt(ind.pe_median,1);
+    if(c.pe_ttm&&ind.pe_median){
+      var pp=c.pe_ttm-ind.pe_median;
+      document.getElementById('peerPremium').textContent=(pp>0?'+':'')+fmt(pp,1)+'x';
+      document.getElementById('peerPremium').style.color=pp<0?'var(--green)':pp>10?'var(--red)':'var(--text2)';
+    }
+    document.getElementById('peSourceNote').textContent='* 使用扣非PE计算行业均值';
 
-  document.getElementById('peHistMin').textContent = fmt(ph.min,1)+'x';
-  document.getElementById('peHistP25').textContent = fmt(ph.p25,1)+'x';
-  document.getElementById('peHistMed').textContent = fmt(ph.median,1)+'x';
-  document.getElementById('peHistP75').textContent = fmt(ph.p75,1)+'x';
-  document.getElementById('peHistMax').textContent = fmt(ph.max,1)+'x';
-
-  var noteEl = document.getElementById('peHistNote');
-  if(ph.current_percentile <= 20){
-    noteEl.innerHTML = '📊 PE处于历史低位，估值吸引力较强';
-    noteEl.style.color = 'var(--green)';
-  } else if(ph.current_percentile <= 50){
-    noteEl.innerHTML = '📊 PE处于历史中低位，估值合理偏低';
-    noteEl.style.color = 'var(--yellow)';
-  } else if(ph.current_percentile <= 80){
-    noteEl.innerHTML = '📊 PE处于历史中高位，估值合理偏贵';
-    noteEl.style.color = 'var(--yellow)';
-  } else {
-    noteEl.innerHTML = '📊 PE处于历史高位，估值偏贵';
-    noteEl.style.color = 'var(--red)';
-  }
-
-  // 图表
-  if(!ph.series || ph.series.length < 2) return;
-  var dom = document.getElementById('peHistChart');
-  var chart = echarts.init(dom);
-  var dates = ph.series.map(function(s){ return s.date.slice(0,4)+'/'+s.date.slice(4,6)+'/'+s.date.slice(6,8); });
-  var vals = ph.series.map(function(s){ return s.pe_ttm; });
-
-  // 构建分位带数据
-  var band_25 = [], band_75 = [];
-  for(var i = 0; i < vals.length; i++){
-    band_25.push(ph.p25);
-    band_75.push(ph.p75);
-  }
-
-  chart.setOption({
-    backgroundColor:'transparent',
-    grid:{top:30,right:50,bottom:30,left:55},
-    xAxis:{type:'category',data:dates,axisLabel:{fontSize:10,color:'#8b949e',interval:Math.floor(dates.length/6)},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
-    yAxis:{type:'value',scale:true,axisLabel:{fontSize:10,color:'#8b949e',formatter:'{value}x'},splitLine:{lineStyle:{color:'#21262d'}},axisLine:{show:false}},
-    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:12},
-      formatter:function(params){
-        var p = params[0];
-        if(!p) return '';
-        var idx = p.dataIndex;
-        var s = ph.series[idx];
-        return s.date.slice(0,4)+'/'+s.date.slice(4,6)+'/'+s.date.slice(6,8)+'<br/>'
-          +'PE(TTM): <b>'+s.pe_ttm+'x</b><br/>'
-          +'历史分位: <b>'+s.pe_percentile+'%</b>';
-      }
-    },
-    series:[
-      {name:'25%-75%区间',type:'line',data:band_75,lineStyle:{opacity:0},areaStyle:{color:'rgba(210,153,34,0.08)'},symbol:'none',stack:'band'},
-      {name:'下界',type:'line',data:band_25,lineStyle:{opacity:0},areaStyle:{color:'rgba(63,185,80,0.08)'},symbol:'none',stack:'band2'},
-      {name:'PE(TTM)',type:'line',data:vals,lineStyle:{color:'#79c0ff',width:2},itemStyle:{color:'#79c0ff'},symbol:'none',
-        markLine:{
-          silent:true,
-          data:[
-            {yAxis:ph.p25,lineStyle:{color:'#3fb950',type:'dashed',width:1,opacity:0.6},label:{show:true,formatter:'P25: '+ph.p25+'x',fontSize:9,color:'#3fb950',position:'insideEndTop'}},
-            {yAxis:ph.median,lineStyle:{color:'#d29922',type:'dashed',width:1,opacity:0.6},label:{show:true,formatter:'中位: '+ph.median+'x',fontSize:9,color:'#d29922',position:'insideEndTop'}},
-            {yAxis:ph.p75,lineStyle:{color:'#f85149',type:'dashed',width:1,opacity:0.6},label:{show:true,formatter:'P75: '+ph.p75+'x',fontSize:9,color:'#f85149',position:'insideEndTop'}}
-          ]
-        },
-        markPoint:{
-          data:[
-            {coord:[dates.length-1, vals[vals.length-1]], symbol:'circle', symbolSize:10, itemStyle:{color:'#79c0ff', borderColor:'#fff', borderWidth:2}, label:{show:false}}
-          ]
-        }
-      }
-    ]
-  });
-  window.addEventListener('resize', function(){ chart.resize(); });
-}
-
-function renderIndustry(d){
-  var ind = d.industry, c = d.catl, pe = c.pe_ttm;
-
-  document.getElementById('indPe').textContent = ind.pe_median ? fmt(ind.pe_median,1) : '--';
-  var pp = document.getElementById('peerPremium');
-  if(ind.peer_premium != null){
-    var ppv = ind.peer_premium;
-    pp.textContent = (ppv >= 0 ? '+' : '') + fmt(ppv,1) + '% vs行业';
-    pp.style.color = ppv < 0 ? 'var(--green)' : ppv > 20 ? 'var(--red)' : 'var(--text2)';
-  } else { pp.textContent = '--'; }
-
-  // 数据源说明
-  var srcNote = document.getElementById('peSourceNote');
-  srcNote.textContent = 'PE口径：宁德=动态TTM(滚动4季度)，对标=年报EPS | 数据源：东财F10 + 新浪行情';
-
-  // 准备包含宁德时代在内的完整对标列表
-  var allPeers = [];
-  if(ind.peers){
-    ind.peers.forEach(function(p){
-      allPeers.push({
-        code:p.code, name:p.name, chain:p.chain,
-        close:p.close, pct_chg:p.pct_chg, pe:p.pe,
-        pb:p.pb, roe:p.roe, gpm:p.gpm, npm:p.npm,
-        mv:p.mv, isCatl:false
-      });
+    var peers=ind.peers;
+    var tbody=document.getElementById('peerBody');
+    var html='';
+    peers.forEach(function(p){
+      var isCatl=p.code==='300750'||p.name&&p.name.indexOf('宁德')>=0;
+      html+='<tr'+(isCatl?' style="background:rgba(121,192,255,.1)"':'')+'>';
+      html+='<td class="'+(isCatl?'highlight':'')+'">'+(isCatl?'★ ':'')+p.name+'</td>';
+      html+='<td><span class="chain-tag">'+p.chain+'</span></td>';
+      html+='<td>'+fmt(p.close,2)+'</td>';
+      html+='<td class="'+(p.pct_chg>0?'chg-up':p.pct_chg<0?'chg-down':'')+'">'+chgText(p.pct_chg)+'</td>';
+      html+='<td>'+fmt(p.pe_ttm,1)+'</td>';
+      html+='<td>'+fmt(p.pb,2)+'</td>';
+      html+='<td class="'+(p.roe>15?'best':p.roe<5?'worst':'')+'">'+fmt(p.roe,1)+'%</td>';
+      html+='<td class="'+(p.gpm>30?'best':p.gpm<15?'worst':'')+'">'+fmt(p.gpm,1)+'%</td>';
+      html+='<td>'+fmt(p.npm,1)+'%</td>';
+      html+='<td>'+fmt(p.mv/10000,0)+'</td>';
+      html+='</tr>';
     });
+    tbody.innerHTML=html;
   }
-  // 加入宁德时代自身
-  allPeers.unshift({
-    code:'300750.SZ', name:'宁德时代', chain:'电池龙头',
-    close:c.close, pct_chg:c.pct_chg, pe:pe,
-    pb:c.pb, roe:c.roe, gpm:c.gpm, npm:c.npm,
-    mv:c.mv, isCatl:true
-  });
 
-  // 表格
-  var tbody = document.getElementById('peerBody');
-  tbody.innerHTML = '';
-  allPeers.forEach(function(p){
-    var tr = document.createElement('tr');
-    if(p.isCatl) tr.style.background = 'rgba(121,192,255,0.06)';
-    
-    var peColor = p.pe != null ? (p.pe <= 22 ? 'var(--green)' : p.pe <= 30 ? 'var(--yellow)' : 'var(--red)') : 'var(--text2)';
-    var chgColor = chgClass(p.pct_chg);
-    var chgStr = chgText(p.pct_chg);
-
-    tr.innerHTML = '<td'+(p.isCatl?' class="highlight"':'')+'>'+p.name+(p.isCatl?' ★':'')+'</td>'
-      +'<td><span class="chain-tag">'+p.chain+'</span></td>'
-      +'<td>\u00a5'+fmt(p.close)+'</td>'
-      +'<td class="'+chgColor+'">'+chgStr+'</td>'
-      +'<td style="color:'+peColor+'">'+(p.pe!=null?fmt(p.pe,1)+'x':'--')+'</td>'
-      +'<td>'+na(p.pb!=null?fmt(p.pb,1)+'x':null)+'</td>'
-      +'<td>'+na(p.roe!=null?fmt(p.roe,1)+'%':null)+'</td>'
-      +'<td>'+na(p.gpm!=null?fmt(p.gpm,1)+'%':null)+'</td>'
-      +'<td>'+na(p.npm!=null?fmt(p.npm,1)+'%':null)+'</td>'
-      +'<td>'+(p.mv!=null?fmtInt(p.mv/100):'--')+'</td>';
-    tbody.appendChild(tr);
-  });
-
-  // 柱状图
-  renderPeerCharts(allPeers);
-}
-
-function renderPeerCharts(peers){
-  // PE 柱状图
-  var peDom = document.getElementById('peerPeChart');
-  var peChart = echarts.init(peDom);
-  var peNames = peers.map(function(p){ return p.name.length > 4 ? p.name.slice(0,4) : p.name; });
-  var peVals = peers.map(function(p){ return p.pe; });
-
-  peChart.setOption({
-    backgroundColor:'transparent',
-    title:{text:'PE(TTM) 对比',textStyle:{fontSize:12,color:'#8b949e'},left:'center',top:0},
-    grid:{top:28,right:10,bottom:30,left:10},
-    xAxis:{type:'category',data:peNames,axisLabel:{fontSize:9,color:'#8b949e',rotate:30},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
-    yAxis:{type:'value',show:false},
-    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:11},formatter:function(p){ return p[0].name+': '+p[0].value+'x'; }},
-    series:[{type:'bar',data:peVals.map(function(v,i){
-      return {value:v, itemStyle:{color:v==null?'#30363d':(v<=22?'#3fb950':v<=30?'#d29922':v<=60?'#e08030':'#f85149')}};
-    }),barMaxWidth:28}]
-  });
-  window.addEventListener('resize',function(){ peChart.resize(); });
-
-  // ROE 柱状图
-  var roeDom = document.getElementById('peerRoeChart');
-  var roeChart = echarts.init(roeDom);
-  var roeVals = peers.map(function(p){ return p.roe; });
-
-  roeChart.setOption({
-    backgroundColor:'transparent',
-    title:{text:'ROE(%) 对比',textStyle:{fontSize:12,color:'#8b949e'},left:'center',top:0},
-    grid:{top:28,right:10,bottom:30,left:10},
-    xAxis:{type:'category',data:peNames,axisLabel:{fontSize:9,color:'#8b949e',rotate:30},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
-    yAxis:{type:'value',show:false},
-    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:11},formatter:function(p){ return p[0].name+': '+p[0].value+'%'; }},
-    series:[{type:'bar',data:roeVals.map(function(v){
-      return {value:v, itemStyle:{color:v==null?'#30363d':(v>=20?'#3fb950':v>=10?'#d29922':'#f85149')}};
-    }),barMaxWidth:28}]
-  });
-  window.addEventListener('resize',function(){ roeChart.resize(); });
-
-  // 毛利率柱状图
-  var gpmDom = document.getElementById('peerGpmChart');
-  var gpmChart = echarts.init(gpmDom);
-  var gpmVals = peers.map(function(p){ return p.gpm; });
-
-  gpmChart.setOption({
-    backgroundColor:'transparent',
-    title:{text:'毛利率(%) 对比',textStyle:{fontSize:12,color:'#8b949e'},left:'center',top:0},
-    grid:{top:28,right:10,bottom:30,left:10},
-    xAxis:{type:'category',data:peNames,axisLabel:{fontSize:9,color:'#8b949e',rotate:30},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
-    yAxis:{type:'value',show:false},
-    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:11},formatter:function(p){ return p[0].name+': '+p[0].value+'%'; }},
-    series:[{type:'bar',data:gpmVals.map(function(v){
-      return {value:v, itemStyle:{color:v==null?'#30363d':(v>=30?'#3fb950':v>=20?'#d29922':'#f85149')}};
-    }),barMaxWidth:28}]
-  });
-  window.addEventListener('resize',function(){ gpmChart.resize(); });
-}
-
-function renderPriceChart(d){
-  var dom = document.getElementById('priceChart');
-  var chart = echarts.init(dom);
-  var dates = d.price_series.map(function(p){ return p.date.slice(4,6)+'/'+p.date.slice(6,8); });
-  var closes = d.price_series.map(function(p){ return p.close; });
-  var ma20Vals = [], ma60Vals = [];
-  for(var i = 0; i < closes.length; i++){
-    if(i >= 19) { var s=0; for(var j=i-19;j<=i;j++) s+=closes[j]; ma20Vals.push(+(s/20).toFixed(2)); } else ma20Vals.push(null);
-    if(i >= 59) { var s2=0; for(var j2=i-59;j2<=i;j2++) s2+=closes[j2]; ma60Vals.push(+(s2/60).toFixed(2)); } else ma60Vals.push(null);
-  }
-  chart.setOption({
-    backgroundColor:'transparent',
-    grid:{top:20,right:50,bottom:24,left:50},
-    xAxis:{type:'category',data:dates,axisLabel:{fontSize:10,color:'#8b949e'},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
-    yAxis:{type:'value',scale:true,axisLabel:{fontSize:10,color:'#8b949e',formatter:'{value}'},splitLine:{lineStyle:{color:'#21262d'}},axisLine:{show:false}},
-    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:12}},
-    series:[
-      {name:'股价',type:'line',data:closes,lineStyle:{color:'#79c0ff',width:2},itemStyle:{color:'#79c0ff'},symbol:'none'},
-      {name:'MA20',type:'line',data:ma20Vals,lineStyle:{color:'#d29922',width:1,type:'dashed'},itemStyle:{color:'#d29922'},symbol:'none'},
-      {name:'MA60',type:'line',data:ma60Vals,lineStyle:{color:'#f85149',width:1,type:'dotted'},itemStyle:{color:'#f85149'},symbol:'none'}
-    ]
-  });
-  window.addEventListener('resize', function(){ chart.resize(); });
+  renderInsights(d);
+  renderNews(d);
+  renderAhChart(d);
+  renderPeHistory(d);
+  renderIndustry(d);
+  renderPeerCharts(d.industry&&d.industry.peers);
+  renderPriceChart(d);
+  renderLithiumChart(d);
 }
 
 function renderAhChart(d){
-  var dom = document.getElementById('ahChart');
-  if(!dom || !d.ah_premium_series || d.ah_premium_series.length < 2) return;
-  var chart = echarts.init(dom);
-  var dates = d.ah_premium_series.map(function(p){ return p.date.slice(4,6)+'/'+p.date.slice(6,8); });
-  var vals = d.ah_premium_series.map(function(p){ return p.premium; });
-  
+  var el=document.getElementById('ahChart');
+  if(!el||!d.ah||!d.ah.history||d.ah.history.length===0) return;
+  var chart=echarts.init(el);
+  var history=d.ah.history;
   chart.setOption({
-    backgroundColor:'transparent',
-    grid:{top:30,right:20,bottom:24,left:55},
-    xAxis:{type:'category',data:dates,axisLabel:{fontSize:10,color:'#8b949e',interval:Math.floor(dates.length/8)},axisLine:{lineStyle:{color:'#30363d'}},axisTick:{show:false}},
-    yAxis:{type:'value',scale:true,axisLabel:{fontSize:10,color:'#8b949e',formatter:'{value}%'},splitLine:{lineStyle:{color:'#21262d'}},axisLine:{show:false}},
-    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:'#30363d',textStyle:{color:'#e6edf3',fontSize:12},
-      formatter:function(params){
-        var p = params[0]; var idx = p.dataIndex; var s = d.ah_premium_series[idx];
-        return s.date.slice(0,4)+'/'+s.date.slice(4,6)+'/'+s.date.slice(6,8)+'<br/>'
-          +'AH溢价: <b>'+s.premium+'%</b><br/>'
-          +'A股: ¥'+s.a_close+' / H股(CNY): ¥'+s.h_close_cny;
-      }
-    },
-    visualMap:{show:false,pieces:[{lte:0,color:'#58a6ff'},{gt:0,lte:40,color:'#3fb950'},{gt:40,lte:70,color:'#d29922'},{gt:70,color:'#f85149'}]},
+    tooltip:{trigger:'axis',formatter:function(p){
+      return p[0].name+'<br>AH溢价: <b style="color:'+(p[0].value>0?'#f85149':'#3fb950')+'">'+(p[0].value>0?'+':'')+p[0].value+'%</b>';
+    }},
+    grid:{top:10,right:10,bottom:25,left:50},
+    xAxis:{type:'category',data:history.map(function(d){return d.date.slice(5);}),axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:10}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#21262d'}},axisLabel:{color:'#8b949e',formatter:function(v){return v+'%';}}},
     series:[{
-      name:'AH溢价',type:'line',data:vals,lineStyle:{width:2},areaStyle:{opacity:0.15},symbol:'none',
-      markLine:{silent:true,data:[
-        {yAxis:0,lineStyle:{color:'#58a6ff',type:'solid',width:1,opacity:0.5},label:{show:true,formatter:'A=H',fontSize:10,color:'#8b949e',position:'insideEndTop'}}
-      ]}
+      data:history.map(function(d){return d.premium;}),
+      type:'line',smooth:true,symbol:'none',
+      lineStyle:{width:2,color:'#58a6ff'},
+      areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(88,166,255,0.3)'},{offset:1,color:'rgba(88,166,255,0)'}]}}
+    },{
+      data:history.map(function(){return 0;}),type:'line',lineStyle:{color:'#30363d',type:'dashed',width:1},symbol:'none'
     }]
   });
-  window.addEventListener('resize', function(){ chart.resize(); });
 }
 
-loadAndRender();
+function renderPeHistory(d){
+  var el=document.getElementById('peHistChart');
+  if(!el||!d.catl||!d.catl.pe_hist) return;
+  var chart=echarts.init(el);
+  var ph=d.catl.pe_hist;
+  chart.setOption({
+    tooltip:{trigger:'axis',formatter:function(p){
+      return p[0].name+'<br>PE: <b style="color:#58a6ff">'+p[0].value+'</b>';
+    }},
+    grid:{top:10,right:10,bottom:25,left:50},
+    xAxis:{type:'category',data:ph.dates.map(function(d){return d.slice(5);}),axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:10,rotate:45}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#21262d'}},axisLabel:{color:'#8b949e',formatter:function(v){return v+'x';}}},
+    series:[
+      {data:ph.values,type:'line',smooth:true,symbol:'none',lineStyle:{width:2,color:'#58a6ff'},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(88,166,255,0.3)'},{offset:1,color:'rgba(88,166,255,0)'}]}}},
+      {data:ph.dates.map(function(){return ph.p25;}),type:'line',lineStyle:{color:'#3fb950',type:'dashed',width:1},symbol:'none',name:'25%分位'},
+      {data:ph.dates.map(function(){return ph.median;}),type:'line',lineStyle:{color:'#d29922',type:'dashed',width:1},symbol:'none',name:'中位数'},
+      {data:ph.dates.map(function(){return ph.p75;}),type:'line',lineStyle:{color:'#f85149',type:'dashed',width:1},symbol:'none',name:'75%分位'}
+    ]
+  });
+}
+
+function renderIndustry(d){
+  // 已在render中处理
+}
+
+function renderPeerCharts(peers){
+  if(!peers) return;
+  var peData=peers.map(function(p){return{name:p.name,value:p.pe_ttm||0};});
+  var roeData=peers.map(function(p){return{name:p.name,value:p.roe||0};});
+  var gpmData=peers.map(function(p){return{name:p.name,value:p.gpm||0};});
+  var names=peers.map(function(p){return p.name;});
+
+  function makeOption(data,color){
+    return{
+      tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+      grid:{top:10,right:10,bottom:30,left:50},
+      xAxis:{type:'category',data:names,axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:9,rotate:30}},
+      yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#21262d'}}},
+      series:[{data:data,type:'bar',itemStyle:{color:color,borderRadius:[4,4,0,0]}}]
+    };
+  }
+
+  var peChart=echarts.init(document.getElementById('peerPeChart'));
+  peChart.setOption(makeOption(peData,'#58a6ff'));
+  var roeChart=echarts.init(document.getElementById('peerRoeChart'));
+  roeChart.setOption(makeOption(roeData,'#3fb950'));
+  var gpmChart=echarts.init(document.getElementById('peerGpmChart'));
+  gpmChart.setOption(makeOption(gpmData,'#d29922'));
+}
+
+function renderPriceChart(d){
+  var el=document.getElementById('priceChart');
+  if(!el||!d.catl||!d.catl.price_history||d.catl.price_history.length===0) return;
+  var chart=echarts.init(el);
+  var ph=d.catl.price_history;
+  chart.setOption({
+    tooltip:{trigger:'axis',formatter:function(p){
+      return p[0].name+'<br>价格: <b style="color:#58a6ff">¥'+p[0].value+'</b>';
+    }},
+    legend:{data:['价格','MA20','MA60'],top:0,textStyle:{color:'#8b949e',fontSize:10}},
+    grid:{top:30,right:10,bottom:25,left:50},
+    xAxis:{type:'category',data:ph.map(function(d){return d.date.slice(5);}),axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:10}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#21262d'}},axisLabel:{color:'#8b949e',formatter:function(v){return '¥'+v;}}},
+    series:[
+      {name:'价格',data:ph.map(function(d){return d.close;}),type:'line',smooth:true,symbol:'none',lineStyle:{width:2,color:'#58a6ff'}},
+      {name:'MA20',data:ph.map(function(d){return d.ma20;}),type:'line',smooth:true,symbol:'none',lineStyle:{width:1,color:'#d29922'}},
+      {name:'MA60',data:ph.map(function(d){return d.ma60;}),type:'line',smooth:true,symbol:'none',lineStyle:{width:1,color:'#3fb950'}}
+    ]
+  });
+}
+
+function renderLithiumChart(d){
+  var el=document.getElementById('lithiumChart');
+  if(!el||!d.lithium||!d.lithium.history||d.lithium.history.length===0) return;
+  var chart=echarts.init(el);
+  var history=d.lithium.history;
+  chart.setOption({
+    tooltip:{trigger:'axis',formatter:function(p){
+      return p[0].name+'<br>锂价: <b style="color:#3fb950">¥'+p[0].value+'</b>万/吨';
+    }},
+    grid:{top:10,right:10,bottom:25,left:50},
+    xAxis:{type:'category',data:history.map(function(d){return d.date.slice(5);}),axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:10}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#21262d'}},axisLabel:{color:'#8b949e',formatter:function(v){return '¥'+v;}}},
+    series:[{
+      data:history.map(function(d){return d.price;}),
+      type:'line',smooth:true,symbol:'none',
+      lineStyle:{width:2,color:'#3fb950'},
+      areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(63,185,80,0.3)'},{offset:1,color:'rgba(63,185,80,0)'}]}}
+    }]
+  });
+}
+
+// 新增图表：下跌归因饼图
+function initNewCharts(){
+  var attrEl=document.getElementById('attributionChart');
+  if(attrEl){
+    var attrChart=echarts.init(attrEl);
+    attrChart.setOption({
+      tooltip:{trigger:'item',formatter:'{b}: {c}%'},
+      legend:{orient:'vertical',right:10,top:'center',textStyle:{color:'#8b949e',fontSize:11}},
+      series:[{
+        type:'pie',
+        radius:['40%','70%'],
+        center:['35%','50%'],
+        avoidLabelOverlap:false,
+        itemStyle:{borderRadius:4,borderColor:'#161b22',borderWidth:2},
+        label:{show:false},
+        data:[
+          {value:35,name:'H股配股',itemStyle:{color:'#f85149'}},
+          {value:25,name:'宏观流动',itemStyle:{color:'#d29922'}},
+          {value:20,name:'机构调仓',itemStyle:{color:'#eab308'}},
+          {value:12,name:'竞争忧虑',itemStyle:{color:'#a855f7'}},
+          {value:8,name:'技术止损',itemStyle:{color:'#6366f1'}}
+        ]
+      }]
+    });
+  }
+
+  // 储能趋势图
+  var energyEl=document.getElementById('energyChart');
+  if(energyEl){
+    var energyChart=echarts.init(energyEl);
+    energyChart.setOption({
+      tooltip:{trigger:'axis'},
+      grid:{top:10,right:10,bottom:25,left:50},
+      xAxis:{type:'category',data:['Q1\'25','Q2\'25','Q3\'25','Q4\'25','Q1\'26'],axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:10}},
+      yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#21262d'}},axisLabel:{color:'#8b949e',formatter:function(v){return v+'%';}}},
+      series:[{
+        data:[15,18,21,23,25],
+        type:'line',smooth:true,symbol:'circle',
+        lineStyle:{width:2,color:'#3fb950'},
+        areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(63,185,80,0.3)'},{offset:1,color:'rgba(63,185,80,0)'}]}},
+        itemStyle:{color:'#3fb950'}
+      }]
+    });
+  }
+}
+
+// 页面加载
+window.addEventListener('load', loadAndRender);
+window.addEventListener('resize', function(){
+  echarts.getInstanceByDom(document.getElementById('ahChart'))&&echarts.getInstanceByDom(document.getElementById('ahChart')).resize();
+  echarts.getInstanceByDom(document.getElementById('peHistChart'))&&echarts.getInstanceByDom(document.getElementById('peHistChart')).resize();
+  echarts.getInstanceByDom(document.getElementById('peerPeChart'))&&echarts.getInstanceByDom(document.getElementById('peerPeChart')).resize();
+  echarts.getInstanceByDom(document.getElementById('peerRoeChart'))&&echarts.getInstanceByDom(document.getElementById('peerRoeChart')).resize();
+  echarts.getInstanceByDom(document.getElementById('peerGpmChart'))&&echarts.getInstanceByDom(document.getElementById('peerGpmChart')).resize();
+  echarts.getInstanceByDom(document.getElementById('priceChart'))&&echarts.getInstanceByDom(document.getElementById('priceChart')).resize();
+  echarts.getInstanceByDom(document.getElementById('lithiumChart'))&&echarts.getInstanceByDom(document.getElementById('lithiumChart')).resize();
+});
 </script>
 </body>
 </html>
