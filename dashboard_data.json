@@ -1,151 +1,151 @@
 {
-  "update_time": "2026-05-10 22:39",
-  "trade_date": "20260510",
+  "update_time": "2026-05-16 22:05",
+  "trade_date": "20260515",
   "catl": {
-    "close": 437.0,
-    "pct_chg": -3.24,
-    "open": null,
-    "high": null,
-    "low": null,
-    "vol": null,
-    "amount": null,
-    "mv": 19228.0,
-    "pe_ttm": 29.62,
+    "close": 423.6,
+    "pct_chg": -0.8,
+    "open": 428.08,
+    "high": 431.5,
+    "low": 421.0,
+    "vol": 2970489300,
+    "amount": 12638150861.85,
+    "mv": 18638.0,
+    "pe_ttm": 28.71,
     "pe_source": "dynamic_ttm",
-    "pb": null,
+    "pb": 5.41,
     "roe": 24.91,
     "gpm": 24.82,
     "npm": 17.61,
-    "ma20": null,
-    "ma60": null,
-    "ma20_trend": "unknown",
-    "ma20_dev": null,
-    "ma60_dev": null
+    "ma20": 439.18,
+    "ma60": 403.04,
+    "ma20_trend": "down",
+    "ma20_dev": -3.55,
+    "ma60_dev": 5.1
   },
   "hk": {
-    "close": 651.0,
-    "pct_chg": -2.11,
-    "close_cny": 570.67
+    "close": 680.0,
+    "pct_chg": -0.87,
+    "close_cny": 596.09
   },
   "ah": {
-    "premium": -23.42,
+    "premium": -28.94,
     "hkd_cny": 0.8766
   },
   "industry": {
-    "pe_median": 34.6,
+    "pe_median": 32.56,
     "peer_premium": null,
     "peers": [
       {
         "code": "002594.SZ",
         "name": "比亚迪",
         "chain": "电池+整车",
-        "close": 100.02,
-        "pct_chg": -0.44,
-        "pe": 27.94,
+        "close": 96.3,
+        "pct_chg": -2.46,
+        "pe": 26.9,
         "pe_source": "f10_eps",
-        "pb": 3.93,
+        "pb": 3.79,
         "roe": 15.31,
         "gpm": 18.81,
         "npm": 2.67,
-        "mv": 9119.0
+        "mv": 8780.0
       },
       {
         "code": "300014.SZ",
         "name": "亿纬锂能",
         "chain": "电池",
-        "close": 69.9,
-        "pct_chg": -2.66,
-        "pe": 34.6,
+        "close": 65.78,
+        "pct_chg": 0.74,
+        "pe": 32.56,
         "pe_source": "f10_eps",
-        "pb": 3.32,
+        "pb": 3.13,
         "roe": 10.5,
         "gpm": 14.04,
         "npm": 6.98,
-        "mv": 1519.0
+        "mv": 1430.0
       },
       {
         "code": "002074.SZ",
         "name": "国轩高科",
         "chain": "电池(大众系)",
-        "close": 37.23,
-        "pct_chg": -2.41,
-        "pe": 28.2,
+        "close": 36.13,
+        "pct_chg": -1.55,
+        "pe": 27.37,
         "pe_source": "f10_eps",
-        "pb": 2.33,
+        "pb": 2.27,
         "roe": 8.65,
         "gpm": 16.06,
         "npm": 0.21,
-        "mv": 675.0
+        "mv": 655.0
       },
       {
         "code": "300207.SZ",
         "name": "欣旺达",
         "chain": "电池+消费",
-        "close": 26.73,
-        "pct_chg": -1.69,
-        "pe": 46.09,
+        "close": 25.2,
+        "pct_chg": -1.22,
+        "pe": 43.45,
         "pe_source": "f10_eps",
-        "pb": 2.0,
+        "pb": 1.89,
         "roe": 4.39,
         "gpm": 17.96,
         "npm": 1.0,
-        "mv": 494.0
+        "mv": 466.0
       },
       {
         "code": "002709.SZ",
         "name": "天赐材料",
         "chain": "电解液",
-        "close": 58.41,
-        "pct_chg": -6.99,
-        "pe": 82.27,
+        "close": 57.54,
+        "pct_chg": 3.66,
+        "pe": 81.04,
         "pe_source": "f10_eps",
-        "pb": 6.24,
+        "pb": 6.15,
         "roe": 9.79,
         "gpm": 38.65,
         "npm": 24.68,
-        "mv": 1191.0
+        "mv": 1173.0
       },
       {
         "code": "603799.SZ",
         "name": "华友钴业",
         "chain": "钴镍资源",
-        "close": 66.0,
-        "pct_chg": -3.23,
-        "pe": 19.76,
+        "close": 58.65,
+        "pct_chg": -2.75,
+        "pe": 17.56,
         "pe_source": "f10_eps",
-        "pb": 2.48,
+        "pb": 2.2,
         "roe": 13.7,
         "gpm": 20.69,
         "npm": 12.22,
-        "mv": 1252.0
+        "mv": 1112.0
       },
       {
         "code": "002460.SZ",
         "name": "赣锋锂业",
         "chain": "锂资源",
-        "close": 84.77,
-        "pct_chg": -3.67,
-        "pe": 105.96,
+        "close": 78.06,
+        "pct_chg": -2.4,
+        "pe": 97.58,
         "pe_source": "f10_eps",
-        "pb": 3.83,
+        "pb": 3.52,
         "roe": 3.8,
         "gpm": 29.72,
         "npm": 20.9,
-        "mv": 1777.0
+        "mv": 1637.0
       },
       {
         "code": "002466.SZ",
         "name": "天齐锂业",
         "chain": "锂资源",
-        "close": 76.05,
-        "pct_chg": -3.81,
-        "pe": 271.61,
+        "close": 69.11,
+        "pct_chg": -2.24,
+        "pe": 246.82,
         "pe_source": "f10_eps",
-        "pb": 2.8,
+        "pb": 2.54,
         "roe": 1.1,
         "gpm": 62.66,
         "npm": 55.4,
-        "mv": 1302.0
+        "mv": 1184.0
       }
     ]
   },
@@ -158,179 +158,1183 @@
     "trade_date": null
   },
   "southbound": null,
-  "pe_history": null,
-  "price_series": [],
-  "hk_price_series": [],
-  "ah_premium_series": [],
+  "pe_history": [
+    {
+      "date": "20251113",
+      "pe": 31.81
+    },
+    {
+      "date": "20251114",
+      "pe": 30.93
+    },
+    {
+      "date": "20251117",
+      "pe": 29.91
+    },
+    {
+      "date": "20251118",
+      "pe": 29.47
+    },
+    {
+      "date": "20251119",
+      "pe": 29.93
+    },
+    {
+      "date": "20251120",
+      "pe": 29.04
+    },
+    {
+      "date": "20251121",
+      "pe": 28.32
+    },
+    {
+      "date": "20251124",
+      "pe": 28.36
+    },
+    {
+      "date": "20251125",
+      "pe": 28.5
+    },
+    {
+      "date": "20251126",
+      "pe": 28.53
+    },
+    {
+      "date": "20251127",
+      "pe": 28.41
+    },
+    {
+      "date": "20251128",
+      "pe": 28.56
+    },
+    {
+      "date": "20251201",
+      "pe": 29.31
+    },
+    {
+      "date": "20251202",
+      "pe": 29.09
+    },
+    {
+      "date": "20251203",
+      "pe": 28.78
+    },
+    {
+      "date": "20251204",
+      "pe": 29.34
+    },
+    {
+      "date": "20251205",
+      "pe": 29.78
+    },
+    {
+      "date": "20251208",
+      "pe": 30.04
+    },
+    {
+      "date": "20251209",
+      "pe": 29.67
+    },
+    {
+      "date": "20251210",
+      "pe": 29.27
+    },
+    {
+      "date": "20251211",
+      "pe": 29.77
+    },
+    {
+      "date": "20251212",
+      "pe": 29.99
+    },
+    {
+      "date": "20251215",
+      "pe": 29.51
+    },
+    {
+      "date": "20251216",
+      "pe": 28.96
+    },
+    {
+      "date": "20251217",
+      "pe": 29.35
+    },
+    {
+      "date": "20251218",
+      "pe": 28.47
+    },
+    {
+      "date": "20251219",
+      "pe": 28.63
+    },
+    {
+      "date": "20251222",
+      "pe": 28.46
+    },
+    {
+      "date": "20251223",
+      "pe": 28.94
+    },
+    {
+      "date": "20251224",
+      "pe": 28.75
+    },
+    {
+      "date": "20251225",
+      "pe": 28.55
+    },
+    {
+      "date": "20251226",
+      "pe": 28.66
+    },
+    {
+      "date": "20251229",
+      "pe": 28.27
+    },
+    {
+      "date": "20251230",
+      "pe": 28.26
+    },
+    {
+      "date": "20251231",
+      "pe": 27.78
+    },
+    {
+      "date": "20260105",
+      "pe": 28.55
+    },
+    {
+      "date": "20260106",
+      "pe": 28.29
+    },
+    {
+      "date": "20260107",
+      "pe": 28.06
+    },
+    {
+      "date": "20260108",
+      "pe": 27.92
+    },
+    {
+      "date": "20260109",
+      "pe": 27.93
+    },
+    {
+      "date": "20260112",
+      "pe": 27.35
+    },
+    {
+      "date": "20260113",
+      "pe": 27.15
+    },
+    {
+      "date": "20260114",
+      "pe": 26.77
+    },
+    {
+      "date": "20260115",
+      "pe": 26.75
+    },
+    {
+      "date": "20260116",
+      "pe": 26.65
+    },
+    {
+      "date": "20260119",
+      "pe": 26.39
+    },
+    {
+      "date": "20260120",
+      "pe": 26.44
+    },
+    {
+      "date": "20260121",
+      "pe": 26.46
+    },
+    {
+      "date": "20260122",
+      "pe": 26.15
+    },
+    {
+      "date": "20260123",
+      "pe": 26.24
+    },
+    {
+      "date": "20260126",
+      "pe": 25.87
+    },
+    {
+      "date": "20260127",
+      "pe": 25.67
+    },
+    {
+      "date": "20260128",
+      "pe": 25.71
+    },
+    {
+      "date": "20260129",
+      "pe": 25.86
+    },
+    {
+      "date": "20260130",
+      "pe": 26.47
+    },
+    {
+      "date": "20260202",
+      "pe": 26.39
+    },
+    {
+      "date": "20260203",
+      "pe": 26.31
+    },
+    {
+      "date": "20260204",
+      "pe": 27.61
+    },
+    {
+      "date": "20260205",
+      "pe": 27.45
+    },
+    {
+      "date": "20260206",
+      "pe": 27.92
+    },
+    {
+      "date": "20260209",
+      "pe": 27.89
+    },
+    {
+      "date": "20260210",
+      "pe": 27.6
+    },
+    {
+      "date": "20260211",
+      "pe": 27.83
+    },
+    {
+      "date": "20260212",
+      "pe": 28.43
+    },
+    {
+      "date": "20260213",
+      "pe": 27.63
+    },
+    {
+      "date": "20260224",
+      "pe": 27.37
+    },
+    {
+      "date": "20260225",
+      "pe": 27.39
+    },
+    {
+      "date": "20260226",
+      "pe": 26.17
+    },
+    {
+      "date": "20260227",
+      "pe": 25.87
+    },
+    {
+      "date": "20260302",
+      "pe": 25.73
+    },
+    {
+      "date": "20260303",
+      "pe": 26.02
+    },
+    {
+      "date": "20260304",
+      "pe": 25.63
+    },
+    {
+      "date": "20260305",
+      "pe": 26.49
+    },
+    {
+      "date": "20260306",
+      "pe": 26.83
+    },
+    {
+      "date": "20260309",
+      "pe": 27.04
+    },
+    {
+      "date": "20260310",
+      "pe": 28.46
+    },
+    {
+      "date": "20260311",
+      "pe": 30.01
+    },
+    {
+      "date": "20260312",
+      "pe": 29.91
+    },
+    {
+      "date": "20260313",
+      "pe": 30.03
+    },
+    {
+      "date": "20260316",
+      "pe": 30.89
+    },
+    {
+      "date": "20260317",
+      "pe": 30.63
+    },
+    {
+      "date": "20260318",
+      "pe": 30.41
+    },
+    {
+      "date": "20260319",
+      "pe": 30.29
+    },
+    {
+      "date": "20260320",
+      "pe": 31.24
+    },
+    {
+      "date": "20260323",
+      "pe": 30.4
+    },
+    {
+      "date": "20260324",
+      "pe": 30.02
+    },
+    {
+      "date": "20260325",
+      "pe": 30.09
+    },
+    {
+      "date": "20260326",
+      "pe": 30.44
+    },
+    {
+      "date": "20260327",
+      "pe": 31.48
+    },
+    {
+      "date": "20260330",
+      "pe": 31.24
+    },
+    {
+      "date": "20260331",
+      "pe": 27.23
+    },
+    {
+      "date": "20260401",
+      "pe": 27.5
+    },
+    {
+      "date": "20260402",
+      "pe": 27.19
+    },
+    {
+      "date": "20260403",
+      "pe": 26.2
+    },
+    {
+      "date": "20260407",
+      "pe": 26.07
+    },
+    {
+      "date": "20260408",
+      "pe": 26.53
+    },
+    {
+      "date": "20260409",
+      "pe": 26.44
+    },
+    {
+      "date": "20260410",
+      "pe": 28.2
+    },
+    {
+      "date": "20260413",
+      "pe": 28.95
+    },
+    {
+      "date": "20260414",
+      "pe": 29.2
+    },
+    {
+      "date": "20260415",
+      "pe": 29.22
+    },
+    {
+      "date": "20260416",
+      "pe": 30.77
+    },
+    {
+      "date": "20260417",
+      "pe": 30.11
+    },
+    {
+      "date": "20260420",
+      "pe": 29.32
+    },
+    {
+      "date": "20260421",
+      "pe": 30.34
+    },
+    {
+      "date": "20260422",
+      "pe": 29.58
+    },
+    {
+      "date": "20260423",
+      "pe": 29.75
+    },
+    {
+      "date": "20260424",
+      "pe": 30.16
+    },
+    {
+      "date": "20260427",
+      "pe": 29.48
+    },
+    {
+      "date": "20260428",
+      "pe": 28.99
+    },
+    {
+      "date": "20260429",
+      "pe": 30.17
+    },
+    {
+      "date": "20260430",
+      "pe": 29.56
+    },
+    {
+      "date": "20260506",
+      "pe": 31.18
+    },
+    {
+      "date": "20260507",
+      "pe": 30.62
+    },
+    {
+      "date": "20260508",
+      "pe": 29.62
+    },
+    {
+      "date": "20260511",
+      "pe": 30.24
+    },
+    {
+      "date": "20260512",
+      "pe": 29.23
+    },
+    {
+      "date": "20260513",
+      "pe": 29.42
+    },
+    {
+      "date": "20260514",
+      "pe": 28.95
+    },
+    {
+      "date": "20260515",
+      "pe": 28.71
+    }
+  ],
+  "price_series": [
+    {
+      "date": "20260415",
+      "close": 431.0
+    },
+    {
+      "date": "20260416",
+      "close": 453.98
+    },
+    {
+      "date": "20260417",
+      "close": 444.2
+    },
+    {
+      "date": "20260420",
+      "close": 432.5
+    },
+    {
+      "date": "20260421",
+      "close": 447.6
+    },
+    {
+      "date": "20260422",
+      "close": 436.35
+    },
+    {
+      "date": "20260423",
+      "close": 438.9
+    },
+    {
+      "date": "20260424",
+      "close": 444.9
+    },
+    {
+      "date": "20260427",
+      "close": 434.88
+    },
+    {
+      "date": "20260428",
+      "close": 427.67
+    },
+    {
+      "date": "20260429",
+      "close": 445.0
+    },
+    {
+      "date": "20260430",
+      "close": 436.0
+    },
+    {
+      "date": "20260506",
+      "close": 460.0
+    },
+    {
+      "date": "20260507",
+      "close": 451.64
+    },
+    {
+      "date": "20260508",
+      "close": 437.0
+    },
+    {
+      "date": "20260511",
+      "close": 446.11
+    },
+    {
+      "date": "20260512",
+      "close": 431.25
+    },
+    {
+      "date": "20260513",
+      "close": 434.05
+    },
+    {
+      "date": "20260514",
+      "close": 427.0
+    },
+    {
+      "date": "20260515",
+      "close": 423.6
+    }
+  ],
+  "hk_price_series": [
+    {
+      "date": "20260212",
+      "close": 528.0
+    },
+    {
+      "date": "20260213",
+      "close": 517.5
+    },
+    {
+      "date": "20260224",
+      "close": 525.5
+    },
+    {
+      "date": "20260225",
+      "close": 533.0
+    },
+    {
+      "date": "20260226",
+      "close": 498.4
+    },
+    {
+      "date": "20260227",
+      "close": 496.0
+    },
+    {
+      "date": "20260302",
+      "close": 484.4
+    },
+    {
+      "date": "20260303",
+      "close": 487.0
+    },
+    {
+      "date": "20260304",
+      "close": 479.2
+    },
+    {
+      "date": "20260305",
+      "close": 499.8
+    },
+    {
+      "date": "20260306",
+      "close": 513.0
+    },
+    {
+      "date": "20260309",
+      "close": 503.0
+    },
+    {
+      "date": "20260310",
+      "close": 550.0
+    },
+    {
+      "date": "20260311",
+      "close": 599.5
+    },
+    {
+      "date": "20260312",
+      "close": 610.0
+    },
+    {
+      "date": "20260313",
+      "close": 621.0
+    },
+    {
+      "date": "20260316",
+      "close": 670.0
+    },
+    {
+      "date": "20260317",
+      "close": 648.0
+    },
+    {
+      "date": "20260318",
+      "close": 650.5
+    },
+    {
+      "date": "20260319",
+      "close": 644.0
+    },
+    {
+      "date": "20260320",
+      "close": 698.0
+    },
+    {
+      "date": "20260323",
+      "close": 662.0
+    },
+    {
+      "date": "20260324",
+      "close": 645.0
+    },
+    {
+      "date": "20260325",
+      "close": 637.5
+    },
+    {
+      "date": "20260326",
+      "close": 616.0
+    },
+    {
+      "date": "20260327",
+      "close": 634.0
+    },
+    {
+      "date": "20260330",
+      "close": 632.0
+    },
+    {
+      "date": "20260331",
+      "close": 613.5
+    },
+    {
+      "date": "20260401",
+      "close": 632.5
+    },
+    {
+      "date": "20260402",
+      "close": 627.5
+    },
+    {
+      "date": "20260408",
+      "close": 639.5
+    },
+    {
+      "date": "20260409",
+      "close": 633.0
+    },
+    {
+      "date": "20260410",
+      "close": 681.5
+    },
+    {
+      "date": "20260413",
+      "close": 682.5
+    },
+    {
+      "date": "20260414",
+      "close": 660.0
+    },
+    {
+      "date": "20260415",
+      "close": 655.5
+    },
+    {
+      "date": "20260416",
+      "close": 714.5
+    },
+    {
+      "date": "20260417",
+      "close": 692.0
+    },
+    {
+      "date": "20260420",
+      "close": 702.5
+    },
+    {
+      "date": "20260421",
+      "close": 736.0
+    },
+    {
+      "date": "20260422",
+      "close": 699.0
+    },
+    {
+      "date": "20260423",
+      "close": 702.5
+    },
+    {
+      "date": "20260424",
+      "close": 695.0
+    },
+    {
+      "date": "20260427",
+      "close": 675.5
+    },
+    {
+      "date": "20260428",
+      "close": 629.0
+    },
+    {
+      "date": "20260429",
+      "close": 627.5
+    },
+    {
+      "date": "20260430",
+      "close": 608.0
+    },
+    {
+      "date": "20260506",
+      "close": 669.0
+    },
+    {
+      "date": "20260507",
+      "close": 665.0
+    },
+    {
+      "date": "20260508",
+      "close": 651.0
+    },
+    {
+      "date": "20260511",
+      "close": 657.5
+    },
+    {
+      "date": "20260512",
+      "close": 651.5
+    },
+    {
+      "date": "20260513",
+      "close": 673.0
+    },
+    {
+      "date": "20260514",
+      "close": 686.0
+    },
+    {
+      "date": "20260515",
+      "close": 680.0
+    }
+  ],
+  "ah_premium_series": [
+    {
+      "date": "20260212",
+      "premium": -18.79
+    },
+    {
+      "date": "20260213",
+      "premium": -19.46
+    },
+    {
+      "date": "20260224",
+      "premium": -21.43
+    },
+    {
+      "date": "20260225",
+      "premium": -22.48
+    },
+    {
+      "date": "20260226",
+      "premium": -20.81
+    },
+    {
+      "date": "20260227",
+      "premium": -21.34
+    },
+    {
+      "date": "20260302",
+      "premium": -19.88
+    },
+    {
+      "date": "20260303",
+      "premium": -19.4
+    },
+    {
+      "date": "20260304",
+      "premium": -19.32
+    },
+    {
+      "date": "20260305",
+      "premium": -20.06
+    },
+    {
+      "date": "20260306",
+      "premium": -21.11
+    },
+    {
+      "date": "20260309",
+      "premium": -18.92
+    },
+    {
+      "date": "20260310",
+      "premium": -21.95
+    },
+    {
+      "date": "20260311",
+      "premium": -24.49
+    },
+    {
+      "date": "20260312",
+      "premium": -26.04
+    },
+    {
+      "date": "20260313",
+      "premium": -27.07
+    },
+    {
+      "date": "20260316",
+      "premium": -30.46
+    },
+    {
+      "date": "20260317",
+      "premium": -28.7
+    },
+    {
+      "date": "20260318",
+      "premium": -29.5
+    },
+    {
+      "date": "20260319",
+      "premium": -29.06
+    },
+    {
+      "date": "20260320",
+      "premium": -32.5
+    },
+    {
+      "date": "20260323",
+      "premium": -30.73
+    },
+    {
+      "date": "20260324",
+      "premium": -29.79
+    },
+    {
+      "date": "20260325",
+      "premium": -28.81
+    },
+    {
+      "date": "20260326",
+      "premium": -25.46
+    },
+    {
+      "date": "20260327",
+      "premium": -25.12
+    },
+    {
+      "date": "20260330",
+      "premium": -25.45
+    },
+    {
+      "date": "20260331",
+      "premium": -25.31
+    },
+    {
+      "date": "20260401",
+      "premium": -26.83
+    },
+    {
+      "date": "20260402",
+      "premium": -27.07
+    },
+    {
+      "date": "20260408",
+      "premium": -30.2
+    },
+    {
+      "date": "20260409",
+      "premium": -29.72
+    },
+    {
+      "date": "20260410",
+      "premium": -30.36
+    },
+    {
+      "date": "20260413",
+      "premium": -28.61
+    },
+    {
+      "date": "20260414",
+      "premium": -25.54
+    },
+    {
+      "date": "20260415",
+      "premium": -24.99
+    },
+    {
+      "date": "20260416",
+      "premium": -27.52
+    },
+    {
+      "date": "20260417",
+      "premium": -26.77
+    },
+    {
+      "date": "20260420",
+      "premium": -29.77
+    },
+    {
+      "date": "20260421",
+      "premium": -30.62
+    },
+    {
+      "date": "20260422",
+      "premium": -28.79
+    },
+    {
+      "date": "20260423",
+      "premium": -28.73
+    },
+    {
+      "date": "20260424",
+      "premium": -26.97
+    },
+    {
+      "date": "20260427",
+      "premium": -26.56
+    },
+    {
+      "date": "20260428",
+      "premium": -22.44
+    },
+    {
+      "date": "20260429",
+      "premium": -19.1
+    },
+    {
+      "date": "20260430",
+      "premium": -18.19
+    },
+    {
+      "date": "20260506",
+      "premium": -21.56
+    },
+    {
+      "date": "20260507",
+      "premium": -22.52
+    },
+    {
+      "date": "20260508",
+      "premium": -23.42
+    },
+    {
+      "date": "20260511",
+      "premium": -22.6
+    },
+    {
+      "date": "20260512",
+      "premium": -24.49
+    },
+    {
+      "date": "20260513",
+      "premium": -26.43
+    },
+    {
+      "date": "20260514",
+      "premium": -28.99
+    },
+    {
+      "date": "20260515",
+      "premium": -28.94
+    }
+  ],
   "news": {
     "articles": [
       {
-        "title": "造车再下一城：宁德时代落子土耳其",
-        "date": "2026-05-08",
-        "source": "财中社",
-        "url": "http://finance.eastmoney.com/a/202605083731616222.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代成交额达100亿元",
-        "date": "2026-05-08",
+        "title": "瑞泰新材：宁德时代是公司的核心客户",
+        "date": "2026-05-15",
         "source": "每日经济新闻",
-        "url": "http://finance.eastmoney.com/a/202605083731364422.html",
+        "url": "http://finance.eastmoney.com/a/202605153738724356.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
       {
-        "title": "宁德时代A股成交额超100亿元",
-        "date": "2026-05-08",
-        "source": "上海证券报·中国证券网",
-        "url": "http://finance.eastmoney.com/a/202605083731383657.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代A股成交额达100亿元",
-        "date": "2026-05-08",
-        "source": "界面新闻",
-        "url": "http://finance.eastmoney.com/a/202605083731347645.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代与Togg达成磐石底盘量产合作",
-        "date": "2026-05-07",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202605073730075586.html",
-        "sentiment_score": 8,
+        "title": "宁德时代：公司通过多种手段保障供应链稳定",
+        "date": "2026-05-15",
+        "source": "证券日报",
+        "url": "http://finance.eastmoney.com/a/202605153739256250.html",
+        "sentiment_score": 2,
         "sentiment_label": "positive"
       },
       {
-        "title": "奥迪E7X预售28.98万元起，首搭宁德时代109度电池",
-        "date": "2026-05-09",
-        "source": "新京报",
-        "url": "http://finance.eastmoney.com/a/202605093732174683.html",
+        "title": "砸百亿连落两子，宁德时代的算力战略野心藏不住了",
+        "date": "2026-05-16",
+        "source": "界面新闻",
+        "url": "http://finance.eastmoney.com/a/202605163739602144.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
       {
-        "title": "宁德时代成交额超150亿元",
-        "date": "2026-05-07",
-        "source": "证券时报网",
-        "url": "http://finance.eastmoney.com/a/202605073730001253.html",
+        "title": "获宁德时代押注 拿森科技递表港交所",
+        "date": "2026-05-14",
+        "source": "上海证券报·中国证券网",
+        "url": "http://finance.eastmoney.com/a/202605143737558839.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "宁德时代：公司加速品牌推广，充分利用线上及线下传播渠道",
+        "date": "2026-05-15",
+        "source": "证券日报",
+        "url": "http://finance.eastmoney.com/a/202605153739256072.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "两月内百亿押注算电协同 宁德时代入股世纪互联、中恒电气",
+        "date": "2026-05-16",
+        "source": "科创板日报",
+        "url": "http://finance.eastmoney.com/a/202605163739589277.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
       {
         "title": "宁德时代成交额超100亿元",
-        "date": "2026-05-07",
+        "date": "2026-05-14",
         "source": "证券时报网",
-        "url": "http://finance.eastmoney.com/a/202605073729841235.html",
+        "url": "http://finance.eastmoney.com/a/202605143737188639.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
       {
-        "title": "宁德时代与土耳其汽车品牌Togg达成磐石底盘量产合作",
-        "date": "2026-05-07",
-        "source": "第一财经",
-        "url": "http://finance.eastmoney.com/a/202605073730073148.html",
-        "sentiment_score": 8,
+        "title": "宁德时代：截至2025年末，公司拥有在建产能321GWh，产能项目建设稳步推进",
+        "date": "2026-05-15",
+        "source": "每日经济新闻",
+        "url": "http://finance.eastmoney.com/a/202605153739080245.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "格林美：宁德时代是公司的核心战略合作伙伴",
+        "date": "2026-05-14",
+        "source": "证券日报",
+        "url": "http://finance.eastmoney.com/a/202605143737740020.html",
+        "sentiment_score": 2,
         "sentiment_label": "positive"
       },
       {
-        "title": "宁德时代成交额达200亿元",
-        "date": "2026-05-06",
-        "source": "每日经济新闻",
-        "url": "http://finance.eastmoney.com/a/202605063728559093.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代在兰州投资成立新公司 含充电桩业务",
-        "date": "2026-05-07",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202605073729489931.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "宁德时代与Togg达成磐石底盘量产合作；智界V9将于本月正式上市丨汽车早参",
-        "date": "2026-05-08",
-        "source": "每日经济新闻",
-        "url": "http://finance.eastmoney.com/a/202605083730569518.html",
-        "sentiment_score": 8,
+        "title": "建发股份与宁德时代签署战略合作备忘录",
+        "date": "2026-05-14",
+        "source": "界面新闻",
+        "url": "http://finance.eastmoney.com/a/202605143737186819.html",
+        "sentiment_score": 2,
         "sentiment_label": "positive"
       },
       {
-        "title": "港股锂电池股走强 宁德时代涨近4%",
-        "date": "2026-05-06",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202605063728110894.html",
+        "title": "宁德时代旗下小康人寿现股权变动：贵星汽销拟出清7%股权，西藏骏杰投资接盘",
+        "date": "2026-05-15",
+        "source": "蓝鲸财经",
+        "url": "http://finance.eastmoney.com/a/202605153738905717.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
       {
-        "title": "公募一季度“抱团”创业板大牛股！超2000只基金重仓宁德时代，中际旭创获2只主动权益基金加仓",
-        "date": "2026-05-09",
-        "source": "时代周报",
-        "url": "http://finance.eastmoney.com/a/202605093732232068.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "港股宁德时代午后涨超5%",
-        "date": "2026-05-04",
+        "title": "64亿元入局！宁德时代切入AI算力腹地，世纪互联引爆资本预期，突围之路几何？",
+        "date": "2026-05-15",
         "source": "每日经济新闻",
-        "url": "http://finance.eastmoney.com/a/202605043727725240.html",
+        "url": "http://finance.eastmoney.com/a/202605153738817433.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
       {
-        "title": "宁德时代在兰州成立新能源科技公司 注册资本2000万元",
-        "date": "2026-05-06",
-        "source": "每日经济新闻",
-        "url": "http://finance.eastmoney.com/a/202605063728458616.html",
+        "title": "宁德时代和博世集团两大巨头参投启境汽车",
+        "date": "2026-05-13",
+        "source": "证券日报",
+        "url": "http://finance.eastmoney.com/a/202605133734917726.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
       {
-        "title": "港股开盘丨恒指跌0.58% 宁德时代涨近3%",
-        "date": "2026-05-05",
-        "source": "第一财经",
-        "url": "http://stock.eastmoney.com/a/202605053727825495.html",
-        "sentiment_score": 0,
-        "sentiment_label": "neutral"
-      },
-      {
-        "title": "摩根士丹利：将宁德时代H股目标价上调至815港元",
-        "date": "2026-05-05",
-        "source": "财联社",
-        "url": "http://hk.eastmoney.com/a/202605053727819497.html",
-        "sentiment_score": 6,
+        "title": "宇通集团与宁德时代签署全面战略合作备忘录",
+        "date": "2026-05-13",
+        "source": "界面新闻",
+        "url": "http://finance.eastmoney.com/a/202605133735799427.html",
+        "sentiment_score": 2,
         "sentiment_label": "positive"
       },
       {
-        "title": "七成创业板公司去年盈利：宁德时代稳坐“一哥”，智飞生物巨亏创纪录",
-        "date": "2026-05-05",
-        "source": "第一财经",
-        "url": "http://finance.eastmoney.com/a/202605053727887236.html",
+        "title": "启境汽车完成超10亿元增资 宁德时代等参投",
+        "date": "2026-05-12",
+        "source": "财联社",
+        "url": "http://finance.eastmoney.com/a/202605123734570277.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       },
       {
-        "title": "港股锂电板块拉涨宁德时代涨近4% 国内矿源供给或进入偏紧阶段",
-        "date": "2026-05-05",
-        "source": "财联社",
-        "url": "http://finance.eastmoney.com/a/202605053727859329.html",
+        "title": "世纪互联引入宁德时代关联方战投；可灵AI登顶42个国家和地区App Store总榜｜未来商业早参",
+        "date": "2026-05-15",
+        "source": "每日经济新闻",
+        "url": "http://finance.eastmoney.com/a/202605153737897854.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "启境汽车获超10亿元战略增资， 宁德时代、博世等参投",
+        "date": "2026-05-13",
+        "source": "界面新闻",
+        "url": "http://finance.eastmoney.com/a/202605133735508546.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "大宗交易：宁德时代成交5069.30万元（5-12）",
+        "date": "2026-05-12",
+        "source": "东方财富Choice数据",
+        "url": "http://stock.eastmoney.com/a/202605123734503895.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "启境汽车完成超10亿元增资，宁德时代、博世等入局",
+        "date": "2026-05-12",
+        "source": "中国证券报·中证金牛座",
+        "url": "http://finance.eastmoney.com/a/202605123734740485.html",
+        "sentiment_score": 0,
+        "sentiment_label": "neutral"
+      },
+      {
+        "title": "聚焦联合出海、重卡换电，宇通与宁德时代签署全球战略备忘录",
+        "date": "2026-05-13",
+        "source": "新京报",
+        "url": "http://finance.eastmoney.com/a/202605133735925013.html",
         "sentiment_score": 0,
         "sentiment_label": "neutral"
       }
     ],
     "sentiment": {
-      "score": 100,
+      "score": 73,
       "label": "positive",
-      "positive_count": 6,
+      "positive_count": 5,
       "negative_count": 0,
-      "neutral_count": 19
+      "neutral_count": 20
     }
   },
   "params": {
@@ -345,13 +1349,14 @@
     "lithium_high": 12
   },
   "signals": {
-    "score": 2,
-    "verdict": "intensive",
-    "verdict_text": "多个指标显示估值偏低，认真考虑加仓",
-    "color": "green",
+    "score": 1,
+    "verdict": "watch",
+    "verdict_text": "估值合理偏低或正常，继续持有观察",
+    "color": "yellow",
     "details": [
-      "PE 29.6x 处于合理区间",
-      "AH溢价 -23.4% 偏低"
+      "PE 28.7x 处于合理区间",
+      "AH溢价 -28.9% 偏低",
+      "价格低于20日均线"
     ]
   }
 }
