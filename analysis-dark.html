@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>宁德时代 300750.SZ 投资分析报告 · 2026-05-18</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--border:#30363d;--text:#e6edf3;--text2:#8b949e;--green:#3fb950;--yellow:#d29922;--red:#f85149;--blue:#58a6ff;--accent:#79c0ff;--up:#f85149;--down:#3fb950;--purple:#a855f7}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC',sans-serif;line-height:1.7}
+.container{max-width:1100px;margin:0 auto;padding:20px 16px}
+h1{font-size:22px;font-weight:700;margin-bottom:4px}
+h2{font-size:18px;font-weight:600;margin:28px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+h3{font-size:15px;font-weight:600;margin:16px 0 8px;color:var(--accent)}
+.meta{font-size:12px;color:var(--text2);margin-bottom:24px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.badge-green{background:rgba(63,185,80,.15);color:var(--green)}
+.badge-yellow{background:rgba(210,153,34,.15);color:var(--yellow)}
+.badge-red{background:rgba(248,81,73,.15);color:var(--red)}
+.badge-blue{background:rgba(88,166,255,.15);color:var(--blue)}
+.badge-purple{background:rgba(168,85,247,.15);color:var(--purple)}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:12px}
+.kpi-box{background:rgba(255,255,255,.03);border-radius:8px;padding:14px;text-align:center}
+.kpi-box .val{font-size:24px;font-weight:700;margin:4px 0}
+.kpi-box .label{font-size:11px;color:var(--text2)}
+.kpi-box .sub{font-size:10px;margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+th{text-align:left;color:var(--text2);font-weight:500;padding:8px 10px;border-bottom:1px solid var(--border);font-size:12px}
+td{padding:7px 10px;border-bottom:1px solid rgba(48,54,61,.5)}
+.tag-pos{color:var(--green);font-weight:600}
+.tag-neg{color:var(--red);font-weight:600}
+.tag-neu{color:var(--text2)}
+.chart-box{width:100%;height:300px}
+.news-item{padding:10px 0;border-bottom:1px solid rgba(48,54,61,.5);display:flex;gap:10px;align-items:flex-start}
+.news-item:last-child{border-bottom:none}
+.news-date{font-size:11px;color:var(--text2);min-width:48px;flex-shrink:0;padding-top:2px}
+.news-title{font-size:13px;line-height:1.5}
+.news-meta{font-size:10px;color:var(--text2);margin-top:3px}
+.signal-box{padding:20px;border-radius:10px;text-align:center;margin:16px 0}
+.signal-buy{background:rgba(63,185,80,.08);border:2px solid var(--green)}
+.signal-hold{background:rgba(210,153,34,.08);border:2px solid var(--yellow)}
+.signal-sell{background:rgba(248,81,73,.08);border:2px solid var(--red)}
+.signal-box .icon{font-size:40px;margin-bottom:8px}
+.signal-box .text{font-size:20px;font-weight:700}
+.signal-box .detail{font-size:13px;color:var(--text2);margin-top:8px;line-height:1.8}
+.impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.impact-item{padding:12px;border-radius:8px}
+.impact-pos{background:rgba(63,185,80,.06);border-left:3px solid var(--green)}
+.impact-neg{background:rgba(248,81,73,.06);border-left:3px solid var(--red)}
+.impact-mix{background:rgba(210,153,34,.06);border-left:3px solid var(--yellow)}
+.impact-item .factor{font-size:13px;font-weight:600;margin-bottom:4px}
+.impact-item .desc{font-size:12px;color:var(--text2);line-height:1.5}
+.summary-box{background:rgba(88,166,255,.05);border:1px solid rgba(88,166,255,.2);border-radius:8px;padding:16px;margin:12px 0}
+.summary-box p{font-size:13px;margin-bottom:8px}
+.summary-box p:last-child{margin-bottom:0}
+.footer{text-align:center;padding:24px;font-size:11px;color:var(--text2);border-top:1px solid var(--border);margin-top:32px}
+@media(max-width:768px){.impact-grid{grid-template-columns:1fr}.kpi-grid{grid-template-columns:repeat(2,1fr)}h1{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🔋 宁德时代 300750.SZ / 03750.HK</h1>
+<p class="meta">价值投资分析报告 · PEG估值法 · 更新时间：2026-05-18 20:30<br>
+数据截至：2026-05-15（本周五收盘）| 报告期：2026年5月第三周</p>
+
+<!-- ===== 核心KPI ===== -->
+<div class="card">
+<div class="card-title">📊 核心指标速览</div>
+<div class="kpi-grid">
+  <div class="kpi-box">
+    <div class="label">A股收盘价</div>
+    <div class="val" style="color:var(--down)">¥423.60</div>
+    <div class="sub tag-neg">-0.80% ↘</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">H股收盘价</div>
+    <div class="val" style="color:var(--down)">HK$680.0</div>
+    <div class="sub tag-neg">-0.87% ↘</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">AH溢价</div>
+    <div class="val" style="color:var(--blue)">-28.94%</div>
+    <div class="sub" style="color:var(--blue)">A股折价港股</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">PE(TTM)</div>
+    <div class="val" style="color:var(--yellow)">28.71x</div>
+    <div class="sub tag-neu">合理区间</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">PEG</div>
+    <div class="val" style="color:var(--green)">0.78</div>
+    <div class="sub tag-pos">&lt; 1 买入区间</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">碳酸锂价格</div>
+    <div class="val" style="color:var(--red)">¥20.05万</div>
+    <div class="sub tag-neg">突破20万关口</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">MA20 / MA60</div>
+    <div class="val">439 / 403</div>
+    <div class="sub tag-neg">低于MA20</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">ROE / PB</div>
+    <div class="val">24.91% / 5.41x</div>
+    <div class="sub tag-pos">盈利能力强</div>
+  </div>
+</div>
+</div>
+
+<!-- ===== 本周综合信号 ===== -->
+<div class="signal-box signal-buy">
+<div class="icon">📈</div>
+<div class="text" style="color:var(--green)">观望偏多 · 短期等待企稳，中长期逻辑持续强化</div>
+<div class="detail">
+PEG = 0.78 &lt; 1，仍处买入估值区间 · PE 28.71x 处于合理区间（22-30x）<br>
+AH溢价 -28.94% 历史低位，港股获得显著溢价 · 价格低于MA20需等待企稳<br>
+本周资讯偏利好：CIBF2026多维度布局 + 算电协同百亿投资 + 储能钠电大单
+</div>
+</div>
+
+<!-- ===== 本周重大资讯 ===== -->
+<h2>📰 本周国内外重大资讯（5/12-5/18）</h2>
+
+<h3>🔴 碳酸锂价格突破20万/吨，创两年新高</h3>
+<div class="card" style="border-left:3px solid var(--red)">
+<p style="font-size:13px;line-height:1.8">
+<strong>关键数据：</strong>截至5月14日，电池级碳酸锂现货均价达 <b style="color:var(--red)">20.05万元/吨</b>，突破20万元整数关口，创两年多来新高。较2025年5月低点约6.5万元/吨，一年涨幅超 <b>200%</b>；碳酸锂期货主力合约报205,260元/吨，年内累计涨幅超65%。<br><br>
+<strong>影响分析：</strong>锂价上涨对宁德时代构成<b style="color:var(--red)">成本端压力</b>，但宁德通过以下手段对冲：
+</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin:8px 0">
+<span class="badge badge-blue">长协锁定低价矿</span>
+<span class="badge badge-blue">锂矿回收布局</span>
+<span class="badge badge-blue">钠电池替代路线</span>
+<span class="badge badge-blue">上游锂矿参股</span>
+<span class="badge badge-blue">技术创新降本</span>
+</div>
+<p style="font-size:12px;color:var(--text2)">⚠️ 需持续跟踪锂价走势。若持续高位运行，Q2毛利率可能面临承压，但宁德凭借全产业链布局，抗压能力显著优于二线厂商。</p>
+</div>
+
+<h3>🟢 CIBF2026：宁德时代多维度战略布局全面展示</h3>
+<div class="card" style="border-left:3px solid var(--green)">
+<p style="font-size:13px;line-height:1.8">5月13-15日，第十八届深圳国际电池技术交流会（CIBF2026）举行，汇聚超3000家参展商。宁德时代在本次展会上释放多重利好：</p>
+
+<table>
+<tr><th>领域</th><th>关键信息</th><th>影响</th></tr>
+<tr>
+  <td><b>钠离子电池</b></td>
+  <td>与海博思创签署<b>3年60GWh</b>储能钠电池合作（全球最大钠电订单）；福鼎基地投资<b>50亿</b>扩建40GWh钠电产能；钠电池零下40℃可稳定放电</td>
+  <td><span class="tag-pos">重大利好</span></td>
+</tr>
+<tr>
+  <td><b>船舶电动化</b></td>
+  <td>布局最早可追溯至2017年；2026年计划将船舶团队规模扩大一倍至约500人；万亿绿色航道市场</td>
+  <td><span class="tag-pos">利好</span></td>
+</tr>
+<tr>
+  <td><b>超换一体网络</b></td>
+  <td>2026年底计划建成<b>4000座</b>超换一体站，覆盖190城+"12纵11横"高速网；2028年联合共建超<b>10万座</b></td>
+  <td><span class="tag-pos">战略利好</span></td>
+</tr>
+<tr>
+  <td><b>V2G车网互动</b></td>
+  <td>定位"车桩站网用户"五位一体生态；依托电池数据优势推进规模化应用；储能+虚拟电厂布局</td>
+  <td><span class="tag-pos">中长期利好</span></td>
+</tr>
+</table>
+</div>
+
+<h3>🟢 算电协同战略：两月百亿级投资，构建AI储能生态</h3>
+<div class="card" style="border-left:3px solid var(--green)">
+<p style="font-size:13px;line-height:1.8">宁德时代在AI数据中心储能领域连续重磅布局，两个月内合计投入超百亿：</p>
+<table>
+<tr><th>投资标的</th><th>金额</th><th>角色</th><th>战略意义</th></tr>
+<tr>
+  <td><b>世纪互联 (VNET.US)</b></td>
+  <td><b>64亿元</b>（9.42亿美元，收购38.1%股权，第一大股东）</td>
+  <td>数据中心运营商</td>
+  <td>获取算力基础设施入口，30+城市50+数据中心资源</td>
+</tr>
+<tr>
+  <td><b>中恒电气 (002364.SZ)</b></td>
+  <td><b>41亿元</b>（认购中恒科技投资49%股权，第一大股东）</td>
+  <td>HVDC电源龙头</td>
+  <td>补齐输电配电环节，构建"储能→输配电→算力用电"全链条</td>
+</tr>
+</table>
+<div class="summary-box" style="margin-top:12px">
+<p><b>深度解读：</b>宁德时代并非"跟风AI"，而是在构建一个垂直整合的算电协同生态：</p>
+<p>🔹 <b>需求侧：</b>2030年全国数据中心年用电量预计超8000亿千瓦时，80%绿电目标带来超4000亿千瓦时增量绿电需求</p>
+<p>🔹 <b>供给侧：</b>宁德凭借储能+电池+电源全链条优势，直接切入"为AI算力供电"的万亿级市场</p>
+<p>🔹 <b>估值影响：</b>此布局可打开新的增长叙事，远期看有望为宁德时代贡献新的估值锚（SOTP拆分估值逻辑更加清晰）</p>
+</div>
+</div>
+
+<h3>🟢 新能源汽车出口爆发，产业链需求持续旺盛</h3>
+<div class="card" style="border-left:3px solid var(--green)">
+<p style="font-size:13px;line-height:1.8">
+<strong>4月数据（中汽协）：</strong><br>
+• 新能源汽车产销：132万辆 / 134.4万辆，同比+5.5% / +9.7%<br>
+• <b>渗透率首破60%</b>：新能源车销量占汽车总销量53.2%，新能源乘用车国内占比达61.4%<br>
+• <b>出口43万辆</b>，环比+16%，同比<b>+110%</b>（翻倍增长）<br>
+• 1-4月累计出口138.4万辆，同比+120%<br><br>
+<strong>对宁德时代的影响：</strong>作为全球动力电池龙头（市占率38%+），新能源车出口爆发直接拉动宁德海外电池出货量，叠加匈牙利工厂已建成即将投产，海外收入占比有望持续提升。
+</p>
+</div>
+
+<h3>🟡 固态电池产业化提速，2026年迎半固态量产元年</h3>
+<div class="card" style="border-left:3px solid var(--yellow)">
+<p style="font-size:13px;line-height:1.8">
+蜂巢能源董事长杨红新表示"<b>2026年是固液混合电池的元年</b>"。奇瑞、宁德时代、中创新航等头部企业纷纷给出明确的装车验证与量产时间表。<br><br>
+宁德时代在此领域保持技术领先，其凝聚态电池、半固态电池方案已在CIBF上展出。<b>固态电池的推进将进一步巩固宁德的技术护城河</b>，但短期对业绩贡献有限。
+</p>
+</div>
+
+<h3>🟡 储能行业政策密集落地</h3>
+<div class="card" style="border-left:3px solid var(--yellow)">
+<p style="font-size:13px;line-height:1.8">
+• <b>5月14日：</b>国家能源局印发《新型储能电站建设工程质量监督大纲》，适用于100MW及以上电化学/压缩空气储能<br>
+• <b>容量补偿政策：</b>独立储能电站容量补偿有望成为第二大收入来源，2026年重点推进<br>
+• <b>行业趋势：</b>从政策驱动转向市场化，兴业证券看好2026年储能各细分赛道景气上行<br><br>
+对宁德时代而言，储能业务已成为第二增长曲线（2025年出货同比+120%），政策规范有利于头部企业出清中小企业，进一步集中市场份额。
+</p>
+</div>
+
+<h3>🔵 澳大利亚储能市场突破</h3>
+<div class="card" style="border-left:3px solid var(--blue)">
+<p style="font-size:13px;line-height:1.8">
+4月30日，宁德时代与澳大利亚能源基础设施服务商<b>Zinfra</b>签署谅解备忘录（MOU），在澳大利亚大规模电池储能系统的交付与运维领域展开合作。<br>
+Zinfra年度项目规模超12亿澳元，此次合作将加速宁德时代在澳洲及南太平洋地区的储能市场渗透，与近期64亿入股世纪互联（全球IDC布局）形成"海外储能+国内算力"的双轮驱动。
+</p>
+</div>
+
+<!-- ===== 海外动态 ===== -->
+<h2>🌍 本周海外动态</h2>
+<div class="card">
+<table>
+<tr><th>事件</th><th>来源</th><th>影响</th></tr>
+<tr>
+  <td>CATL Super Technology Day 发布六大电池创新技术（快充、长续航等）</td>
+  <td>CATL官方 · 5月1日</td>
+  <td><span class="tag-pos">技术领先验证</span></td>
+</tr>
+<tr>
+  <td>CATL × Zinfra 澳大利亚储能战略合作</td>
+  <td>CATL · 5月1日</td>
+  <td><span class="tag-pos">海外储能突破</span></td>
+</tr>
+<tr>
+  <td>CATL × Togg 底盘电池合作（土耳其）</td>
+  <td>CATL · 5月7日</td>
+  <td><span class="tag-pos">欧洲/中东布局</span></td>
+</tr>
+<tr>
+  <td>50亿元投资福建福鼎40GWh钠电池产线（2年建设周期）</td>
+  <td>环评公示 · 5月7日</td>
+  <td><span class="tag-pos">产能扩张</span></td>
+</tr>
+<tr>
+  <td>特斯拉柏林工厂电池产能翻倍（8→18GWh）</td>
+  <td>媒体报道 · 5月12日</td>
+  <td><span class="tag-neg">竞争加剧</span></td>
+</tr>
+<tr>
+  <td>美联储政策观望，全球债市波动加大</td>
+  <td>财经媒体 · 5月17日</td>
+  <td><span class="tag-neu">宏观不确定性</span></td>
+</tr>
+</table>
+</div>
+
+<!-- ===== 本周资讯综合影响 ===== -->
+<h2>⚡ 本周资讯对宁德时代的影响评估</h2>
+<div class="card">
+<div class="impact-grid">
+  <div class="impact-item impact-pos">
+    <div class="factor" style="color:var(--green)">🟢 储能钠电大单 + 40GWh扩产</div>
+    <div class="desc">全球最大60GWh钠电订单（海博思创），50亿福鼎扩产40GWh。钠电池开启规模化商用元年，宁德抢占全球主导地位。</div>
+  </div>
+  <div class="impact-item impact-pos">
+    <div class="factor" style="color:var(--green)">🟢 算电协同百亿投资</div>
+    <div class="desc">两月内64亿+41亿连投世纪互联和中恒电气，构建"储能→输电→算力"全链条，打开AI数据中心万亿级新市场。</div>
+  </div>
+  <div class="impact-item impact-pos">
+    <div class="factor" style="color:var(--green)">🟢 新能源出口翻倍</div>
+    <div class="desc">4月新能源出口同比+110%，渗透率首破60%。匈牙利工厂已建成即将投产，海外收入占比将持续提升。</div>
+  </div>
+  <div class="impact-item impact-pos">
+    <div class="factor" style="color:var(--green)">🟢 超换一体站计划</div>
+    <div class="desc">年底4000座、2028年10万座。补能网络从"服务车"进化为"服务车+服务电网"，深化能源生态布局。</div>
+  </div>
+  <div class="impact-item impact-neg">
+    <div class="factor" style="color:var(--red)">🔴 碳酸锂突破20万/吨</div>
+    <div class="desc">电池级碳酸锂20.05万/吨创两年新高，成本端压力加大。但宁德凭借长协+回收+钠电替代，抗压能力优于同行。</div>
+  </div>
+  <div class="impact-item impact-mix">
+    <div class="factor" style="color:var(--yellow)">🟡 周末宏观偏空</div>
+    <div class="desc">全球债市抛售、美股大跌（纳指跌超1%），周一A股或低开。但中美经贸磋商初步成果、普京访华等构成对冲。</div>
+  </div>
+</div>
+</div>
+
+<!-- ===== 技术面分析 ===== -->
+<h2>📈 技术面分析（截至5月15日）</h2>
+<div class="card">
+<div class="kpi-grid">
+  <div class="kpi-box">
+    <div class="label">收盘价</div>
+    <div class="val">¥423.60</div>
+    <div class="sub tag-neg">低于MA20</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">MA20</div>
+    <div class="val">¥439.18</div>
+    <div class="sub tag-neg">偏离 -3.55%</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">MA60</div>
+    <div class="val">¥403.04</div>
+    <div class="sub tag-pos">高于MA60 +5.1%</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">MA20趋势</div>
+    <div class="val" style="color:var(--red)">↓ 下降</div>
+    <div class="sub">短期偏弱</div>
+  </div>
+</div>
+<div id="priceChart" class="chart-box" style="height:320px;margin-top:12px"></div>
+<div class="summary-box" style="margin-top:12px">
+<p><b>技术面研判：</b></p>
+<p>• 股价低于MA20（-3.55%），短期处于调整态势，MA20趋势向下</p>
+<p>• 但仍高于MA60（+5.1%），中期趋势未破，中期均线支撑有效</p>
+<p>• 近20日价格区间：421-460元，当前位置处于区间下沿</p>
+<p>• <b style="color:var(--yellow)">关键价位：</b>上方压力 MA20=439元、前期高点460元；下方支撑 MA60=403元、心理关口400元</p>
+</div>
+</div>
+
+<!-- ===== AH溢价 ===== -->
+<h2>🔄 AH溢价分析</h2>
+<div class="card">
+<div class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+  <div class="kpi-box">
+    <div class="label">A股价格</div>
+    <div class="val">¥423.60</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">H股价格（折CNY）</div>
+    <div class="val">¥596.09</div>
+  </div>
+  <div class="kpi-box">
+    <div class="label">AH溢价</div>
+    <div class="val" style="color:var(--blue)">-28.94%</div>
+    <div class="sub" style="color:var(--blue)">A股大幅折价</div>
+  </div>
+</div>
+<div id="ahChart" class="chart-box" style="height:250px;margin-top:12px"></div>
+<div class="summary-box">
+<p><b>AH溢价解读：</b>A股较H股折价近29%，处于历史极端水平。这通常反映：</p>
+<p>• 海外投资者对宁德时代成长性给予更高预期（储能出海、钠电池、算电协同）</p>
+<p>• 港股通资金持续流入，推高H股估值</p>
+<p>• 极端折价幅度可能吸引套利资金入场，短期有AH溢价回归动力</p>
+<p>• <b style="color:var(--green)">对A股持有人而言，折价非利空，反而说明A股估值更具安全边际</b></p>
+</div>
+</div>
+
+<!-- ===== PEG估值 ===== -->
+<h2>💰 PEG估值分析</h2>
+<div class="card">
+<table>
+<tr><th>指标</th><th>数值</th><th>评估</th></tr>
+<tr><td>当前股价</td><td><b>¥423.60</b></td><td></td></tr>
+<tr><td>PE(TTM)</td><td><b>28.71x</b></td><td>合理区间（22-30x）<span class="badge badge-yellow" style="margin-left:6px">合理</span></td></tr>
+<tr><td>Q1 2026 EPS</td><td><b>¥4.58</b></td><td>同比+48.5%（归母净利润+48.52%）</td></tr>
+<tr><td>隐含增速(g)</td><td><b>36.8%</b></td><td>基于PEG=0.78反推</td></tr>
+<tr><td><b>PEG</b></td><td><b style="color:var(--green)">0.78</b></td><td><span class="badge badge-green">&lt; 1 → 买入区间</span></td></tr>
+<tr><td>5年PE历史分位</td><td><b>~30%</b></td><td>历史偏低位置</td></tr>
+<tr><td>PB</td><td><b>5.41x</b></td><td>ROE 24.91%支撑</td></tr>
+<tr><td>行业PE中位</td><td><b>32.56x</b></td><td>宁德PE低于行业中位<span class="badge badge-blue" style="margin-left:6px">折价</span></td></tr>
+</table>
+<div class="summary-box" style="margin-top:12px">
+<p><b>PEG估值结论：</b>PEG = 0.78 &lt; 1，仍处于价值低估区间。即使按保守增速30%计算，PEG = 0.96 &lt; 1，买入逻辑依然成立。</p>
+<p>• 买入条件（PEG&lt;1）：✅ 满足 → 可考虑分批加仓</p>
+<p>• 卖出条件（PEG&gt;1.5）：❌ 未触发 → 继续持有</p>
+</div>
+</div>
+
+<!-- ===== 风险因素 ===== -->
+<h2>⚠️ 风险提示</h2>
+<div class="card">
+<table>
+<tr><th style="width:25%">风险因素</th><th>等级</th><th>说明</th></tr>
+<tr>
+  <td>碳酸锂价格</td>
+  <td><span class="badge badge-red">高</span></td>
+  <td>已突破20万/吨，若持续高位运行将压缩毛利率。宁德Q1毛利率24.82%，需观察Q2趋势</td>
+</tr>
+<tr>
+  <td>短期技术面</td>
+  <td><span class="badge badge-yellow">中</span></td>
+  <td>股价低于MA20，MA20趋势向下，短期仍有调整压力。周一受宏观偏空或低开</td>
+</tr>
+<tr>
+  <td>算电协同不确定性</td>
+  <td><span class="badge badge-yellow">中</span></td>
+  <td>IDC行业竞争激烈，64亿+41亿投资回报周期较长，需持续验证商业化落地能力</td>
+</tr>
+<tr>
+  <td>行业竞争</td>
+  <td><span class="badge badge-yellow">中</span></td>
+  <td>比亚迪王传福称"电池产能紧张"暗示行业竞争加剧；特斯拉柏林产能翻倍</td>
+</tr>
+<tr>
+  <td>宏观/地缘</td>
+  <td><span class="badge badge-yellow">中</span></td>
+  <td>全球债市波动、美联储政策不确定性、中美关系虽有缓和但AI/半导体限制仍在</td>
+</tr>
+</table>
+</div>
+
+<!-- ===== 操作建议 ===== -->
+<h2>🎯 操作建议（更新版）</h2>
+<div class="card">
+<div class="signal-box signal-hold">
+<div class="icon">🤔</div>
+<div class="text" style="color:var(--yellow)">观望为主，回调至支撑位可分批加仓</div>
+<div class="detail">
+<b>短期（1-2周）：</b>周一低开概率大，短期技术面偏弱，耐心等待企稳信号<br>
+<b>支撑位：</b>MA60=403元（核心支撑），心理关口400元<br>
+<b>加仓计划（若回调至以下价位）：</b><br>
+├ 第一批：¥410 附近 × 25%（MA60上方5%）<br>
+├ 第二批：¥403 附近 × 35%（MA60支撑）<br>
+└ 第三批：¥395 以下 × 40%（跌破MA60的极端情况，需重新评估）<br>
+<b>目标价：</b>¥535（基于PE 32x合理区间上沿）<br>
+<b>止损位：</b>¥385（有效跌破视为逻辑破坏）<br>
+<b>建议仓位：</b>12%（分批建仓，均价约407元）<br>
+<b>风险收益比：</b>约 7:1（潜在涨幅+32% vs 潜在跌幅-5.2%）
+</div>
+</div>
+</div>
+
+<!-- ===== 新闻列表 ===== -->
+<h2>📋 本周新闻清单</h2>
+<div class="card">
+<div class="news-item">
+  <div class="news-date">5/17</div>
+  <div>
+    <div class="news-title">世纪互联引入宁德时代关联战投，股价异动单日最高涨超30%</div>
+    <div class="news-meta">来源：经济观察网 | <span class="tag-neu">中性</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/16</div>
+  <div>
+    <div class="news-title">砸百亿连落两子，宁德时代的算力战略野心藏不住了</div>
+    <div class="news-meta">来源：界面新闻 | <span class="tag-pos">利好</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/15</div>
+  <div>
+    <div class="news-title">孟永健：宁德时代计划2026年底建成4000座超换一体站，2028年联合共建超10万座</div>
+    <div class="news-meta">来源：轩辕汽车蓝皮书论坛 | <span class="tag-pos">利好</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/15</div>
+  <div>
+    <div class="news-title">万亿绿色航道"换电"破局？宁德时代、比亚迪等电池巨头集体下海</div>
+    <div class="news-meta">来源：新浪财经 | <span class="tag-pos">利好</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/15</div>
+  <div>
+    <div class="news-title">同比增长1.2倍 1-4月我国新能源汽车出口138.4万辆</div>
+    <div class="news-meta">来源：中汽协 | <span class="tag-pos">利好</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/14</div>
+  <div>
+    <div class="news-title">碳酸锂价格回升至20万元/吨，产业链进入盈利修复周期</div>
+    <div class="news-meta">来源：中国财经 | <span class="tag-neg">利空（成本端）</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/14</div>
+  <div>
+    <div class="news-title">国家能源局印发《新型储能电站建设工程质量监督大纲》（100MW+储能纳入质量监督）</div>
+    <div class="news-meta">来源：国家能源局 | <span class="tag-neu">中性偏利好</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/13</div>
+  <div>
+    <div class="news-title">两月内百亿投向算电协同，宁德时代入股世纪互联（64亿）、中恒电气（41亿）</div>
+    <div class="news-meta">来源：观点网/搜狐 | <span class="tag-pos">重大利好</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/12</div>
+  <div>
+    <div class="news-title">碳酸锂期货突破20万元/吨大关，创合约上市以来历史新高（年内涨幅超65%）</div>
+    <div class="news-meta">来源：新浪财经 | <span class="tag-neg">利空（成本端）</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/9</div>
+  <div>
+    <div class="news-title">宁德时代50亿加码钠电池：40GWh项目落地福鼎，建设周期24个月</div>
+    <div class="news-meta">来源：CNEVPost/环评公示 | <span class="tag-pos">利好</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/6</div>
+  <div>
+    <div class="news-title">宁德时代与澳洲Zinfra签署MOU，共建澳大利亚大规模电池储能系统</div>
+    <div class="news-meta">来源：新浪财经 | <span class="tag-pos">利好</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/4</div>
+  <div>
+    <div class="news-title">CATL Super Technology Day发布六大电池创新技术（快充/长续航/安全）</div>
+    <div class="news-meta">来源：CATL/Sodium Battery Hub | <span class="tag-pos">利好</span></div>
+  </div>
+</div>
+<div class="news-item">
+  <div class="news-date">5/1</div>
+  <div>
+    <div class="news-title">宁德时代与土耳其Togg签署底盘认证合作，CAIT深度绑定</div>
+    <div class="news-meta">来源：CATL官网 | <span class="tag-pos">利好</span></div>
+  </div>
+</div>
+</div>
+
+<!-- ===== 页脚 ===== -->
+<div class="footer">
+数据来源：中汽协 · 国家能源局 · 东方财富 · CATL官网 · 财经媒体报道<br>
+分析方法：价值投资 · PEG估值法 · PEG&lt;1买入 / PEG&gt;1.5卖出<br>
+⚠️ 本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。<br>
+宁德时代持仓分析 · 2026-05-18 更新
+</div>
+
+</div>
+
+<script>
+// 价格走势图
+(function(){
+  var el = document.getElementById('priceChart');
+  if(!el) return;
+  var chart = echarts.init(el);
+  var dates = ['04/15','04/16','04/17','04/20','04/21','04/22','04/23','04/24','04/27','04/28','04/29','04/30','05/06','05/07','05/08','05/11','05/12','05/13','05/14','05/15'];
+  var closes = [431.0,453.98,444.2,432.5,447.6,436.35,438.9,444.9,434.88,427.67,445.0,436.0,460.0,451.64,437.0,446.11,431.25,434.05,427.0,423.6];
+  // 计算MA
+  var ma20=[], ma60=[];
+  for(var i=0;i<closes.length;i++){
+    ma20.push(i>=19?Math.round(closes.slice(i-19,i+1).reduce(function(a,b){return a+b},0)/20*100)/100:null);
+    ma60.push(null);
+  }
+  chart.setOption({
+    tooltip:{trigger:'axis',formatter:function(p){
+      var s = p[0].name + '<br>';
+      p.forEach(function(item){if(item.value!=null)s+=item.marker+item.seriesName+': <b>¥'+item.value+'</b><br>';});
+      return s;
+    }},
+    legend:{data:['收盘价','MA20'],top:0,textStyle:{color:'#8b949e',fontSize:11}},
+    grid:{top:35,right:15,bottom:30,left:55},
+    xAxis:{type:'category',data:dates,axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:10}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#21262d'}},axisLabel:{color:'#8b949e',formatter:function(v){return '¥'+v;}}},
+    series:[
+      {name:'收盘价',data:closes,type:'line',smooth:true,symbol:'circle',symbolSize:5,lineStyle:{width:2.5,color:'#58a6ff'},itemStyle:{color:'#58a6ff'},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(88,166,255,0.2)'},{offset:1,color:'rgba(88,166,255,0)'}]}}},
+      {name:'MA20',data:ma20,type:'line',smooth:true,symbol:'none',lineStyle:{width:1.5,color:'#d29922',type:'dashed'}},
+      {name:'关键事件',type:'scatter',data:[{value:[dates[11],436.0],name:'H股配股后反弹',symbol:'triangle',symbolSize:12,itemStyle:{color:'#3fb950'}},{value:[dates[17],434.05],name:'60GWh钠电大单+科技日',symbol:'diamond',symbolSize:10,itemStyle:{color:'#a855f7'}}],tooltip:{formatter:function(p){return p.data.name+'<br>'+p.value[0]+': ¥'+p.value[1];}}}
+    ]
+  });
+})();
+
+// AH溢价图
+(function(){
+  var el = document.getElementById('ahChart');
+  if(!el) return;
+  var chart = echarts.init(el);
+  var dates = ['02/12','02/13','02/24','02/25','02/26','02/27','03/02','03/03','03/04','03/05','03/06','03/09','03/10','03/11','03/12','03/13','03/16','03/17','03/18','03/19','03/20','03/23','03/24','03/25','03/26','03/27','03/30','03/31','04/01','04/02','04/08','04/09','04/10','04/13','04/14','04/15','04/16','04/17','04/20','04/21','04/22','04/23','04/24','04/27','04/28','04/29','04/30','05/06','05/07','05/08','05/11','05/12','05/13','05/14','05/15'];
+  var premiums = [-18.79,-19.46,-21.43,-22.48,-20.81,-21.34,-19.88,-19.4,-19.32,-20.06,-21.11,-18.92,-21.95,-24.49,-26.04,-27.07,-30.46,-28.7,-29.5,-29.06,-32.5,-30.73,-29.79,-28.81,-25.46,-25.12,-25.45,-25.31,-26.83,-27.07,-30.2,-29.72,-30.36,-28.61,-25.54,-24.99,-27.52,-26.77,-29.77,-30.62,-28.79,-28.73,-26.97,-26.56,-22.44,-19.1,-18.19,-21.56,-22.52,-23.42,-22.6,-24.49,-26.43,-28.99,-28.94];
+  chart.setOption({
+    tooltip:{trigger:'axis',formatter:function(p){return p[0].name+'<br>AH溢价: <b style="color:'+(p[0].value>0?'#f85149':'#3fb950')+'">'+p[0].value+'%</b>';}},
+    grid:{top:15,right:15,bottom:30,left:55},
+    xAxis:{type:'category',data:dates,axisLine:{lineStyle:{color:'#30363d'}},axisLabel:{color:'#8b949e',fontSize:10,rotate:45}},
+    yAxis:{type:'value',axisLine:{show:false},splitLine:{lineStyle:{color:'#21262d'}},axisLabel:{color:'#8b949e',formatter:function(v){return v+'%';}}},
+    visualMap:{show:false,pieces:[{lt:-25,color:'#58a6ff'},{gte:-25,color:'#a855f7'}]},
+    series:[
+      {data:premiums,type:'line',smooth:true,symbol:'none',lineStyle:{width:2},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(88,166,255,0.25)'},{offset:1,color:'rgba(88,166,255,0)'}]}}},
+      {data:dates.map(function(){return 0;}),type:'line',lineStyle:{color:'#30363d',type:'dashed',width:1},symbol:'none'},
+      {data:dates.map(function(){return -20;}),type:'line',lineStyle:{color:'#f85149',type:'dotted',width:1},symbol:'none'}
+    ]
+  });
+})();
+
+// 响应式
+window.addEventListener('resize',function(){
+  echarts.getInstanceByDom(document.getElementById('priceChart'))&&echarts.getInstanceByDom(document.getElementById('priceChart')).resize();
+  echarts.getInstanceByDom(document.getElementById('ahChart'))&&echarts.getInstanceByDom(document.getElementById('ahChart')).resize();
+});
+</script>
+</body>
+</html>
